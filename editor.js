@@ -113,7 +113,7 @@ function gw_clearConsole() {
     document.getElementsByClassName("console-logs")[0].innerHTML = "";
 }
 
-function primeScriptForErrors(code) {
+function gw_primeScriptForErrors(code) {
     let raw = "try {" + code + "\n} catch (e) {gw_error(e)}";
     return raw;
 }
@@ -160,6 +160,18 @@ window.addEventListener("keyup", function(e) {
     }
 });
 
+// Not allowed js Keywords
+const notAllowed = ['window', 'document'];
+
+function gw_checkForSecurityIssues(txt) {
+    for (let i = 0; i < notAllowed.length; i++) {
+        if (txt.indexOf(notAllowed[i] + '.') !== -1) {
+            gw_error("Security Alert! Cannot allow JavaScript keyword: " + notAllowed[i] + ". This causes a security issue; Avoid using this word.");
+            return true;
+        }
+    }
+    return false
+}
 
 // running code
 function gw_run() {
@@ -167,7 +179,10 @@ function gw_run() {
     let script = document.createElement("script");
     script.classList.add("canvas-script");
     let raw = editor.getValue();
-    raw = primeScriptForErrors(raw);
+    raw = gw_primeScriptForErrors(raw);
+    if (gw_checkForSecurityIssues(raw)) {
+        return false;
+    }
     script.innerHTML = raw;
     document.body.appendChild(script);
 }
