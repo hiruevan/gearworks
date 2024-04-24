@@ -97,7 +97,9 @@ const gearWorks = {
         }
         let sound = document.createElement("audio");
         sound.src = url;
-        sound.loop = true;
+        if (repeat) {
+            sound.loop = true;
+        }
         sound.classList.add("canvas-sound");
         document.body.appendChild(sound);
         sound.play();
