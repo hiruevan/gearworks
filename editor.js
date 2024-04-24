@@ -156,7 +156,11 @@ window.addEventListener("keydown", function(e) {
 });
 window.addEventListener("keyup", function(e) {
     if (keyboard.includes(e.key)) {
-        keyboard.splice(keyboard.indexOf(e.key), 1);
+        if (e.key == "Shift") {
+            keyboard = [];
+        } else {
+            keyboard.splice(keyboard.indexOf(e.key), 1);
+        }
     }
 });
 
