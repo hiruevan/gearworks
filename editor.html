@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Gearworks | Editor</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="./images/Gw-Favicon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./gwstyles.css">
+</head>
+<body spellcheck="false">
+	<div class="top-bar">
+		<a href="https://hiruevan.github.io/gearworks"><img src="./images/Gw-Favicon.svg"></a>
+		<span><button class="file-button" onclick="gw_toggleFileBox()">File ▼</button>
+            </span>
+		<span><button onclick="window.location = './tutorials'">Tutorials</button></span>
+		<span><button onclick="window.location = './documentation'">DOCS</button></span>
+        <span><input type="text" maxlength="16" placeholder="Untited Project" id="name-input"></span>
+        <div class="file-box hidden">
+            <button onclick="gw_openProject();">Upload</button>
+            <input type="file" class="hidden" id="project-uploader" accept=".gw1">
+            <button onclick="gw_downloadProject();">Download</button>
+            <button onclick="gw_packageProject();">Package</button>
+        </div>
+    </div>
+	<div class="content">
+        
+        <!--Side Bar-->
+		<div class="side-bar side-bar-out">
+            <div class="container page">
+                <br>
+                <button class="side-bar tab selected" onclick="gw_switchToDocs();">Docs</button>
+                <button class="side-bar tab" onclick="gw_switchToConsole();">Console</button>
+                
+                <!--Docs-->
+                <div class="docs">
+                    <p><u>Gear Works</u></p>
+                    <p><em><b>gearWorks</b><br>Used for handling system occurances and insctructions.</em></p>
+                    <p>gearWorks.log(str)<br>Logs a string in the console.</p>
+                    <p>gearWorks.warn(str)<br>Logs a warning string in the console.</p>
+                    <p>gearWorks.error(str)<br>Logs a error in the console.</p>
+                    <p>gearWorks.url(name)<br>Returns a conversion of a project file to a data url.</p>
+                    <p>gearWorks.playSound(name)<br>Plays a sound found in the project files.</p>
+                    <p><em><b>input</b><br>Used to determine what the user is doing at any moment.</em></p>
+                    <p>mouse.x<br>Returns mouse x.</p>
+                    <p>mouse.y<br>Returns mouse y.</p>
+                    <p>keyboard<br>Returns an array of all keys being pressed at any given moment.</p>
+                    <p>keyboard.includes(key)<br>Checks if a key is being pressed.</p>
+                    <p><em><b>draw</b><br>Used for drawing things on the canvas.</em></p>
+                    <p>draw.fillRect(x, y, width, height)<br>Draws a "filled" rectange.</p>
+                    <p>draw.strokeRect(x, y, width, height)<br>Draws a rectangle (with no fill).</p>
+                    <p>draw.clearRect(x, y, width, height)<br>Clears specified pixels within a rectangle.</p>
+                    <p>draw.beginPath()<br>Begins a new path or resets the current path.</p>
+                    <p>draw.closePath()<br>Adds a line to the path from the current point to the start.</p>
+                    <p>draw.moveTo(x, y)<br>Moves the path to a point in the canvas (without drawing).</p>
+                    <p>draw.lineTo(x, y)<br>Adds a line to the path.</p>
+                    <p>draw.fill()<br>Fills the current path.</p>
+                    <p>draw.stroke()<br>Draws the current path.</p>
+                    <p>draw.arc(x, y, r, startAngle, endAngle)<br>Adds an arc/curve (circle, or parts of a circle) to the path.</p>
+                    <p>draw.fillText(text, x, y)<br>Draws "filled" text on the canvas.</p>
+                    <p>draw.strokeText(text, x, y)<br>Draws text (with no fill).</p>
+                    <p>draw.font = cssFont<br>Sets or returns the font properties for text content. Example:<br>draw.font = "50px Arial";</p>
+                    <p>draw.textAlign = cssAlign<br>Sets or returns the alignment for text content. Example:<br>draw.textAlign = "center";</p>
+                    <p>draw.fillStyle = cssColor<br>Sets or returns the color, gradient, or pattern used to fill the drawing.</p>
+                    <p>draw.strokeStyle = cssColor<br>Sets or returns the color, gradient, or pattern used for strokes.</p>
+                    <p><u>JavaScript</u></p>
+                    <p><em><b>Operators</b><br>Used in everyday programming, these are very important to know.</em></p>
+                    <p>+<br>Addition symbol.</p>
+                    <p>-<br>Subtraction symbol.</p>
+                    <p>*<br>Multiplication symbol.</p>
+                    <p>/<br>Division symbol.</p>
+                    <p>%<br>Modulus symbol.</p>
+                    <p>||<br>Or symbol.</p>
+                    <p>&&<br>And symbol.</p>
+                    <p>!<br>Not symbol.</p>
+                    <p>==<br>Equal to symbol <em>(Not to be confused with a single =, that is variable setting).</em></p>
+                    <p><em><b>Math</b><br>Used for representing irrational numbers, and running other mathematical functions.</em></p>
+                    <p>Math.E<br>Returns Euler's number.</p>
+                    <p>Math.PI<br>Returns PI.</p>
+                    <p>Math.sin(int)<br>Sine function.</p>
+                    <p>Math.cos(int)<br>Cosine function.</p>
+                    <p>Math.tan(int)<br>Tangent function.</p>
+                    <p>Math.sqrt(int)<br>Square root function.</p>
+                    <p>Math.pow(x, y)<br>Returns x to the power of y.</p>
+                    <p>Math.abs(int)<br>Absolute value function.</p>
+                    <p>Math.round(int)<br>Rounding to nearest intager function.</p>
+                    <p>Math.ceil(int)<br>Rounding up function.</p>
+                    <p>Math.floor(int)<br>Rounding down function.</p>
+                    <p>Math.random()<br>Returns random value between 0 and 1.</p>
+                    <p><u>Extensions</u></p>
+                    <div class="extension-docs-holder"></div>
+                    <br>
+                    <button class="side-bar" onclick="document.getElementById('ext-uploader').click();">Add</button>
+                    <input type="file" class="hidden" id="ext-uploader" accept=".gwx">
+                </div>
+
+                <!--Console-->
+                <div class="console hidden">
+                    <button class="side-bar" onclick="gw_clearConsole();">Clear</button>
+                    <p class="console-logs"></p>
+                </div>
+            </div>
+        </div>
+        <a class="side-bar-control" onclick="gw_toggleSideBar();">◀</a>
+        
+        <!-- Code Space -->
+        <div class="code-controls">
+            <a class="zoom" onclick="gw_zoomIn();"><img src="./images/Zoom in.svg" width="40"></a>
+            <a class="zoom" onclick="gw_zoomOut();"><img src="./images/Zoom out.svg" width="40"></a>
+        </div>
+        <div id="editor" class="editor-text norm">// Welcome to the Gearworks Editor!</div>
+
+        <!--Canvas-->
+        <div class="right-bar">
+            <div class="canvas-div">
+                <div class="controls-div">
+                    <a class="play-controls right" onclick="gw_fullscreen();">Fullscreen</a>
+                    <a class="play-controls" onclick="gw_run();">Run</a>
+                    <a class="play-controls right-left" onclick="gw_stop();">Stop</a></div>
+                <canvas width="800" height="800" id="cvs"></canvas>
+            </div>
+            <div class="info-div">
+                <p>Mouse-x: <span id="m-x"></span><br>Mouse-y: <span id="m-y"></span></p>
+            </div>
+            <div class="cabinet page">
+                <div class="container">
+                    <button onclick="document.getElementById('img-upload').click();">Add Images</button>
+                    <input id="img-upload" type="file" class="hidden" accept=".png, .jpg, .jpeg, .svg">
+                    <img id="add-img" src="#" class="hidden">
+                    <div class="container uploaded-images">
+                    </div>
+                    <button onclick="document.getElementById('sound-upload').click();">Add Sounds</button>
+                    <input id="sound-upload" type="file" class="hidden" accept=".mp3, .wav, .ogg, .m4a, .wma">
+                    <img id="add-sound" src="#" class="hidden">
+                    <div class="container uploaded-sounds">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Name -->
+    <script>
+        document.getElementById("name-input").addEventListener("change", function(e) {
+            if (document.getElementById("name-input").value == "") {
+                document.getElementsByTagName("title")[0].innerHTML = "Gearworks | Editor";
+            } else {
+                document.getElementsByTagName("title")[0].innerHTML = "Gearworks | " + document.getElementById("name-input").value;
+            }
+            
+        });
+    </script>
+
+    <!-- Ace Editor -->
+    <script src="ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="ace-editor/ext-language_tools.js"></script>
+    <script src="./ace-cfg.js"></script>
+
+    <!--JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--Gearworks JS and Libraries-->
+    <script src="./editor.js"></script>
+    <script src="./extLoader.js"></script>
+    <script src="./gwLib.js"></script>
+</body>
+</html>
