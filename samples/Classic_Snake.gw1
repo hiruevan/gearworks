@@ -12,13 +12,20 @@ let food = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random(
 let score = 0;
 let direction = "right";
 
+let evaluated = true;
+
 
 function changeDirection() {
-    const key = keyboard[keyboard.length - 1];
-    if (key === "ArrowLeft" && direction !== "right") direction = "left";
-    else if (key === "ArrowUp" && direction !== "down") direction = "up";
-    else if (key === "ArrowRight" && direction !== "left") direction = "right";
-    else if (key === "ArrowDown" && direction !== "up") direction = "down";
+    let key;
+    if (evaluated) {
+        key = keyboard[keyboard.length - 1];
+    } else {
+        key = false;
+    }
+    if (key === "ArrowLeft" && direction !== "right") { direction = "left"; evaluated = false; }
+    else if (key === "ArrowUp" && direction !== "down") { direction = "up"; evaluated = false; }
+    else if (key === "ArrowRight" && direction !== "left") { direction = "right"; evaluated = false; }
+    else if (key === "ArrowDown" && direction !== "up") { direction = "down"; evaluated = false; }
 }
 
 let tick = 0;
@@ -52,6 +59,8 @@ function forever() {
         if (direction === "up") head.y -= box;
         if (direction === "down") head.y += box;
         
+        evaluated = true;
+        
         // Check collision with wall
         if (
             head.x < 0 ||
@@ -78,8 +87,4 @@ function forever() {
         // Add new head
         snake.unshift(head);
     }
-
-    
-
-    
 }⇉⇇END⇉
