@@ -383,8 +383,8 @@ let xtns = [];
 
 function gw_toggleFileBox() {
     if (document.getElementsByClassName("file-button")[0].textContent.includes("▼")) {
-    document.getElementsByClassName("file-box")[0].classList.remove("hidden");
-    document.getElementsByClassName("file-button")[0].textContent = "File ▲";
+        document.getElementsByClassName("file-box")[0].classList.remove("hidden");
+        document.getElementsByClassName("file-button")[0].textContent = "File ▲";
     } else {
         document.getElementsByClassName("file-box")[0].classList.add("hidden");
         document.getElementsByClassName("file-button")[0].textContent = "File ▼";
