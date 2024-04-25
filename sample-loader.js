@@ -10,9 +10,9 @@ function gw_loadFile(filePath) {
 }
 
 window.onload = function() {
-    if (window.location.search.length > 7) {
+    if (window.location.search.length > 8) {
         let projectToLoad = "";
-        for (let i = 0; i < window.location.search.length; i++) {
+        for (let i = 8; i < window.location.search.length; i++) {
             projectToLoad += window.location.search[i];
         }
 
