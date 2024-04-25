@@ -128,8 +128,14 @@ let mouse = {
 document.getElementById("cvs").addEventListener("mousemove", function(e) {
     let cvsWidth = (window.innerWidth*0.25 - 35);
     let leftCvsPos = (window.innerWidth - 35) - cvsWidth;
+    let mathWidth = cvsWidth;
+    const fullWidth = window.innerHeight - 15;
+    if (document.getElementsByClassName("right")[0].textContent == "Escape") {
+        mathWidth = fullWidth;
+        leftCvsPos = (window.innerWidth - fullWidth)/2;
+    }
     mouse.x = e.clientX - leftCvsPos;
-    mouse.x = Math.floor((mouse.x*800)/cvsWidth);
+    mouse.x = Math.floor((mouse.x*800)/mathWidth);
     if (mouse.x < 0) {
         mouse.x = 0;
     } else if (mouse.x > 800) {
@@ -137,8 +143,11 @@ document.getElementById("cvs").addEventListener("mousemove", function(e) {
     }
     let cvsDivTop = (window.innerHeight*0.07 + 15)
     let topCvsPos =  cvsDivTop + 20;
+    if (document.getElementsByClassName("right")[0].textContent == "Escape") {
+        topCvsPos = 15;
+    }
     mouse.y = e.clientY - topCvsPos;
-    mouse.y = Math.floor((mouse.y*800)/cvsWidth);
+    mouse.y = Math.floor((mouse.y*800)/mathWidth);
     if (mouse.y < 0) {
         mouse.y = 0;
     } else if (mouse.y > 800) {
