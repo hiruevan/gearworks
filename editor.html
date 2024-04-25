@@ -14,11 +14,11 @@
 </head>
 <body spellcheck="false">
 	<div class="top-bar">
-		<a href="https://hiruevan.github.io/gearworks"><img src="./images/Gw-Favicon.svg"></a>
+		<a href="https://gearworks.org"><img src="./images/Gw-Favicon.svg"></a>
 		<span><button class="file-button" onclick="gw_toggleFileBox()">File ▼</button>
             </span>
 		<span><button onclick="window.location = './tutorials'">Tutorials</button></span>
-		<span><button onclick="window.location = './documentation'">DOCS</button></span>
+		<span><button onclick="window.location = './docs'">DOCS</button></span>
         <span><input type="text" maxlength="16" placeholder="Untited Project" id="name-input"></span>
         <div class="file-box hidden">
             <button onclick="gw_openProject();">Upload</button>
@@ -159,17 +159,24 @@
     </script>
 
     <!-- Ace Editor -->
-    <script src="ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="ace-editor/ext-language_tools.js"></script>
-    <script src="./ace-cfg.js"></script>
+    <script src="./ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./ace-editor/ext-language_tools.js"></script>
+    <script src="./editor/ace-cfg.js"></script>
 
     <!--JQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!--Gearworks JS and Libraries-->
-    <script src="./editor.js"></script>
-    <script src="./extLoader.js"></script>
-    <script src="./sample-loader.js"></script>
-    <script src="./gwLib.js"></script>
+    <script src="./editor/userInput.js"></script>
+    <script src="./editor/codeActive.js"></script>
+    <script src="./editor/console.js"></script>
+    <script src="./editor/fullscreen.js"></script>
+    <script src="./editor/cabinet.js"></script>
+    <script src="./editor/editor.js"></script>
+
+    <script src="./loaders/projectLoader.js"></script>
+    <script src="./loaders/extLoader.js"></script>
+    <script src="./loaders/sample-loader.js"></script>
+    <script src="./loaders/gwLib.js"></script>
 </body>
 </html>
