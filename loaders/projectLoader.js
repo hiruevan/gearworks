@@ -31,6 +31,10 @@ function gw_packageProject() {
 Special Symbols:
 ⇇⇉⇔
 
+Hash \n || \r && #:
+#: ↯
+\n || \r: ↴
+
 .gw1 file format
 
 META
@@ -72,7 +76,11 @@ function gw_loadProjectFile(text) {
     let xtnsFiles = [];
 
     let txt = text;
-    txt = txt.replaceAll("↯", "#")
+
+    // Hash specail *Broken* characters
+    txt = txt.replaceAll("↯", "#");
+    txt = txt.replaceAll("↴", "\n");
+
     if (!txt[13] == "1" || !txt[1] == "!") {
         alert("An error occured!")
         return;
@@ -195,7 +203,16 @@ function gw_getDownloadFile() {
     txt += "⇇META⇔" + Date().toString() + "⇉";
     
     txt += "⇇TITLE⇔" + document.getElementById("name-input").value.replaceAll("#", "↯") + "⇔gw_user⇉";
-    txt += "⇇JSCONTENT⇔" + editor.getValue().replaceAll("#", "↯") + "⇉";
+
+    // Get editor Value
+    let eValue = editor.getValue();
+
+    // Hash specail *broken* characters
+    eValue = eValue.replaceAll("#", "↯");
+    eValue = eValue.replaceAll("\n", "↴");
+    eValue = eValue.replaceAll("\r", "↴");
+
+    txt += "⇇JSCONTENT⇔" + eValue + "⇉";
     for (let i = 0; i < gw_cabinet.imageNames.length; i++) {
         txt += "⇇IMAGE⇔" + gw_cabinet.imageNames[i] + "⇔" + gw_cabinet.imageUrls[i] + "⇉";
     }
@@ -218,14 +235,14 @@ function gw_getDownloadFile() {
 function gw_getExtensionFile(obj) {
     let txt = "←!DOCTYPE↭gwx→";
     txt += "←META↭" + obj.date + "→";
-    txt += "←TITLE↭" + obj.name + "↭" + obj.author + "→";
-    txt += "←OVERVEIW↭" + obj.overveiw + "↭" + obj.color.replaceAll("#", "↯") + "→";
-    txt += "←JSCONTENT↭" + obj.js + "→";
-    txt += "←DOCUMENTATION↭" + obj.docs + "→"; 
+    txt += "←TITLE↭" + obj.name.replaceAll("#", "↯") + "↭" + obj.author.replaceAll("#", "↯") + "→";
+    txt += "←OVERVEIW↭" + obj.overveiw.replaceAll("#", "↯").replaceAll("\n", "↴").replaceAll("\r", "↴") + "↭" + obj.color.replaceAll("#", "↯") + "→";
+    txt += "←JSCONTENT↭" + obj.js.replaceAll("#", "↯").replaceAll("\n", "↴").replaceAll("\r", "↴") + "→";
+    txt += "←DOCUMENTATION↭" + obj.docs.replaceAll("#", "↯").replaceAll("\n", "↴").replaceAll("\r", "↴") + "→"; 
     txt += "←END→";
-    for (let i = 0; i < specailSymbols.length; i++) {
-        txt = txt.replaceAll(specailSymbols[i], '');
-    }
+    // for (let i = 0; i < specailSymbols.length; i++) {
+    //     txt = txt.replaceAll(specailSymbols[i], '');
+    // }
     return txt;
 }
 
