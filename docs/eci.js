@@ -29,10 +29,10 @@ END
 function gw_exportGwx() {
     let txt = "←!DOCTYPE↭gwx→";
     txt += "←META↭" + Date().toString() + "→";
-    txt += "←TITLE↭" + document.getElementById("name").value + "↭" + document.getElementById("author").value + "→";
-    txt += "←OVERVEIW↭" + document.getElementById("overveiw").value + "↭" + document.getElementById("color").value + "→";
-    txt += "←JSCONTENT↭" + editor.getValue() + "→";
-    txt += "←DOCUMENTATION↭" + document.getElementById("docs").value + "→"; 
+    txt += "←TITLE↭" + document.getElementById("name").value.replaceAll("#", "↯") + "↭" + document.getElementById("author").value.replaceAll("#", "↯") + "→";
+    txt += "←OVERVEIW↭" + document.getElementById("overveiw").value.replaceAll("#", "↯").replaceAll("\n", "↴").replaceAll("\r", "↴") + "↭" + document.getElementById("color").value.replaceAll("#", "↯") + "→";
+    txt += "←JSCONTENT↭" + editor.getValue().replaceAll("#", "↯").replaceAll("\n", "↴").replaceAll("\r", "↴") + "→";
+    txt += "←DOCUMENTATION↭" + document.getElementById("docs").value.replaceAll("#", "↯").replaceAll("\n", "↴").replaceAll("\r", "↴") + "→"; 
     txt += "←END→";
 
     return txt;
