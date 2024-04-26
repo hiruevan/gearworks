@@ -33,7 +33,6 @@ function gw_readExtensionFile(txt) {
         js: "",
         color: "",
         overveiw: "",
-        color: "",
         docs: "",
         date: ""
     };
@@ -42,6 +41,8 @@ function gw_readExtensionFile(txt) {
         alert("An error occured loading the Extension!")
         return;
     }
+
+    
 
     for (let i = 0; i < txt.length; i++) {
         if (txt[i] == "←") {
@@ -127,8 +128,12 @@ function gw_readExtensionFile(txt) {
         }
     }
 
-    ext.docs = ext.docs.replaceAll("\n", "<br>");
-    ext.overveiw = ext.overveiw.replaceAll("\n", "<br>");
+    // Unhash extentions
+    ext.docs = ext.docs.replaceAll("↯", "#").replaceAll("↴", "<br>");
+    ext.overveiw = ext.overveiw.replaceAll("↯", "#").replaceAll("↴", "<br>");
+    ext.js = ext.js.replaceAll("↯", "#").replaceAll("↴", "\n");
+    ext.name = ext.name.replaceAll("↯", "#");
+    ext.author = ext.author.replaceAll("↯", "#");
 
     return ext;
 }
