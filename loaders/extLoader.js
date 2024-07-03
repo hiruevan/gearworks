@@ -26,7 +26,8 @@ Docs (Overveiw of objs + Function Docs)
 END
 */
 
-function gw_readExtensionFile(txt) {
+function gw_readExtensionFile(str) {
+    let txt = decodeURI(str);
     let ext = {
         name: "",
         author: "",
