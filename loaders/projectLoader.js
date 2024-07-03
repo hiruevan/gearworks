@@ -60,7 +60,8 @@ document.getElementById("project-uploader").addEventListener("change", function(
     gw_reader.readAsText(this.files[0]);
 })
 
-function gw_loadProjectFile(text) {
+function gw_loadProjectFile(str) {
+    let text = decodeURI(str);
     document.getElementsByClassName("uploaded-images")[0].innerHTML = "";
     document.getElementsByClassName("uploaded-sounds")[0].innerHTML = "";
 
@@ -229,7 +230,7 @@ function gw_getDownloadFile() {
 
     txt += "⇇END⇉";
 
-    return txt;
+    return encodeURI(txt);
 }
 
 function gw_getExtensionFile(obj) {
@@ -243,7 +244,7 @@ function gw_getExtensionFile(obj) {
     // for (let i = 0; i < specailSymbols.length; i++) {
     //     txt = txt.replaceAll(specailSymbols[i], '');
     // }
-    return txt;
+    return encodeURI(txt);
 }
 
 function gw_downloadProject() {
