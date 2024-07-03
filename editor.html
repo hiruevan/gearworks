@@ -40,60 +40,66 @@
                 <div class="docs">
                     <p><u>Gear Works</u></p>
                     <p><em><b>gearWorks</b><br>Used for handling system occurances and insctructions.</em></p>
-                    <p>gearWorks.log(str)<br>Logs a string in the console.</p>
-                    <p>gearWorks.warn(str)<br>Logs a warning string in the console.</p>
-                    <p>gearWorks.error(str)<br>Logs a error in the console.</p>
-                    <p>gearWorks.url(name)<br>Returns a conversion of a project file to a data url.</p>
-                    <p>gearWorks.playSound(name)<br>Plays a sound found in the project files.</p>
+                    <p><strong>gearWorks.log(str)</strong><br>Logs a string in the console.</p>
+                    <p><strong>gearWorks.warn(str)</strong><br>Logs a warning string in the console.</p>
+                    <p><strong>gearWorks.error(str)</strong><br>Logs a error in the console.</p>
+                    <p><strong>gearWorks.url(name)</strong><br>Returns a conversion of a project file to a data url.</p>
+                    <p><strong>gearWorks.playSound(name)</strong><br>Plays a sound found in the project files.</p>
                     <p><em><b>input</b><br>Used to determine what the user is doing at any moment.</em></p>
-                    <p>mouse.x<br>Returns mouse x.</p>
-                    <p>mouse.y<br>Returns mouse y.</p>
-                    <p>keyboard<br>Returns an array of all keys being pressed at any given moment.</p>
-                    <p>keyboard[keyboard.length-1]<br>Returns the last key pressed.</p>
-                    <p>keyboard.includes(key)<br>Checks if a key is being pressed.</p>
+                    <p><strong>mouse.x</strong><br>Returns mouse x.</p>
+                    <p><strong>mouse.y</strong><br>Returns mouse y.</p>
+                    <p><strong>keyboard</strong><br>Returns an array of all keys being pressed at any given moment.</p>
+                    <p><strong>keyboard[keyboard.length-1]</strong><br>Returns the last key pressed.</p>
+                    <p><strong>keyboard.includes(key)</strong><br>Checks if a key is being pressed.</p>
                     <p><em><b>draw</b><br>Used for drawing things on the canvas.</em></p>
-                    <p>draw.background(cssColor)<br>Clears the screen and displays a solid color. Example:<br>draw.background("skyblue");</p>
-                    <p>draw.fillRect(x, y, width, height)<br>Draws a "filled" rectange.</p>
-                    <p>draw.strokeRect(x, y, width, height)<br>Draws a rectangle (with no fill).</p>
-                    <p>draw.clearRect(x, y, width, height)<br>Clears specified pixels within a rectangle.</p>
-                    <p>draw.image(url, x, y, width, height)<br>Draws an image from the cabinet on the canvas.</p>
-                    <p>draw.beginPath()<br>Begins a new path or resets the current path.</p>
-                    <p>draw.closePath()<br>Adds a line to the path from the current point to the start.</p>
-                    <p>draw.moveTo(x, y)<br>Moves the path to a point in the canvas (without drawing).</p>
-                    <p>draw.lineTo(x, y)<br>Adds a line to the path.</p>
-                    <p>draw.fill()<br>Fills the current path.</p>
-                    <p>draw.stroke()<br>Draws the current path.</p>
-                    <p>draw.arc(x, y, r, startAngle, endAngle)<br>Adds an arc/curve (circle, or parts of a circle) to the path.</p>
-                    <p>draw.fillText(text, x, y)<br>Draws "filled" text on the canvas.</p>
-                    <p>draw.strokeText(text, x, y)<br>Draws text (with no fill).</p>
-                    <p>draw.font = cssFont<br>Sets or returns the font properties for text content. Example:<br>draw.font = "50px Arial";</p>
-                    <p>draw.textAlign = cssAlign<br>Sets or returns the alignment for text content. Example:<br>draw.textAlign = "center";</p>
-                    <p>draw.fillStyle = cssColor<br>Sets or returns the color, gradient, or pattern used to fill the drawing.</p>
-                    <p>draw.strokeStyle = cssColor<br>Sets or returns the color, gradient, or pattern used for strokes.</p>
+                    <p><strong>draw.background(cssColor)</strong><br>Clears the screen and displays a solid color. Example:<br>draw.background("skyblue");</p>
+                    <p><strong>draw.fillRect(x, y, width, height)</strong><br>Draws a "filled" rectange.</p>
+                    <p><strong>draw.strokeRect(x, y, width, height)</strong><br>Draws a rectangle (with no fill).</p>
+                    <p><strong>draw.clearRect(x, y, width, height)</strong><br>Clears specified pixels within a rectangle.</p>
+                    <p><strong>draw.image(url, x, y, width, height)</strong><br>Draws an image from the cabinet on the canvas.</p>
+                    <p><strong>draw.beginPath()</strong><br>Begins a new path or resets the current path.</p>
+                    <p><strong>draw.closePath()</strong><br>Adds a line to the path from the current point to the start.</p>
+                    <p><strong>draw.moveTo(x, y)</strong><br>Moves the path to a point in the canvas (without drawing).</p>
+                    <p><strong>draw.lineTo(x, y)</strong><br>Adds a line to the path.</p>
+                    <p><strong>draw.fill()</strong><br>Fills the current path.</p>
+                    <p><strong>draw.stroke()</strong><br>Draws the current path.</p>
+                    <p><strong>draw.arc(x, y, r, startAngle, endAngle)</strong><br>Adds an arc/curve (circle, or parts of a circle) to the path.</p>
+                    <p><strong>draw.fillText(text, x, y)</strong><br>Draws "filled" text on the canvas.</p>
+                    <p><strong>draw.strokeText(text, x, y)</strong><br>Draws text (with no fill).</p>
+                    <p><strong>draw.font = cssFont</strong><br>Sets or returns the font properties for text content. Example:<br>draw.font = "50px Arial";</p>
+                    <p><strong>draw.textAlign = cssAlign</strong><br>Sets or returns the alignment for text content. Example:<br>draw.textAlign = "center";</p>
+                    <p><strong>draw.fillStyle = cssColor</strong><br>Sets or returns the color, gradient, or pattern used to fill the drawing.</p>
+                    <p><strong>draw.strokeStyle = cssColor</strong><br>Sets or returns the color, gradient, or pattern used for strokes.</p>
                     <p><u>JavaScript</u></p>
                     <p><em><b>Operators</b><br>Used in everyday programming, these are very important to know.</em></p>
-                    <p>+<br>Addition symbol.</p>
-                    <p>-<br>Subtraction symbol.</p>
-                    <p>*<br>Multiplication symbol.</p>
-                    <p>/<br>Division symbol.</p>
-                    <p>%<br>Modulus symbol.</p>
-                    <p>||<br>Or symbol.</p>
-                    <p>&&<br>And symbol.</p>
-                    <p>!<br>Not symbol.</p>
-                    <p>==<br>Equal to symbol <em>(Not to be confused with a single =, that is variable setting).</em></p>
+                    <p><strong>+</strong><br>Addition symbol.</p>
+                    <p><strong>-</strong><br>Subtraction symbol.</p>
+                    <p><strong>*</strong><br>Multiplication symbol.</p>
+                    <p><strong>/</strong><br>Division symbol.</p>
+                    <p><strong>%</strong><br>Modulus symbol.</p>
+                    <p><strong>||</strong><br>Or symbol.</p>
+                    <p><strong>&&</strong><br>And symbol.</p>
+                    <p><strong>!</strong><br>Not symbol.</p>
+                    <p><strong>==</strong><br>Equal to symbol <em>(Not to be confused with a single =, that is for variable setting).</em></p>
+                    <p><em><b>Variables & Keywords</b><br>This is a very important function that is in all programming languages. You can use this to store values, store lists of values, objects, and even to store code for later use!</em></p>
+                    <p><strong>var</strong><br>This keyword defines a variable without any constrant. Example:<br>var str = "Hello World!"</p>
+                    <p><strong>let</strong><br>This keyword defines a variable that can be changed, but not redefined.</p>
+                    <p><strong>const</strong><br>This keyword defines a constant variable.</p>
+                    <p><strong>function</strong><br>Function keyword. This allows you to call a function (Reuse old code) later. Example:<br>function logHi() { gearWorks.log("Hi"); }</p>
+                    <p><strong>function forever() {}</strong><br>In the case of the forever function, gearWorks will take whatever code you have defined in the brakets and repeat it forever.</p>
                     <p><em><b>Math</b><br>Used for representing irrational numbers, and running other mathematical functions.</em></p>
-                    <p>Math.E<br>Returns Euler's number.</p>
-                    <p>Math.PI<br>Returns PI.</p>
-                    <p>Math.sin(int)<br>Sine function.</p>
-                    <p>Math.cos(int)<br>Cosine function.</p>
-                    <p>Math.tan(int)<br>Tangent function.</p>
-                    <p>Math.sqrt(int)<br>Square root function.</p>
-                    <p>Math.pow(x, y)<br>Returns x to the power of y.</p>
-                    <p>Math.abs(int)<br>Absolute value function.</p>
-                    <p>Math.round(int)<br>Rounding to nearest intager function.</p>
-                    <p>Math.ceil(int)<br>Rounding up function.</p>
-                    <p>Math.floor(int)<br>Rounding down function.</p>
-                    <p>Math.random()<br>Returns random value between 0 and 1.</p>
+                    <p><strong>Math.E</strong><br>Returns Euler's number.</p>
+                    <p><strong>Math.PI</strong><br>Returns PI.</p>
+                    <p><strong>Math.sin(float)</strong><br>Sine function.</p>
+                    <p><strong>Math.cos(float)</strong><br>Cosine function.</p>
+                    <p><strong>Math.tan(float)</strong><br>Tangent function.</p>
+                    <p><strong>Math.sqrt(float)</strong><br>Square root function.</p>
+                    <p><strong>Math.pow(x, y)</strong><br>Returns x to the power of y.</p>
+                    <p><strong>Math.abs(float)</strong><br>Absolute value function.</p>
+                    <p><strong>Math.round(float)</strong><br>Rounding to nearest intager function.</p>
+                    <p><strong>Math.ceil(float)</strong><br>Rounding up function.</p>
+                    <p><strong>Math.floor(float)</strong><br>Rounding down function.</p>
+                    <p><strong>Math.random()</strong><br>Returns random value between 0 and 1.</p>
                     <p><u>Extensions</u></p>
                     <div class="extension-docs-holder"></div>
                     <br>
