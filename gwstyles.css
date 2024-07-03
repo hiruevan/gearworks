@@ -42,6 +42,15 @@ span input {
     top: 6px;
 }
 
+input.search {
+    width: 30%;
+    font-size: 20px;
+}
+
+ul.results {
+    font-size: 25px;
+}
+
 div.top-bar div {
     position: fixed;
     height: 150px;
@@ -152,6 +161,21 @@ div.page {
     width: 90%;
     left: 0px;
     position: relative;
+}
+
+div.videos h3 {
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+}
+
+div.videos video {
+    padding: 0;
+    margin: 0;
+}
+
+div.videos {
+    width: 550px;
 }
 
 div.footer {
