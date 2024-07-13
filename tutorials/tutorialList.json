@@ -1,18 +1,25 @@
 {   
     "Template": [
         {
+            "module": "desc",
             "name": "name_of_step",
-            "video": "filename_of_video",
-            "desc": "This is where the video description goes."
+            "value": "Desctiontion here."
         },
         {
+            "module": "video",
             "name": "name_of_step",
             "video": "filename_of_video",
             "desc": "There can be more than one video."
+        },
+        {
+            "module": "download",
+            "location": "./samples/Classic_Snake.gw1",
+            "name": "Classic Snake"
         }
     ],
     "Getting Started": [
         {
+            "module": "video",
             "name": "Creating a Counter",
             "video": "01",
             "desc": "In this video, we will be creating a simple starter project where we will have the computer count upwards forever as well as saying their name is Bob. Being an obedient dog, it will continue doing this until we tell it to stop."
