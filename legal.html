@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gearworks | *CHANGE THIS*</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./images/Gw-Favicon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./gwstyles.css">
+</head>
+<body>
+	<div class="top-bar">
+		<a href="gearworks.org"><img src="./images/Logo1.svg"></a>
+		<span><button onclick="window.location = './editor'">Editor</button></span>
+		<span><button onclick="window.location = './tutorials'">Tutorials</button></span>
+		<span><button onclick="window.location = './docs'">DOCS</button></span>
+        <span><button onclick="window.location = './projects'">Projects</button></span>
+    	</div>
+	<div class="content scroll">
+		<div class="container">
+		</div>
+		<br><br><br>
+        <footer>
+            <a href="./legal">Legal</a> | <a href="./about">About</a> | <a href="https://github.com/hiruevan/gearworks?tab=readme-ov-file" target="_blank">Source Code</a> | <a href="">Donate</a>
+        </footer>
+
+        <script>
+            // For loading the docs list JSON
+            function loadFile(filePath) {
+                var result = null;
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", filePath, false);
+                xmlhttp.send();
+                if (xmlhttp.status==200) {
+                result = xmlhttp.responseText;
+                }
+                return result;
+            }
+
+            let file = loadFile("./LICENSE");
+            let html = '<h2>Legal Information</h2>';
+            let dummy = '';
+            for (let i = 0; i < file.length; i++) {
+                if (file[i] == "<") {
+                    i++;
+                    if (file[i] == "h") {
+                        html += "<a href='"
+                    } else {
+                        html += "<h3>"
+                    }
+                    dummy = '';
+                    
+                }
+                if (file[i] == ">") {
+                    i++;
+                    if (dummy[0] == "h") {
+                        html += "'>" + dummy + "</a>";
+                    } else {
+                        html += "</h3>"
+                    }
+                    dummy = '';
+                }
+                html += file[i];
+                dummy += file[i];
+            }
+            html = html.replaceAll("\n", "<br>");
+            document.getElementsByClassName("container")[0].innerHTML += "<div style='text-align: center; justify-content: center;'>" + html + "</div>";
+        </script>
+
+	</div>
+  </body>
+  </html>
