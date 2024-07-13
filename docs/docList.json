@@ -1,0 +1,831 @@
+{   
+    "Template_Catogory": [
+        {
+            "module": "desc",
+            "name": null,
+            "value": "This is a template DOCS catogory."
+        },
+        {
+            "module": "method",
+            "type": "function (Commonly)",
+            "name": "name",
+            "use": "This is where the description goes. AKA the use.",
+            "example": "This will have an example of it's use.",
+            "to_highlight": 
+                {
+                    "int": "orange",
+                    "str": "green"
+                }
+        }
+    ],
+    "Gear Works": [
+        {
+            "module": "desc",
+            "name": null,
+            "value": "These functions are used for debugging mostly, but are the base of all projects in Gear Works."
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "gearWorks.log(str)",
+            "use": "This function logs a string in the gear works console. This can be used for debuging projects or for simpler projects as a make-shift text engine.",
+            "example": "gearWorks.log('Hello World!');",
+            "to_highlight":
+                {
+                    "str": "green",
+                    "'Hello World!'": "green",
+                    "log": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "gearWorks.warn(str)",
+            "use": "This function logs a warning string in the gear works console. This is used to debug projects and to inform the user of issues.",
+            "example": "gearWorks.warn('Variable not set.');",
+            "to_highlight": 
+                {
+                    "str": "green",
+                    "'Variable not set.'": "green",
+                    "warn": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "gearWorks.error(str)",
+            "use": "This function logs a error string in the gear works console. This can be helpful in debuging as it stops the project at the exact moment the error ocurs.",
+            "example": "gearWorks.error('Something went wrong!');",
+            "to_highlight": 
+                {
+                    "str": "green",
+                    "'Something went wrong!'": "green",
+                    "error": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "gearWorks.ask(str)",
+            "use": "This function asks for user input and returns whatever the user types. TBD!!! NOT DONE YET!!!",
+            "example": "gearWorks.log(gearWorks.ask('How are you doing today?'));",
+            "to_highlight":
+                {
+                    "str": "green",
+                    "'How are you doing today?'": "green",
+                    "log": "blue",
+                    "ask": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "gearWorks.url(name)",
+            "use": "This function will return a data url of an item in the cabinet. This is useful for rendering images and other things requiring access to items in the cabinet.",
+            "example": "gearWorks.url('image.svg');",
+            "to_highlight": 
+                {
+                    "name": "green",
+                    "'image.svg'": "green",
+                    "url": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "gearWorks.playSound(name)",
+            "use": "This function will play a sound from the cabinet. If this function is repeated forever, it will loop. Keep in mind that the function starts playing the sound, and does not wait until it is finished.",
+            "example": "gearWorks.playSound('music.mp3');",
+            "to_highlight": 
+                {
+                    "name": "green",
+                    "'music.mp3'": "green",
+                    "playSound": "blue"
+                }
+        }
+    ],
+    "Input": [
+        {
+            "module": "desc",
+            "name": null,
+            "value": "These functions and values are used to determine what the user is doing at any given moment. This will help make project user-interative!"
+        },
+        {
+            "module": "method",
+            "type": "object",
+            "name": "mouse",
+            "use": "This will give you the user's current mouse position in the format: { x: mouse_x, y: mouse_y }.",
+            "example": "gearWorks.log('x: ' + mouse.x + ', y: ' + mouse.y);",
+            "to_highlight": 
+                {
+                    "log": "blue",
+                    "'x: '": "green",
+                    "', y: '": "green"
+                }
+        },
+        {
+            "module": "method",
+            "type": "float",
+            "name": "mouse.x",
+            "use": "This will always return the user's current mouse x position in real-time.",
+            "example": "gearWorks.log(mouse.x);",
+            "to_highlight": 
+                {
+                    "log": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "float",
+            "name": "mouse.y",
+            "use": "This will always return the user's current mouse y position in real-time.",
+            "example": "gearWorks.log(mouse.y);",
+            "to_highlight": 
+                {
+                    "log": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "array",
+            "name": "keyboard",
+            "use": "This will always contain every key being pressed by the user at any given moment. The last item in the array will always be the last key pressed.",
+            "example": "gearWorks.log(keyboard[0]);",
+            "to_highlight": 
+                {
+                    "log": "blue",
+                    "0": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "array string",
+            "name": "keyboard[keyboard.length-1]",
+            "use": "This will always be the last key pressed by the user updating in real-time.",
+            "example": "gearWorks.log(keyboard[keyboard.length-1]);",
+            "to_highlight": 
+                {
+                    "log": "blue",
+                    "-": "darkblue",
+                    "1": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "array method",
+            "name": "keyboard.includes(key)",
+            "use": "This will return true if the given key is being pressed. It will return false if it is not being pressed at any given moment.",
+            "example": "gearWorks.log(keyboard.includes(' ');",
+            "to_highlight": 
+                {
+                    "log": "blue",
+                    "includes": "blue",
+                    "' '": "green"
+                }
+        }
+    ],
+    "Drawing": [
+        {
+            "module": "desc",
+            "name": null,
+            "value": "The following functions are used to draw on the canvas. This gives a visual to projects. !!(THIS DOCS PAGE IS STILL IN PROGRESS)!!"
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.background(cssColor)",
+            "use": "This function will clear the current screen and display a solid color across it.",
+            "example": "draw.background('skyblue');",
+            "to_highlight": 
+                {
+                    "background": "blue",
+                    "cssColor": "green",
+                    "'skyblue'": "green"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.fillRect(/x/, /y/, width, height)",
+            "use": "This function draws a 'filled' rectangle with the left-most point at (x, y) and a width of (width) with a height of (height).",
+            "example": "draw.fillRect(0, 400, 400, 400);",
+            "to_highlight": 
+                {
+                    "fillRect": "blue",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "width": "orange",
+                    "height": "orange",
+                    "4": "orange",
+                    "0": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.strokeRect(/x/, /y/, width, height)",
+            "use": "This function draws a 'stroked' (Not filled, with just an outline) rectangle with the left-most point at (x, y) and a width of (width) with a height of (height).",
+            "example": "draw.strokeRect(0, 400, 400, 400);",
+            "to_highlight": 
+                {
+                    "strokeRect": "blue",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "width": "orange",
+                    "height": "orange",
+                    "4": "orange",
+                    "0": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.clearRect(/x/, /y/, width, height)",
+            "use": "This function clears the pixels of a rectangle with the left-most point at (x, y) and a width of (width) with a height of (height).",
+            "example": "draw.clearRect(0, 400, 400, 400);",
+            "to_highlight": 
+                {
+                    "clearRect": "blue",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "width": "orange",
+                    "height": "orange",
+                    "4": "orange",
+                    "0": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.image(name, /x/, /y/, width, height)",
+            "use": "This function draws an image from the cabinet on the canvas with the left-most point at (x, y). The (width) and (height) parameters are not required, but can be used to stretch the image.",
+            "example": "draw.image('img.svg', 300, 400);",
+            "to_highlight": 
+                {
+                    "'img.svg'": "green",
+                    "image": "blue",
+                    "name": "green",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "width": "orange",
+                    "height": "orange",
+                    "4": "orange",
+                    "3": "orange",
+                    "0": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.drawImage(url, /x/, /y/, width, height)",
+            "use": "This function draws an image with the given url from the internet. It is positioned the same as the normal 'image' method.",
+            "example": "draw.drawImage('https://upload.wikimedia.org/wikipedia/etc/image.jpg', 0, 0);",
+            "to_highlight": 
+                {
+                    "drawImage": "blue",
+                    "url": "green",
+                    "'https://upload.wikimedia.org/wikipedia/etc/image.jpg'": "green",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "width": "orange",
+                    "height": "orange",
+                    "0": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "boolean value",
+            "name": "draw.imageSmoothingEnabled /=/ bool",
+            "use": "This property determines when images are drawn, if the image is blurred slightly to clean sharp edges. The default is 'true' but it can be turned off.",
+            "example": "draw.imageSmoothingEnabled /=/ false;\n\ndraw.|image|('img.svg', 300, 400);",
+            "to_highlight": 
+                {
+                    "bool": "orange",
+                    "false": "orange",
+                    "/=/": "darkblue",
+                    "4": "orange",
+                    "3": "orange",
+                    "0": "orange",
+                    "'img.svg'": "green",
+                    "|image|": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.imageSmoothingQuality /=/ quality",
+            "use": "This value sets what the quality is of image smoothing (Blurring the image slightly to remove sharp edges). The property can be 'low', 'medium' or 'high'.",
+            "example": "draw.imageSmoothingQuality /=/ 'high';\n\ndraw.|image|('img.svg', 300, 400);",
+            "to_highlight": 
+                {
+                    "quality": "green",
+                    "'high'": "green",
+                    "/=/": "darkblue",
+                    "4": "orange",
+                    "3": "orange",
+                    "0": "orange",
+                    "'img.svg'": "green",
+                    "|image|": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.beginPath()",
+            "use": "This function begins a stroke path that can be used to draw custom shapes. (Such as circles, arcs, abnormal polygons, etc.)",
+            "example": "draw.beginPath();",
+            "to_highlight": 
+                {
+                    "beginPath": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.closePath()",
+            "use": "This function closes a stroke path to be drawn on the canvas with fill() or stroke().",
+            "example": "draw.closePath();",
+            "to_highlight": 
+                {
+                    "closePath": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.moveTo(/x/, /y/)",
+            "use": "This function moves the invisible 'pen' when drawing a path to a set location.",
+            "example": "draw.beginPath();\ndraw.moveTo(400, 400);",
+            "to_highlight": 
+                {
+                    "moveTo": "blue",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "4": "orange",
+                    "0": "orange",
+                    "beginPath": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.lineTo(/x/, /y/)",
+            "use": "This function uses the invisible 'pen' to draw a line from it's current point to the next.",
+            "example": "draw.beginPath();\ndraw.moveTo(400,400);\ndraw.lineTo(200, 200);",
+            "to_highlight": 
+                {
+                    "lineTo": "blue",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "2": "orange",
+                    "0": "orange",
+                    "moveTo": "blue",
+                    "4": "orange",
+                    "beginPath": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.fill()",
+            "use": "This function draws the current path as a filled shape.",
+            "example": "draw.fill();",
+            "to_highlight": 
+                {
+                    "fill": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.stroke()",
+            "use": "This function draws the current path's outline as a stroke.",
+            "example": "draw.stroke();",
+            "to_highlight": 
+                {
+                    "stroke": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.arc(/x/, /y/, /r/, startAngle, endAngle)",
+            "use": "This function adds an arc (Circle, semi-circle, etc.) to the current path.",
+            "example": "draw.arc(400, 400, 50, 0, Math.PI);",
+            "to_highlight": 
+                {
+                    "arc": "blue",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "/r/": "orange",
+                    "startAngle": "orange",
+                    "endAngle": "orange",
+                    "4": "orange",
+                    "0": "orange",
+                    "5": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.arcTo(x0, y0, x1, y1, /r/)",
+            "use": "This function adds an arc (Circle, semi-circle, etc.) to the current path from a desired point (x0, y0) to another (x1, y1).",
+            "example": "draw.arcTo(400, 400, 50, 40, 80);",
+            "to_highlight": 
+                {
+                    "arcTo": "blue",
+                    "x0": "orange",
+                    "y0": "orange",
+                    "x1": "orange",
+                    "y1": "orange",
+                    "/r/": "orange",
+                    "4": "orange",
+                    "0": "orange",
+                    "5": "orange",
+                    "8": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.setLineDash(segments)",
+            "use": "Makes it so that 'stroked' lines are dashed rather than a solid line. The first number is the length of each dash, and the second number is the distance between dashes. To turn off dashes, use an empty array.",
+            "example": "draw.setLineDash([5, 15]);\n\ndraw.beginPath();\ndraw.moveTo(400, 400);\ndraw.lineTo(200, 200);\n\ndraw.stroke();",
+            "to_highlight": 
+                {
+                    "setLineDash": "blue",
+                    "2": "orange",
+                    "0": "orange",
+                    "1": "orange",
+                    "5": "orange",
+                    "moveTo": "blue",
+                    "4": "orange",
+                    "beginPath": "blue",
+                    "stroke": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "float value",
+            "name": "draw.lineDashOffset /=/ dashOffset",
+            "use": "This property shifts the dashes on dashed lines a desired pixel amount.",
+            "example": "draw.lineDashOffset /=/ 4;\ndraw.setLineDash([5, 15]);\n\ndraw.beginPath();\ndraw.moveTo(400, 400);\ndraw.lineTo(200, 200);\n\ndraw.stroke();",
+            "to_highlight": 
+                {
+                    "dashOffset": "orange",
+                    "4": "orange",
+                    "1": "orange",
+                    "5": "orange",
+                    "/=/": "darkblue",
+                    "setLineDash": "blue",
+                    "2": "orange",
+                    "0": "orange",
+                    "moveTo": "blue",
+                    "beginPath": "blue",
+                    "stroke": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.lineCap /=/ cap",
+            "use": "This property changes how the ends of lines (Strokes or paths) are drawn. Its default value is 'butt' but can also be set to 'round', or 'square'.",
+            "example": "draw.lineCap /=/ 'round';\n\ndraw.beginPath();\ndraw.moveTo(400, 400);\ndraw.lineTo(200, 200);\n\ndraw.stroke();",
+            "to_highlight": 
+                {
+                    "cap": "green",
+                    "'round'": "green",
+                    "/=/": "darkblue",
+                    "1": "orange",
+                    "5": "orange",
+                    "4": "orange",
+                    "2": "orange",
+                    "0": "orange",
+                    "moveTo": "blue",
+                    "beginPath": "blue",
+                    "stroke": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.lineJoin /=/ joinType",
+            "use": "This property adjusts how lines look when they are strung together. The possible values are 'round', 'bevel', and 'meter'.",
+            "example": "draw.lineJoin /=/ 'round';\n\ndraw.beginPath();\ndraw.moveTo(400, 400);\ndraw.lineTo(200, 200);\n\ndraw.stroke();",
+            "to_highlight": 
+                {
+                    "joinType": "green",
+                    "'round'": "green",
+                    "/=/": "darkblue",
+                    "1": "orange",
+                    "5": "orange",
+                    "4": "orange",
+                    "2": "orange",
+                    "0": "orange",
+                    "moveTo": "blue",
+                    "beginPath": "blue",
+                    "stroke": "blue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "float value",
+            "name": "draw.lineWidth /=/ width",
+            "use": "This property changes how large lines are rendered.",
+            "example": "draw.lineWidth /=/ 5;",
+            "to_highlight": 
+                {
+                    "width": "orange",
+                    "5": "orange",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "float value",
+            "name": "draw.miterLimit /=/ miter",
+            "use": "When the lineJoin property is 'miter' this changes how sharp those edges on the lines will be.",
+            "example": "draw.lineWidth /=/ 20;",
+            "to_highlight": 
+                {
+                    "miter": "orange",
+                    "20": "orange",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.fillText(text, /x/, /y/, width, height)",
+            "use": "This function draws 'filled' text the the screen at position (x, y). The (width) and (height) parameters are not required, but will stretch the text if provided.",
+            "example": "draw.fillText('Hello World!', 200, 400);",
+            "to_highlight": 
+                {
+                    "fillText": "blue",
+                    "text": "green",
+                    "'Hello World!'": "green",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "width": "orange",
+                    "height": "orange",
+                    "4": "orange",
+                    "0": "orange",
+                    "2": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "function",
+            "name": "draw.strokeText(text, /x/, /y/, width, height)",
+            "use": "This function draws an outline of text the the screen at position (x, y). The (width) and (height) parameters are not required, but will stretch the text if provided.",
+            "example": "draw.fillText('Hello World!', 200, 400);",
+            "to_highlight": 
+                {
+                    "strokeText": "blue",
+                    "text": "green",
+                    "'Hello World!'": "green",
+                    "/x/": "orange",
+                    "/y/": "orange",
+                    "width": "orange",
+                    "height": "orange",
+                    "4": "orange",
+                    "0": "orange",
+                    "2": "orange"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.font /=/ cssFont",
+            "use": "This function sets the font to be used by the 'strokeText' or 'fillText' methods.",
+            "example": "draw.font /=/ '50px Arial';",
+            "to_highlight": 
+                {
+                    "cssFont": "green",
+                    "'50px Arial'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.textAlign /=/ cssAlign",
+            "use": "This function sets the text alignment that will be used by the 'strokeText' or 'fillText' methods.",
+            "example": "draw.textAlign /=/ 'center';",
+            "to_highlight": 
+                {
+                    "cssAlign": "green",
+                    "'center'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.fontKerning /=/ cssKerning",
+            "use": "This defines how the 'text' methods use kerning. Kerning is the relative space of each cahracter, so without curning all characters are evenly spaced. The values can be 'auto', 'none' or 'normal'.",
+            "example": "draw.fontKerning /=/ 'none';",
+            "to_highlight": 
+                {
+                    "cssKerning": "green",
+                    "'none'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.fontStretch /=/ cssStretch",
+            "use": "This defines how the 'text' methods stretch the text. It's value can be 'ultra-condensed', 'extra-condensed', 'condensed', 'semi-condensed', 'normal', 'semi-exapnded', 'expanded', 'extra-expanded' or 'ultra-expanded'.",
+            "example": "draw.fontStretch /=/ 'semi-condensed';",
+            "to_highlight": 
+                {
+                    "cssStretch": "green",
+                    "'semi-condensed'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.fontVariantCaps /=/ cssVariantCaps",
+            "use": "This defines how the 'text' methods capitalize the text and size letters. It's possible values are 'normal', 'small-caps', 'all-small-caps', 'petite-caps', 'all-petite-caps', 'unicase' and 'titling-caps'.",
+            "example": "draw.fontVariantCaps /=/ 'small-caps';",
+            "to_highlight": 
+                {
+                    "cssVariantCaps": "green",
+                    "'small-caps'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.letterSpacing /=/ cssSpacing",
+            "use": "This defines how the 'text' methods space letters. This changes how far apart each letter is from it's surrounding letters.",
+            "example": "draw.letterSpacing /=/ '5px';",
+            "to_highlight": 
+                {
+                    "cssSpacing": "green",
+                    "'5px'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.wordSpacing /=/ cssSpacing",
+            "use": "This defines how the 'text' methods space words. Depending on the number, it changes how large ' ' or (Space) characters are.",
+            "example": "draw.letterSpacing /=/ '10px';",
+            "to_highlight": 
+                {
+                    "cssSpacing": "green",
+                    "'10px'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.textBaseline /=/ baselineValue",
+            "use": "This defines how the 'text' methods draw the letters centered. It changes what the center of the text's 'Y' value is. It's possible values are 'top', 'hanging', 'middle', 'alphabetic' (default), 'ideographic', and 'bottom'.",
+            "example": "draw.letterSpacing /=/ 'alphabetic';",
+            "to_highlight": 
+                {
+                    "baselineValue": "green",
+                    "'alphabetic'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.textRendering /=/ renderingType",
+            "use": "This defines how the 'text' methods render the text on the canvas. It's possible values are 'auto' (default), 'optimizeSpeed', 'optimizeLegibility', and 'geometricPrecision'.",
+            "example": "draw.textRendering /=/ 'auto';",
+            "to_highlight": 
+                {
+                    "renderingType": "green",
+                    "'auto'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.fillStyle /=/ cssColor",
+            "use": "This function sets the fill color for all methods that 'fill' things.",
+            "example": "draw.fillStyle /=/ 'purple';",
+            "to_highlight": 
+                {
+                    "cssColor": "green",
+                    "'purple'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.strokeStyle /=/ cssColor",
+            "use": "This function sets the stroke color for all methods that draw outlines.",
+            "example": "draw.strokeStyle /=/ 'darkgrey';",
+            "to_highlight": 
+                {
+                    "cssColor": "green",
+                    "'darkgrey'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.filter /=/ cssFilter",
+            "use": "This sets a css filter to be applied to whatever is drawn on the canvas. It can receive the value of 'none' for the filter to be cleared.",
+            "example": "draw.filter /=/ 'blur(4px)';",
+            "to_highlight": 
+                {
+                    "cssFilter": "green",
+                    "'blur(4px)'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "float value",
+            "name": "draw.globalAlpha /=/ alpha",
+            "use": "This set the 'alpha' of the drawer when drawing on the canvas. Whatever is drawn after being set has the new alpha, which defines opacity as a value between 0 and 1.",
+            "example": "draw.globalAlpha /=/ 0.5;",
+            "to_highlight": 
+                {
+                    "alpha": "orange",
+                    "0.5": "orange",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.globalCompositeOperation /=/ compositeOperation",
+            "use": "This property sets the type of compositing operation to apply when drawing new shapes. This affects how shapes drawn on top of each other interact and look. The default value is 'source-over' but there are so many values for this, and as it cannot be written down what all do here, we suggest you play with them. The possible values are 'source-over', 'source-in', 'source-out', 'source-atop', 'destination-over', 'destination-in', 'destination-out', 'destination-atop', 'lighter', 'copy', 'xor', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', and 'luminosity'.",
+            "example": "draw.globalCompositeOperation /=/ 'xor';",
+            "to_highlight": 
+                {
+                    "compositeOperation": "green",
+                    "'xor'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.shadowColor /=/ cssColor",
+            "use": "This property sets the color of a shadow that will be drawn behind shapes.",
+            "example": "draw.shadowColor /=/ 'orange';",
+            "to_highlight": 
+                {
+                    "cssColor": "green",
+                    "'orange'": "green",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.shadowBlur /=/ blurAmt",
+            "use": "This property adjusts the clearness of shadows drawn behind shapes.",
+            "example": "draw.shadowBlur /=/ 15;",
+            "to_highlight": 
+                {
+                    "blurAmt": "orange",
+                    "15": "orange",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.shadowOffsetX /=/ offsetX",
+            "use": "This property adjusts the offset of shadows in the X direction.",
+            "example": "draw.shadowOffsetX /=/ 4;",
+            "to_highlight": 
+                {
+                    "offsetX": "orange",
+                    "4": "orange",
+                    "/=/": "darkblue"
+                }
+        },
+        {
+            "module": "method",
+            "type": "string value",
+            "name": "draw.shadowOffsetY /=/ offsetY",
+            "use": "This property adjusts the offset of shadows in the Y direction.",
+            "example": "draw.shadowOffsetX /=/ 7;",
+            "to_highlight": 
+                {
+                    "offsetY": "orange",
+                    "7": "orange",
+                    "/=/": "darkblue"
+                }
+        }
+    ]
+}
