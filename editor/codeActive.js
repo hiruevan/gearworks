@@ -46,6 +46,11 @@ function gw_clearAllSounds() {
 function gw_stop() {
     forever = function() {}
     gw_clearAllSounds();
+    
+    let src = gw_canvas.toDataURL();
+    console.log("Possible Thumnail:");
+    console.log(src);
+
     gw_ctx.fillStyle = "white";
     gw_ctx.fillRect(0, 0, 800, 800);
     try {
