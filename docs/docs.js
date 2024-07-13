@@ -84,7 +84,7 @@ docs.load = function(name) {
         }
 
         container.innerHTML += '</div>';
-        document.getElementsByClassName('content')[0].appendChild(container);
+        document.getElementById('list').appendChild(container);
     } else {
         console.warn("The User has requested a DOCS page that does not exist.");
     }
@@ -104,7 +104,7 @@ docs.setupSearch = function(query) {
     container.classList.add("container");
     container.innerHTML += '<p><a href="./docs">Back</a></p><h2>Master Docs Search > ' + n + '</h2><ul class="results"></ul>';
 
-    document.getElementsByClassName('content')[0].appendChild(container);
+    document.getElementById('list').appendChild(container);
 
     return n;
 }
