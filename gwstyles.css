@@ -123,13 +123,22 @@ body {
     overflow-y: scroll;
 }
 
-div.container {
-    margin-left: 2%;
-    margin-right: 2%;
+div.container, footer {
     align-items: stretch;
     display: flex;
-    flex-direction: column;
     flex-wrap: nowrap;
+}
+div.container {
+    flex-direction: column;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+footer {
+    flex-direction: row;
+    padding: 1%;
+    background-color: ghostwhite;
+    text-align: center;
+    justify-content: center;
 }
 
 div.code-controls {
