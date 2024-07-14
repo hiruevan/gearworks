@@ -136,7 +136,7 @@ div.container {
 footer {
     flex-direction: row;
     padding: 1%;
-    background-color: ghostwhite;
+    background-color: rgb(150, 150, 150);
     text-align: center;
     justify-content: center;
 }
