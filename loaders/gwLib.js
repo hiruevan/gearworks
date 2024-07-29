@@ -12,7 +12,7 @@ gw_ctx.background = function(color) {
 
 // draw obj
 var draw = gw_ctx;
-draw.image = function(pUrl, x, y, h = null, w = null, c = null, d = null) {
+draw.image = function(pUrl, x, y, h = null, w = null, c = null, d = null, e = null, f = null) {
     let itemName = pUrl;
     let url;
     if (gw_cabinet.imageNames.includes(itemName)) {
@@ -31,10 +31,10 @@ draw.image = function(pUrl, x, y, h = null, w = null, c = null, d = null) {
     if (h == null && w == null) {
         this.drawImage(url, x, y);
     } else {
-        if (c == null && d == null) {
+        if (c == null && d == null && e == null && f == null) {
             this.drawImage(url, x, y, h, w);
         } else {
-            this.drawImage(url, x, y, h, w, c, d);
+            this.drawImage(url, x, y, h, w, c, d, e, f);
         }
     }
 }
