@@ -23,7 +23,7 @@ window.onload = function() {
         }
     }
     if (projectToLoad.length > 1) { // Load project
-        const fileContent = gw_loadFile(projectToLoad);
+        const fileContent = gw_loadFile(decodeURI(projectToLoad));
         gw_loadProjectFile(fileContent);
     }
 }
