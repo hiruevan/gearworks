@@ -69,7 +69,7 @@ tutorials.load = function(name) {
                 container.innerHTML += '<p>' + this[n][i].desc + '</p>';
             } else if (this[n][i].module == 'download') { // Downloadable gw1 files
                 container.innerHTML += '<h3>' + this[n][i].name + '</h3>';
-                container.innerHTML += '<p><a href="' + this[n][i].location + '" download>Download</a> | <a href="TBD">Load in Editor</a></p>';
+                container.innerHTML += '<p><a href="' + this[n][i].location + '" download>Download</a> | <a href="./editor?loc=' + encodeURI(this[n][i].location) + '" target="_blank">Load in Editor</a></p>';
             } else if (this[n][i].module == 'desc') { // Just plain text
                 if (this[n][i].name !== null) {
                     container.innerHTML += '<h3>' + this[n][i].name + '</h3>';
