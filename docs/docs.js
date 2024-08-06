@@ -19,6 +19,9 @@ function sortAsc(arr) {
 let jsonFile = loadFile("./docs/docList.json");
 const docs = JSON.parse(jsonFile);
 
+// Load the global stuff from JSON
+const globalStyle = JSON.parse(loadFile("./docs/globalColoring.json"));
+
 // Loads docs into html
 docs.load = function(name) {
     let n = '';
@@ -38,13 +41,21 @@ docs.load = function(name) {
                 // Color the code
                 let coloredName = this[n][i].name;
                 let coloredExample = this[n][i].example;
-                let strsToHighlight = Object.keys(this[n][i]["to_highlight"])
+                let strsToHighlight = Object.keys(this[n][i]["to_highlight"]);
+                let autoToHighlight = Object.keys(globalStyle);
                 for (let m = 0; m < strsToHighlight.length; m++) {
                     coloredName = coloredName.replaceAll(strsToHighlight[m], "<span style='color: " + this[n][i]["to_highlight"][strsToHighlight[m]] + ";'>" + strsToHighlight[m] + "</span>");
                     if (this[n][i]["to_highlight"][strsToHighlight[m]] == "blue") this[n][i]["to_highlight"][strsToHighlight[m]] = 'rgb(60, 85, 255)';
                     if (this[n][i]["to_highlight"][strsToHighlight[m]] == "darkblue") this[n][i]["to_highlight"][strsToHighlight[m]] = 'rgb(122, 40, 255)';
                     coloredExample = coloredExample.replaceAll(strsToHighlight[m], "<span style='color: " + this[n][i]["to_highlight"][strsToHighlight[m]] + ";'>" + strsToHighlight[m] + "</span>");
                 }
+
+                // for (let m = 0; m < autoToHighlight.length; m++) {
+                //     coloredName = coloredName.replaceAll(autoToHighlight[m], "<span style='color: " + globalStyle[autoToHighlight[m]] + ";'>" + autoToHighlight[m] + "</span>");
+                //     if (globalStyle[autoToHighlight[m]] == "blue") globalStyle[autoToHighlight[m]] = 'rgb(60, 85, 255)';
+                //     if (globalStyle[autoToHighlight[m]] == "darkblue") globalStyle[autoToHighlight[m]] = 'rgb(122, 40, 255)';
+                //     coloredExample = coloredExample.replaceAll(autoToHighlight[m], "<span style='color: " + globalStyle[autoToHighlight[m]] + ";'>" + autoToHighlight[m] + "</span>");
+                // }
 
                 // Fix anoying issue with x's, y's, z's a's, b's, c's, or r's in a function's parameters in their names
                 coloredName = coloredName.replaceAll("/x/", "x");
@@ -74,7 +85,7 @@ docs.load = function(name) {
                 container.innerHTML += '<p>' + this[n][i].desc + '</p>';
             } else if (this[n][i].module == 'download') { // Downloadable gw1 files
                 container.innerHTML += '<h3>' + this[n][i].name + '</h3>';
-                container.innerHTML += '<p><a href="' + this[n][i].location + '" download>Download</a> | <a href="TBD">Load in Editor</a></p>';
+                container.innerHTML += '<p><a href="' + this[n][i].location + '" download>Download</a> | <a href="./editor?loc=' + encodeURI(this[n][i].location) + '" target="_blank">Load in Editor</a></p>';
             } else if (this[n][i].module == 'desc') { // Just plain text
                 if (this[n][i].name !== null) {
                     container.innerHTML += '<h3>' + this[n][i].name + '</h3>';
