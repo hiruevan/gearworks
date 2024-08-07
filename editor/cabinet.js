@@ -6,6 +6,29 @@ let gw_cabinet = {
     soundUrls: []
 };
 
+// Remove from cabinet
+function gw_cabinetRemove(url, type) {
+    if (type == "image") {
+        if (!gw_cabinet.imageNames.includes(url)) return false;
+        let idx = gw_cabinet.imageNames.indexOf(url);
+        let img = document.getElementsByClassName("imported-image")[idx];
+        let txt = document.getElementsByClassName("image-text")[idx];
+        img.remove();
+        txt.remove();
+        gw_cabinet.imageNames.splice(idx, 1);
+        gw_cabinet.imageUrls.splice(idx, 1);
+    } else if (type == "sound") {
+        if (!gw_cabinet.soundNames.includes(url)) return false;
+        let idx = gw_cabinet.soundNames.indexOf(url);
+        let audio = document.getElementsByClassName("imported-sound")[idx];
+        let txt = document.getElementsByClassName("sound-text")[idx];
+        audio.remove();
+        txt.remove();
+        gw_cabinet.soundNames.splice(idx, 1);
+        gw_cabinet.soundUrls.splice(idx, 1);
+    }
+}
+
 // Images
 document.getElementById('img-upload').addEventListener('change', function() {
     if (this.files && this.files[0]) {
@@ -26,7 +49,7 @@ document.getElementById('img-upload').addEventListener('change', function() {
         gw_cabinet.imageNames.push(this.files[0].name);
 
         gw_imgToDataURL(img.src, function(url) {
-            document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + url + "'><p>" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + " <a style='font-size:15px' href='" + url + "' download='" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + "'>Download</a></p>";
+            document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + url + "'><p class='image-text'>" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + " <a style='font-size:15px;' href='" + url + "' download='" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + '", "image")' + "'>Remove</a></p>";
             gw_cabinet.imageUrls.push(url);
         }, ext);
     }
@@ -64,7 +87,7 @@ document.getElementById('sound-upload').addEventListener('change', function() {
 
 function gw_addResult(r) {
     let url = r;
-    document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + url + "' controls></audio><p>" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + " <a style='font-size:15px' href='" + url + "' download='" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + "'>Download</a></p>";
+    document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + url + "' controls></audio><p class='sound-text'>" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + " <a style='font-size:15px;' href='" + url + "' download='" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + '", "sound")' + ";'>Remove</a></p>";
     gw_cabinet.soundUrls.push(url);
 }
 
