@@ -183,12 +183,12 @@ function gw_loadProjectFile(text) {
                 document.getElementById("name-input").value = pName;
                 editor.setValue(content);
                 for (let i = 0; i < gw_cabinet.imageNames.length; i++) {
-                    document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + gw_cabinet.imageUrls[i] + "'><p>" + gw_cabinet.imageNames[i] + " <a style='font-size:15px' href='" + gw_cabinet.imageUrls[i] + "' download='" + gw_cabinet.imageNames[i] + "'>Download</a></p>";
+                    document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + gw_cabinet.imageUrls[i] + "'><p class='image-text'>" + gw_cabinet.imageNames[i] + " <a style='font-size:15px;' href='" + gw_cabinet.imageUrls[i] + "' download='" + gw_cabinet.imageNames[i] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.imageNames[i] + '", "image")' + "'>Remove</a></p>";
                 }
                 console.log(gw_cabinet.soundNames.length);
                 for (let i = 0; i < gw_cabinet.soundNames.length; i++) {
                     console.log("a");
-                    document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + gw_cabinet.soundUrls[i] + "' controls></audio><p>" + gw_cabinet.soundNames[i] + " <a style='font-size:15px' href='" + gw_cabinet.soundUrls[i] + "' download='" + gw_cabinet.soundNames[i] + "'>Download</a></p>";
+                    document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + gw_cabinet.soundUrls[i] + "' controls></audio><p class='sound-text'>" + gw_cabinet.soundNames[i] + " <a style='font-size:15px;' href='" + gw_cabinet.soundUrls[i] + "' download='" + gw_cabinet.soundNames[i] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.soundNames[i] + '", "sound")' + ";'>Remove</a></p>";
                 }
                 for (let i = 0; i < xtnsFiles.length; i++) {
                     gw_loadExtension(gw_readExtensionFile(xtnsFiles[i]));
@@ -288,11 +288,15 @@ document.getElementById("ext-uploader").addEventListener("change", function() {
 });
 
 function gw_loadExtension(ext) {
+    if (document.getElementsByClassName(ext.name + "-" + ext.author).length > 0) {
+        alert("You already loaded that extension.");
+        return false;
+    };
     xtns.push(ext);
     let d = document.createElement("div");
     d.classList.add(ext.name.replaceAll(" ", "_") + "-" + ext.author.replaceAll(" ", "_"));
     d.style = "background-color: " + ext.color;
-    d.innerHTML += "<p><b>" + ext.name + "</b> <a href='javascript:gw_download(" + '"' + ext.name + '.gwx"' + ", gw_getExtensionFile(xtns[" + (xtns.length-1) + "]));'>Download</a></p>";
+    d.innerHTML += "<p><b>" + ext.name + "</b> <a href='javascript:gw_download(" + '"' + ext.name + '.gwx"' + ", gw_getExtensionFile(xtns[" + (xtns.length-1) + "]));'>Download</a> <a href='javascript:gw_xtnRemove(" + '"' + (ext.name) + '"' + ")'>Remove</a></p>";
     d.innerHTML += "<p><em>" + ext.overveiw + "</em></p>";
     d.innerHTML += "<p>" + ext.docs + "</p>";
     document.getElementsByClassName("extension-docs-holder")[0].appendChild(d);
@@ -302,4 +306,18 @@ function gw_loadExtension(ext) {
     s.textContent = ext.js;
     s.classList.add("ext-script");
     document.body.appendChild(s);
+}
+
+function gw_xtnRemove(xtnName) {
+    let idx;
+    for (let i = 0; i < xtns.length+1; i++) {
+        if (i > xtns.length) return false;
+        if (xtns[i].name == xtnName) {
+            idx = i;
+            break;
+        }
+    }
+
+    document.getElementsByClassName(xtnName + "-" + xtns[idx].author)[0].remove();
+    xtns.splice(idx, 1);
 }
