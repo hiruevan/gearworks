@@ -26,7 +26,7 @@ document.getElementById('img-upload').addEventListener('change', function() {
         gw_cabinet.imageNames.push(this.files[0].name);
 
         gw_imgToDataURL(img.src, function(url) {
-            document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + url + "'><p>" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + "</p>";
+            document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + url + "'><p>" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + " <a style='font-size:15px' href='" + url + "' download='" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + "'>Download</a></p>";
             gw_cabinet.imageUrls.push(url);
         }, ext);
     }
@@ -64,7 +64,7 @@ document.getElementById('sound-upload').addEventListener('change', function() {
 
 function gw_addResult(r) {
     let url = r;
-    document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + url + "' controls></audio><p>" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + "</p>";
+    document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + url + "' controls></audio><p>" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + " <a style='font-size:15px' href='" + url + "' download='" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + "'>Download</a></p>";
     gw_cabinet.soundUrls.push(url);
 }
 
