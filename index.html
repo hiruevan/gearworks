@@ -1,42 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Gearworks | Home</title>
-	<link rel="shortcut icon" type="image/x-icon" href="./images/Gw-Favicon.svg">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="./gwstyles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gear Works | Home</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/Gw-Favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./gwstyles.css">
 </head>
 <body>
-	<div class="top-bar">
-		<a href=""><img src="./images/Logo1.svg"></a>
-		<span><button onclick="window.location = './editor'">Editor</button></span>
-		<span><button onclick="window.location = './tutorials'">Tutorials</button></span>
-		<span><button onclick="window.location = './docs'">DOCS</button></span>
-		<span><button onclick="window.location = './projects'">Projects</button></span>
+    <div class="top-bar">
+        <a href=""><img src="./images/Logo1.svg" alt="Gear Works Logo"></a>
+        <span><button onclick="window.location = './editor'">Editor</button></span>
+        <span><button onclick="window.location = './tutorials'">Tutorials</button></span>
+        <span><button onclick="window.location = './docs'">DOCS</button></span>
+        <span><button onclick="window.location = './projects'">Projects</button></span>
     </div>
-	<div class="content scroll">
-		<div class="container">
-			<h1>Welcome to Gear Works!</h1>
-			<h2>About</h2>
-			<p>Gear Works is a new programming website, similar to <a href="https://scratch.mit.edu">Scratch</a>. It is designed to help 12-16 year-olds learn how to code, by using the best teacher: Creativity. This project is currently in beta, but can be used. <em>(This project was created by four highschoolers, and will be finished this summer!)</em></p>
-			<p>You can submit feedback and bugs <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7u1IZbc0sBgVzWqmlQwkh2IdUmiKuuI7MPvtfCP4A6a3l9g/viewform" target="_blank">here</a>.</p>
+    <div class="content scroll">
+        <div class="container">
+            <h1>Welcome to Gear Works!</h1>
 
-			<h2>Sample Projects</h2>
+            <h2>About</h2>
+			<p>Gear Works is an open-source website created by 4 highschoolers who absolutly love computer programming. They are keen on enhancing the creativity and learning experience of middle and high school students in computer science. Founded by Evan Hill, our platform complements traditional teaching methods and aims to inspire the next generation of programmers.</p>
+			<p>The journey of Gear Works began when Evan Hill was in 7th grade. Faced with a lack of creativity-driven educational tools, Evan and his team transformed a simple idea into a comprehensive platform designed to foster independent learning and creativity.</p>
+			<p>Meet our team:</p>
 			<ul>
-				<li>Basic Sample: <a href="./samples/GW_Sample.gw1" download>Download</a> | <a href="./editor?sample=GW_Sample" target="_blank">Load in our Editor</a></li>
-				<li>Blue Jumper: <a href="./samples/Blue_Jumper.gw1" download>Download</a> | <a href="./editor?sample=Blue_Jumper" target="_blank">Load in our Editor</a></li>
-				<li>Classic Snake: <a href="./samples/Classic_Snake.gw1" download>Download</a> | <a href="./editor?sample=Classic_Snake" target="_blank">Load in our Editor</a></li>
+				<li><strong>Evan Hill</strong> - Project Leader</li>
+				<li><strong>Nathan Malaman</strong> - Web Designer and Artist</li>
+				<li><strong>Parker Budd</strong> and <strong>Katie Kimmel</strong> - Supporting Programmers</li>
 			</ul>
-			<br><br><br>
-			
-		</div>
-		<footer>
-			<a href="./legal">Legal</a> | <a href="./about">About</a> | <a href="https://github.com/hiruevan/gearworks?tab=readme-ov-file" target="_blank">Source Code</a> | <a href="">Donate</a>
-		</footer>
+			<p>Inspired by MIT's <a href="https://scratch.mit.edu" target="_blank">Scratch</a>, Gear Works offers a creativity-driven editor, a customizable library, comprehensive tutorials, and unique extensions created by both users and teachers. Our platform complements existing resources, supporting various learning styles and promoting hands-on engagement with coding. Other resources recomended by our team include <a href="https://www.khanacademy.org/computing/computer-programming" target="_blank">Khan Acadamy</a>, <a href="https://code.org" target="_blank">Code.org</a>, and <a href="https://codehs.com/" target="_blank">CodeHS</a></p>
+			<p>We have exciting updates in the pipeline, including the introduction of new official extensions and user accounts. Additionally, we plan to host monthly game jams to encourage creativity and build a vibrant community.</p>
+			<p>Explore Gear Works and join us in revolutionizing computer science education! Let's start by click "Editor" on the navigation bar!</p>
+
+            <h2>Our Sample Projects</h2>
+            <ul>
+                <div class="grid-container">
+					<div class="grid-item">
+						<a href="./editor?sample=Blue_Jumper">
+							<img src="./samples/Blue_Jumper.png" alt="Blue Jumper Thumbnail">
+							<h3>Blue Jumper</h3>
+						</a>
+					</div>
+					<div class="grid-item">
+						<a href="./editor?sample=Classic_Snake">
+							<img src="./samples/Classic_Snake.png" alt="Classic Snake Thumbnail">
+							<h3>Classic Snake</h3>
+						</a>
+					</div>
+					<div class="grid-item">
+						<a href="./editor?sample=GW_Sample">
+							<img src="./samples/GW_Sample.png" alt="Gear Works Sample Project Thumbnail">
+							<h3>Gear Works Sample Project</h3>
+						</a>
+					</div>
+				</div>
+            </ul>
+            <br><br><br>
+
+			<h2>Project README</h2>
+			<p>A README is a file that is included with most software. Because Gear Works is an open-source project, you can also access the README with our source-code linked at the bottom of the page.</p>
+
+			<!--Load README-->
+			<script>
+				function loadFile(filePath) {
+					var result = null;
+					var xmlhttp = new XMLHttpRequest();
+					xmlhttp.open("GET", filePath, false);
+					xmlhttp.send();
+					if (xmlhttp.status==200) {
+					result = xmlhttp.responseText;
+					}
+					return result;
+				}
+				function markdownToHtml(md) {
+					// Split the markdown content into lines
+					const lines = md.split('\n');
+					
+					let html = '';
+					let currentLine = '';
+					
+					// Loop through each line
+					for (let line of lines) {
+						// Check for headings
+						if (line.startsWith('# ')) {
+							html += `<h3>${line.substring(2)}</h3><br>`;
+						} else if (line.startsWith('## ')) {
+							// Extract edge name
+							currentLine = line.substring(3, line.lastIndexOf('(') - 1);
+							// Build HTML for edge with button
+							html += `<h4>${line.substring(3)}</h4><br>`;
+						} else {
+							// Convert bold text
+							line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+							// Convert italic text
+							line = line.replace(/\*(.*?)\*/g, '<em>$1</em>');
+							// Normal paragraph text
+							html += `<p>${line}</p>`;
+						}
+    					}
+    
+					return html;
+				}
+	
+				let file = loadFile("./README.md");
+				let html = markdownToHtml(file);
+				
+				html = html.replaceAll("\n", "<br>");
+				document.getElementsByClassName("container")[0].innerHTML += "<div class='README' style='background:lightgrey; padding:10px; margin:25px;'>" + html + "</div>";
+			</script>
+            
+        </div>
+        <footer>
+            <a href="./legal">Legal</a> | <a href="./about">About</a> | <a href="https://github.com/hiruevan/gearworks?tab=readme-ov-file" target="_blank">Source Code</a> | <a href="">Donate</a>
+        </footer>
     </div>
 </body>
 </html>
