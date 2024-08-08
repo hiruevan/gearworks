@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00:12.656 --> 00:00:14.257
+welcome to this tutorial on how to
+
+00:00:14.257 --> 00:00:17.108
+animate using sprite sheets. You'll see
+
+00:00:17.348 --> 00:00:19.268
+quite a bit of code here. It might be a
+
+00:00:19.268 --> 00:00:22.109
+little daunting at first, but you
+
+00:00:22.109 --> 00:00:25.030
+also see this flower character
+
+00:00:25.030 --> 00:00:27.671
+over here with animations in one
+
+00:00:27.671 --> 00:00:30.072
+image. We will be using that throughout
+
+00:00:30.072 --> 00:00:32.312
+this tutorial to animate this flower
+
+00:00:32.312 --> 00:00:34.393
+character and make them walk around.
+
