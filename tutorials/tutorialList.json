@@ -24,5 +24,111 @@
             "video": "01",
             "desc": "In this video, we will be creating a simple starter project where we will have the computer count upwards forever as well as saying their name is Bob. Being an obedient dog, it will continue doing this until we tell it to stop."
         }
+    ],
+    "Spritesheet Animation": [
+        {
+            "module": "desc",
+            "name": null,
+            "value": "In this tutorial, you will learn how to create a simple player controller, as well as animate a player using sprite sheets."
+        },
+        {
+            "module": "video",
+            "name": "Introduction",
+            "video": "00",
+            "desc": "This video will give you an idea of what is to come. Download or Load the starter project below so that you can follow along!"
+        },
+        {
+            "module": "download",
+            "location": "./tutorials/projects/spritesheet_starter.gw1",
+            "name": "Starter Project"
+        },
+        {
+            "module": "video",
+            "name": "Cropping and Modulus",
+            "video": "01",
+            "desc": "We will be going over how to 'cut' things out from images to create our animation. And will we also explain how modulus works and how it will be helpful for animating."
+        },
+        {
+            "module": "video",
+            "name": "Single Animations",
+            "video": "02",
+            "desc": "We will now begin to create specific animations from our 'cut' image using the knowledge gained previously."
+        },
+        {
+            "module": "video",
+            "name": "User Interaction",
+            "video": "03",
+            "desc": "Now we will create a simple player controller that will let the player move the character. Their animation's will also correspond to what they are doing!"
+        },
+        {
+            "module": "video",
+            "name": "Fliping an Image",
+            "video": "04",
+            "desc": "After you learn to flip any image, you can flip the character so that they face in the correct direction they're moving."
+        },
+        {
+            "module": "video",
+            "name": "Jumping",
+            "video": "05",
+            "desc": "Finaly, we will add the 'jump' animation and complete the project."
+        },
+        {
+            "module": "download",
+            "location": "./tutorials/projects/spritesheet_final.gw1",
+            "name": "Final Project"
+        }
+    ],
+    "Tile-Based Game": [
+        {
+            "module": "desc",
+            "name": null,
+            "value": "In this tutorial, we will construct a basic game loop to work for most games. We will use a sprite sheet to draw diverse worlds that you can create. It is suggested that you first complete our 'Sprite Animation' tutorial to first learn about sprit sheets, but it is not required."
+        },
+        {
+            "module": "video",
+            "name": "Introduction",
+            "video": "00",
+            "desc": "This video will give you an idea of what is to come. Download or Load the starter project below so that you can follow along!"
+        },
+        {
+            "module": "download",
+            "location": "./tutorials/projects/tile_starter.gw1",
+            "name": "Starter Project"
+        },
+        {
+            "module": "video",
+            "name": "Making a Tile Grid",
+            "video": "01",
+            "desc": "We are going to use the 'explorer_tiles' spritesheet to create a simple tile grid that we can scroll around with the arrow keys."
+        },
+        {
+            "module": "video",
+            "name": "Editing the Tile Grid using Math",
+            "video": "02",
+            "desc": "In this video, we are going to use simple math to edit the tile grid to no longer be perfectly uniform."
+        },
+        {
+            "module": "video",
+            "name": "Making a player controller",
+            "video": "03",
+            "desc": "We will now be adding a simple player to our game. This player can move around the world, and scolls the screen when they get too close to the edge."
+        },
+        {
+            "module": "video",
+            "name": "Editing the Tile Grid using an Array",
+            "video": "04",
+            "desc": "Using the new 'map' array, we can now create our own game worlds super easily. The game will read what is in the array, and using that information, generate the world acordingly."
+        },
+        {
+            "module": "video",
+            "name": "Player Collisions",
+            "video": "05",
+            "desc": "In this video, we will finaly finish the basic project by adding player collisions. The player will no longer be able to pass through tiles set by the map array!"
+        },
+        {
+            "module": "download",
+            "location": "./tutorials/projects/tile_final.gw1",
+            "name": "Final Project"
+        }
     ]
 }
