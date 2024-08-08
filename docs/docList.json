@@ -479,7 +479,7 @@
             "type": "string value",
             "name": "draw.wordSpacing ~= @cssSpacing",
             "use": "This defines how the 'text' methods space words. Depending on the number, it changes how large ' ' or (Space) characters are.",
-            "example": "draw.wordSpacing ~= '10px';",
+            "example": "draw.wordSpacing ~= '¹⁰px';",
             "to_highlight": 
                 {
                     "@cssSpacing": "green",
