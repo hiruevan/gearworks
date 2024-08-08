@@ -47,6 +47,7 @@ END
 */
 
 document.getElementById("project-uploader").addEventListener("change", function() {
+    gw_toggleFileBox();
     const ext = this.files[0].name.split(".")[1];
 
     if (ext !== "gw1") {
@@ -248,6 +249,7 @@ function gw_getExtensionFile(obj) {
 }
 
 function gw_downloadProject() {
+    gw_toggleFileBox();
     let name = document.getElementById("name-input").value;
 
     if (name == "") {
