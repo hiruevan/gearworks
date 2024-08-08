@@ -43,6 +43,7 @@ docs.load = function(name) {
                 let coloredExample = this[n][i].example;
                 let strsToHighlight = Object.keys(this[n][i]["to_highlight"]);
                 let autoToHighlight = Object.keys(globalStyle);
+
                 for (let m = 0; m < strsToHighlight.length; m++) {
                     coloredName = coloredName.replaceAll(strsToHighlight[m], "<span style='color: " + this[n][i]["to_highlight"][strsToHighlight[m]] + ";'>" + strsToHighlight[m] + "</span>");
                     if (this[n][i]["to_highlight"][strsToHighlight[m]] == "blue") this[n][i]["to_highlight"][strsToHighlight[m]] = 'rgb(60, 85, 255)';
@@ -50,30 +51,39 @@ docs.load = function(name) {
                     coloredExample = coloredExample.replaceAll(strsToHighlight[m], "<span style='color: " + this[n][i]["to_highlight"][strsToHighlight[m]] + ";'>" + strsToHighlight[m] + "</span>");
                 }
 
-                // for (let m = 0; m < autoToHighlight.length; m++) {
-                //     coloredName = coloredName.replaceAll(autoToHighlight[m], "<span style='color: " + globalStyle[autoToHighlight[m]] + ";'>" + autoToHighlight[m] + "</span>");
-                //     if (globalStyle[autoToHighlight[m]] == "blue") globalStyle[autoToHighlight[m]] = 'rgb(60, 85, 255)';
-                //     if (globalStyle[autoToHighlight[m]] == "darkblue") globalStyle[autoToHighlight[m]] = 'rgb(122, 40, 255)';
-                //     coloredExample = coloredExample.replaceAll(autoToHighlight[m], "<span style='color: " + globalStyle[autoToHighlight[m]] + ";'>" + autoToHighlight[m] + "</span>");
-                // }
-
-                // Fix anoying issue with x's, y's, z's a's, b's, c's, or r's in a function's parameters in their names
-                coloredName = coloredName.replaceAll("/x/", "x");
-                coloredName = coloredName.replaceAll("/y/", "y");
-                coloredName = coloredName.replaceAll("/z/", "z");
-                coloredName = coloredName.replaceAll("/a/", "a");
-                coloredName = coloredName.replaceAll("/b/", "b");
-                coloredName = coloredName.replaceAll("/c/", "c");
-                coloredName = coloredName.replaceAll("/r/", "r");
-
-                // Fix same issue with operators
-                coloredName = coloredName.replaceAll("/=/", "=");
-                coloredExample = coloredExample.replaceAll("/=/", "=");
+                for (let m = 0; m < autoToHighlight.length; m++) {
+                    coloredName = coloredName.replaceAll(autoToHighlight[m], "<span style='color: " + globalStyle[autoToHighlight[m]] + ";'>" + autoToHighlight[m] + "</span>");
+                    console.log(coloredName);
+                    if (globalStyle[autoToHighlight[m]] == "blue") globalStyle[autoToHighlight[m]] = 'rgb(60, 85, 255)';
+                    if (globalStyle[autoToHighlight[m]] == "darkblue") globalStyle[autoToHighlight[m]] = 'rgb(122, 40, 255)';
+                    coloredExample = coloredExample.replaceAll(autoToHighlight[m], "<span style='color: " + globalStyle[autoToHighlight[m]] + ";'>" + autoToHighlight[m] + "</span>");
+                }
 
                 // Make example multiline
                 coloredExample = coloredExample.replaceAll("\n", "<br>");
 
+                // Use custom syntax
+                coloredName = coloredName.replaceAll("|", "");
                 coloredExample = coloredExample.replaceAll("|", "");
+                coloredName = coloredName.replaceAll("@", "");
+                coloredExample = coloredExample.replaceAll("@", "");
+                coloredName = coloredName.replaceAll("$", "");
+                coloredExample = coloredExample.replaceAll("$", "");
+                coloredName = coloredName.replaceAll("~", "");
+                coloredExample = coloredExample.replaceAll("~", "");
+                
+                // Numbers
+                coloredExample = coloredExample.replaceAll("⁰", "0");
+                coloredExample = coloredExample.replaceAll("¹", "1");
+                coloredExample = coloredExample.replaceAll("²", "2");
+                coloredExample = coloredExample.replaceAll("³", "3");
+                coloredExample = coloredExample.replaceAll("⁴", "4");
+                coloredExample = coloredExample.replaceAll("⁵", "5");
+                coloredExample = coloredExample.replaceAll("⁶", "6");
+                coloredExample = coloredExample.replaceAll("⁷", "7");
+                coloredExample = coloredExample.replaceAll("⁸", "8");
+                coloredExample = coloredExample.replaceAll("⁹", "9");
+
 
                 // Append the docs to the container
                 container.innerHTML += '<label><code>' + coloredName + '</code> (' + this[n][i].type + ')</label>';
