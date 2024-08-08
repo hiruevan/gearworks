@@ -1,0 +1,170 @@
+WEBVTT
+
+00:00:00.234 --> 00:00:02.515
+So in the last video, we created this
+
+00:00:02.515 --> 00:00:05.315
+simple animation. Uh But what we want to
+
+00:00:05.315 --> 00:00:07.755
+do is we want to separate these
+
+00:00:07.755 --> 00:00:10.356
+animations. So what we're going to do
+
+00:00:10.356 --> 00:00:12.236
+this tutorial is we're actually going to
+
+00:00:12.236 --> 00:00:15.036
+create a simple player that you can move
+
+00:00:15.036 --> 00:00:17.277
+around and should match the
+
+00:00:17.277 --> 00:00:18.957
+animations. So,
+
+00:00:20.237 --> 00:00:22.557
+let's start. Let
+
+00:00:22.557 --> 00:00:25.518
+Px equal 80 and
+
+00:00:25.518 --> 00:00:27.398
+let Py equal 160.
+
+00:00:28.718 --> 00:00:31.438
+Let ani equal walk. This will
+
+00:00:31.438 --> 00:00:33.639
+be the type of animation that we're
+
+00:00:33.639 --> 00:00:36.239
+doing. Now, we're
+
+00:00:36.239 --> 00:00:37.959
+going to uh
+
+00:00:39.399 --> 00:00:41.639
+copy that and delete it. And then we're
+
+00:00:41.639 --> 00:00:44.240
+going to put it down here in a new
+
+00:00:44.240 --> 00:00:46.880
+function called drawPlayer with X,
+
+00:00:47.200 --> 00:00:49.760
+Y, and type. Now let's paste it back in
+
+00:00:49.760 --> 00:00:50.001
+there
+
+00:00:53.201 --> 00:00:55.201
+like that. Now we're going to call the
+
+00:00:55.201 --> 00:00:58.082
+function up here with px and py
+
+00:00:58.082 --> 00:01:00.802
+and ani as the parameters, like
+
+00:01:00.802 --> 00:01:03.522
+that. Now
+
+00:01:03.602 --> 00:01:05.802
+inside the drawPlayer function, we want
+
+00:01:05.802 --> 00:01:07.643
+to select our own uh
+
+00:01:10.323 --> 00:01:12.803
+animation. So if type equals walk,
+
+00:01:12.963 --> 00:01:14.964
+then we are going to do the walk
+
+00:01:14.964 --> 00:01:17.924
+animation. So spidx is going to equal
+
+00:01:18.804 --> 00:01:21.604
+animation mod two plus
+
+00:01:22.564 --> 00:01:24.365
+three. If you look at the uh
+
+00:01:26.885 --> 00:01:29.685
+image, it's going to be three. And
+
+00:01:29.685 --> 00:01:32.646
+then else if type equals jump, we're
+
+00:01:32.646 --> 00:01:34.566
+going to do spidx
+
+00:01:34.566 --> 00:01:37.526
+equals two, it looks
+
+00:01:37.526 --> 00:01:39.607
+like. Yeah, two.
+
+00:01:41.527 --> 00:01:43.927
+Then otherwise we're doing the idle
+
+00:01:43.927 --> 00:01:46.407
+animation. So spidx equals
+
+00:01:46.567 --> 00:01:49.368
+math.floor animation divided by five.
+
+00:01:49.528 --> 00:01:51.648
+This is just going to slow down. that
+
+00:01:51.648 --> 00:01:54.088
+animation and then modulo 2.
+
+00:01:54.568 --> 00:01:56.329
+We don't need to add anything since the
+
+00:01:56.329 --> 00:01:58.569
+idle animation is at the beginning. So
+
+00:01:58.569 --> 00:02:01.329
+then we can remove this SPIDX
+
+00:02:01.329 --> 00:02:03.689
+set up here.
+
+00:02:04.170 --> 00:02:07.050
+And you should always check those.
+
+00:02:07.210 --> 00:02:10.010
+That was very helpful. I forgot
+
+00:02:10.050 --> 00:02:11.770
+an equal sign there. There needs to be an
+
+00:02:11.770 --> 00:02:14.411
+extra equal sign. So now we're going to
+
+00:02:14.411 --> 00:02:17.251
+update the x and y down here to
+
+00:02:17.251 --> 00:02:19.691
+fit that. And now when we click Run,
+
+00:02:20.572 --> 00:02:22.252
+uhWe see
+
+00:02:23.852 --> 00:02:26.492
+that we get the walk animation, but when
+
+00:02:26.492 --> 00:02:28.853
+we change Annie to idle, we're going to
+
+00:02:28.853 --> 00:02:31.133
+get this nice idle
+
+00:02:31.133 --> 00:02:31.853
+animation.
+
