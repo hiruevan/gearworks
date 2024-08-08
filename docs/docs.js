@@ -91,7 +91,7 @@ docs.load = function(name) {
                 container.innerHTML += '<u>For Example:</u><br><examplecode>' + coloredExample + '</examplecode></p><br><br>';
             } if (this[n][i].module == 'video') { // Videos
                 container.innerHTML += '<h3>' + this[n][i].name + '</h3>';
-                container.innerHTML += '<video width="512" height="288" controls="controls"><source src="./tutorials/videos/' + n + '/' + this[n][i].video + '.mp4"></video>';
+                container.innerHTML += '<video width="512" height="288" controls="controls"><source src="./tutorials/videos/' + n + '/' + this[n][i].video + '.mp4"><track src="./tutorials/videos/' + n + '/' + this[n][i].video + '.vtt" kind="subtitles" srclang="en" label="English"></video>';
                 container.innerHTML += '<p>' + this[n][i].desc + '</p>';
             } else if (this[n][i].module == 'download') { // Downloadable gw1 files
                 container.innerHTML += '<h3>' + this[n][i].name + '</h3>';
