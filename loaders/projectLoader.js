@@ -186,9 +186,7 @@ function gw_loadProjectFile(text) {
                 for (let i = 0; i < gw_cabinet.imageNames.length; i++) {
                     document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + gw_cabinet.imageUrls[i] + "'><p class='image-text'>" + gw_cabinet.imageNames[i] + " <a style='font-size:15px;' href='" + gw_cabinet.imageUrls[i] + "' download='" + gw_cabinet.imageNames[i] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.imageNames[i] + '", "image")' + "'>Remove</a></p>";
                 }
-                console.log(gw_cabinet.soundNames.length);
                 for (let i = 0; i < gw_cabinet.soundNames.length; i++) {
-                    console.log("a");
                     document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + gw_cabinet.soundUrls[i] + "' controls></audio><p class='sound-text'>" + gw_cabinet.soundNames[i] + " <a style='font-size:15px;' href='" + gw_cabinet.soundUrls[i] + "' download='" + gw_cabinet.soundNames[i] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.soundNames[i] + '", "sound")' + ";'>Remove</a></p>";
                 }
                 for (let i = 0; i < xtnsFiles.length; i++) {
