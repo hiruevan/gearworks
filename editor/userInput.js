@@ -81,6 +81,14 @@ function gw_zoomOut() {
     document.getElementsByClassName("editor-text")[0].classList.add(gw_zoomClasses[gw_codeZoom]);
 }
 
+function gw_equalZoom() {
+    document.getElementsByClassName("editor-text")[0].classList.remove(gw_zoomClasses[gw_codeZoom]);
+    gw_codeZoom = 2;
+    document.getElementsByClassName("editor-text")[0].classList.add(gw_zoomClasses[gw_codeZoom]);
+    document.getElementsByClassName("zoom")[0].classList.remove("disabled");
+    document.getElementsByClassName("zoom")[1].classList.remove("disabled");
+}
+
 /*User input in project running*/
 
 // Mouse position handling
