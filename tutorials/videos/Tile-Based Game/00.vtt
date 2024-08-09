@@ -1,0 +1,20 @@
+WEBVTT
+
+00:00:12.377 --> 00:00:15.180
+Hello! Welcome to this GearWorks tutorial
+
+00:00:15.180 --> 00:00:17.142
+on creating a tile-based game.
+
+00:00:18.703 --> 00:00:21.346
+Today we are going to be looking into how
+
+00:00:21.346 --> 00:00:24.229
+to take a simple tile sheet,
+
+00:00:24.309 --> 00:00:26.712
+like this explorer tiles we have here,
+
+00:00:27.112 --> 00:00:29.034
+and making a game world.
+
