@@ -126,8 +126,8 @@
         
         <!-- Code Space -->
         <div class="code-controls">
-            <a class="zoom" onclick="gw_zoomIn();"><img src="./images/Zoom in.svg" width="40"></a>
-            <a class="zoom" onclick="gw_zoomOut();"><img src="./images/Zoom out.svg" width="40"></a>
+            <a class="zoom" id="zoom1" onclick="gw_zoomIn();"><img src="./images/Zoom in.svg" width="20"></a>
+            <a class="zoom" id="zoom2" onclick="gw_zoomOut();"><img src="./images/Zoom out.svg" width="20"></a>
         </div>
         <div id="editor" class="editor-text norm">// Welcome to the Gearworks Editor!</div>
 
@@ -145,12 +145,12 @@
             </div>
             <div class="cabinet page">
                 <div class="container">
-                    <button onclick="document.getElementById('img-upload').click();">Add Images</button>
+                    <button onclick="document.getElementById('img-upload').click();" class="canvasButton"><img src="./images/Image.svg"></button>
                     <input id="img-upload" type="file" class="hidden" accept=".png, .jpg, .jpeg, .svg">
                     <img id="add-img" src="#" class="hidden">
                     <div class="container uploaded-images">
                     </div>
-                    <button onclick="document.getElementById('sound-upload').click();">Add Sounds</button>
+                    <button onclick="document.getElementById('sound-upload').click();" class="canvasButton"><img src="./images/sound.svg"></button>
                     <input id="sound-upload" type="file" class="hidden" accept=".mp3, .wav, .ogg, .m4a, .wma">
                     <img id="add-sound" src="#" class="hidden">
                     <div class="container uploaded-sounds">
