@@ -14,11 +14,16 @@ function convertGwoldToGw1(oldContent) {
     
     // Replace unnecessary/incorrect formatting
     jsContent = jsContent.replace(/forever\s*\(\)\s*{/, 'function forever() {');
+
+    let arr = jsContent.split("௹");
+
+    let title = arr[0];
+    jsContent = arr[1];
     
     // Wrap the JS content in a valid Gear Works format (if needed)
     let convertedContent = `⇇!DOCTYPE⇔gw1⇉
-⇇META⇔${oldContent.slice(0, 10)}⇉
-⇇TITLE⇔Converted Script⇔gw_user⇉
+⇇META⇔Old File Type⇉
+⇇TITLE⇔${title}⇔gw_user⇉
 ⇇JSCONTENT⇔
 ${jsContent}
 ⇉⇇END⇉`;
