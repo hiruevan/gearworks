@@ -68,18 +68,28 @@ div.file-box button {
 }
 
 button {
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Sometype Mono', monospace;
     font-weight: bolder;
-    height: 138%;
+    height: 100%;
     position: relative;
     background-color: #787878;
     border: none;
     border-bottom: #979797;
 }
 
+button.canvasButton {
+    width:40%;
+    height:auto;
+    background-color: white;
+}
+.canvasButton > img{
+    width: 30%;
+    margin: 5px;
+}
+
 div.cabinet div.container button {
-    margin: 15px;
+    margin: 10px;
 }
 
 button.side-bar {
@@ -104,7 +114,7 @@ button:hover {
 }
 
 body {
-    background-color: #9d9d9d;
+    background-color: #a0a0a0;
 }
 
 .content {
@@ -221,6 +231,7 @@ div.canvas-div {
     height: 0;
     padding-bottom: 105%;
     background-color: #9d9d9d;
+    margin-bottom: 3px;
 }
 
 div.controls-div {
@@ -239,6 +250,8 @@ div.canvas-div canvas {
     width: 100%;
     top: 0px;
     background-color: white;
+    border-width: 5px;
+    border-color: grey;
 }
 
 div.canvas-div.fullscreen canvas {
@@ -253,13 +266,15 @@ div.info-div {
     position: inherit;
     height: 55px;
     width: 100%;
-    top: -15px;
+    top: -16px;
     margin-top: calc(105% + 15px);
+    background-color: #646464;
+     
 }
 
 div.cabinet {
     position: absolute;
-    background-color: orange;
+    background-color: #b15d29;
     height: auto;
     top: 0px;
     margin-top: calc(105% + 70px);
@@ -312,12 +327,21 @@ a.side-bar-control {
 }
 
 a.zoom {
-    background-color: beige;
-    border-radius: 1rem;
+    background-color: #ff853a;
     padding: 10px;
     padding-bottom: 5px;
     margin: 5px;
     z-index: 15;
+}
+
+#zoom2{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#zoom1{
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
 }
 
 a.play-controls {
