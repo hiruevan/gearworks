@@ -1,0 +1,122 @@
+WEBVTT
+
+00:00:00.090 --> 00:00:02.810
+So now you see when we click run, uh we
+
+00:00:02.810 --> 00:00:04.650
+can move the player around and it looks
+
+00:00:04.650 --> 00:00:07.131
+great until you move the player to the
+
+00:00:07.131 --> 00:00:09.651
+left. Now, you'd
+
+00:00:09.651 --> 00:00:11.852
+expect the player to rotate
+
+00:00:12.212 --> 00:00:15.093
+when you move him to the
+
+00:00:15.093 --> 00:00:16.733
+left, but that doesn't happen. You'd
+
+00:00:16.733 --> 00:00:18.773
+expect him to flip around as you can see
+
+00:00:18.773 --> 00:00:21.574
+in that example. But this is actually
+
+00:00:21.574 --> 00:00:23.934
+fairly easy to fix. So let dir equal
+
+00:00:23.934 --> 00:00:25.655
+right. He's going to start facing to the
+
+00:00:25.655 --> 00:00:28.495
+right. Then down here in
+
+00:00:28.895 --> 00:00:30.936
+arrow left, we're going to make him point
+
+00:00:30.936 --> 00:00:33.456
+to the left, and then arrow right,
+
+00:00:33.696 --> 00:00:35.777
+dir equals right, like this.
+
+00:00:36.897 --> 00:00:39.617
+Now down in drawPlayer, we're going to
+
+00:00:39.617 --> 00:00:42.418
+add dir, like
+
+00:00:42.418 --> 00:00:45.299
+this. And we're going to change how we
+
+00:00:45.299 --> 00:00:47.739
+render the player with the
+
+00:00:47.739 --> 00:00:49.980
+image. Now, I'm not going to explain
+
+00:00:49.980 --> 00:00:52.420
+exactly why this works. That will
+
+00:00:52.420 --> 00:00:55.221
+take a lot of time and it will
+
+00:00:55.221 --> 00:00:58.141
+be quite confusing. So I'm just
+
+00:00:58.141 --> 00:01:01.062
+going to go through this and you
+
+00:01:01.062 --> 00:01:03.382
+can learn how this works later. So if
+
+00:01:03.382 --> 00:01:06.183
+d=left and then else we're going to
+
+00:01:06.183 --> 00:01:08.663
+do the draw.image we already have,
+
+00:01:11.024 --> 00:01:13.704
+like this. Now we're going to copy the
+
+00:01:13.704 --> 00:01:16.105
+draw.image and we're going to paste it up
+
+00:01:16.105 --> 00:01:18.225
+in left. It's going to be exactly the
+
+00:01:18.225 --> 00:01:20.906
+same, except x is going to be
+
+00:01:20.906 --> 00:01:23.146
+negative x minus 128.
+
+00:01:24.106 --> 00:01:27.067
+And above here, we're going to go
+
+00:01:27.147 --> 00:01:28.187
+draw.save,
+
+00:01:29.627 --> 00:01:32.588
+draw.scale, negative 1,
+
+00:01:32.668 --> 00:01:35.429
+1, and
+
+00:01:35.429 --> 00:01:38.349
+then underneath the image, draw.restore.
+
+00:01:40.350 --> 00:01:42.750
+Now when we click run, we see that it
+
+00:01:43.150 --> 00:01:46.111
+works exactly the same and going left the
+
+00:01:46.271 --> 00:01:48.751
+player rotates and it looks really good.
+

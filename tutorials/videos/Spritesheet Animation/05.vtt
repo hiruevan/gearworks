@@ -1,0 +1,143 @@
+WEBVTT
+
+00:00:00.189 --> 00:00:01.669
+at this point in time, you may be
+
+00:00:01.669 --> 00:00:03.629
+wondering about this jump animation you
+
+00:00:03.629 --> 00:00:05.670
+can see. We even set it up in the draw
+
+00:00:05.670 --> 00:00:08.070
+player. So let's add that.
+
+00:00:08.550 --> 00:00:11.351
+It's actually pretty easy to add. So
+
+00:00:11.431 --> 00:00:12.551
+up here, if
+
+00:00:12.551 --> 00:00:15.512
+keyboard.includes, we're going
+
+00:00:15.512 --> 00:00:16.632
+to do space
+
+00:00:18.552 --> 00:00:20.873
+uh and
+
+00:00:21.273 --> 00:00:23.833
+PZ equals zero, meaning the
+
+00:00:23.833 --> 00:00:26.714
+player's on the ground. Then we're going
+
+00:00:26.714 --> 00:00:29.634
+to do ZVel equals 20. Now we're going
+
+00:00:29.634 --> 00:00:32.235
+to have to add PZ and ZVel up here. So
+
+00:00:32.555 --> 00:00:35.075
+let PZ equals zero. Player starts in the
+
+00:00:35.075 --> 00:00:37.476
+ground. Let ZVel equals zero. The
+
+00:00:37.476 --> 00:00:39.676
+player's not falling at the start.
+
+00:00:40.796 --> 00:00:43.037
+Oh, there we go. Then in here, we're
+
+00:00:43.037 --> 00:00:45.037
+going to add PZ to the drawPlayer
+
+00:00:45.037 --> 00:00:47.918
+function. Let's add Z there. Then down
+
+00:00:47.918 --> 00:00:50.238
+here, we're going to subtract Z from Y.
+
+00:00:50.238 --> 00:00:53.199
+So Z is like a Y offset, but it's
+
+00:00:53.199 --> 00:00:56.079
+not the same as Y. um
+
+00:00:56.960 --> 00:00:59.280
+and it will give a jumping effect. So now
+
+00:00:59.280 --> 00:01:01.921
+we have to do the actual jump animation.
+
+00:01:02.401 --> 00:01:04.241
+Super easy actually. We're going to
+
+00:01:04.241 --> 00:01:06.882
+simulate gravity by doing if pz is
+
+00:01:06.882 --> 00:01:09.522
+greater than zero or zvel is
+
+00:01:09.522 --> 00:01:11.603
+greater than zero, meaning the player's
+
+00:01:11.683 --> 00:01:13.923
+in the air. Then we're going to do
+
+00:01:14.243 --> 00:01:16.323
+pz plus equals zvel,
+
+00:01:16.644 --> 00:01:19.324
+zvel minus minus, and
+
+00:01:19.324 --> 00:01:21.324
+then annie equals jump.
+
+00:01:25.365 --> 00:01:28.166
+Now, what the Z
+
+00:01:28.166 --> 00:01:30.806
+is actually doing is it's just an
+
+00:01:31.206 --> 00:01:33.727
+offset of the player's Y. We can move the
+
+00:01:33.727 --> 00:01:36.407
+player around, um and
+
+00:01:36.407 --> 00:01:38.968
+then the PZ will just move it up
+
+00:01:39.128 --> 00:01:42.088
+and down, but it's Y will stay the same.
+
+00:01:42.729 --> 00:01:44.169
+So that's what that is.
+
+00:01:46.205 --> 00:01:49.008
+Now that is our project complete.
+
+00:01:49.328 --> 00:01:51.330
+Your character is able to jump, move
+
+00:01:51.330 --> 00:01:53.572
+around, and has all these animations
+
+00:01:53.572 --> 00:01:56.375
+synced. Thank you for
+
+00:01:56.375 --> 00:01:59.258
+programming with me today, and I
+
+00:01:59.658 --> 00:02:02.341
+invite you to make cool stuff with
+
+00:02:02.341 --> 00:02:04.783
+this newfound knowledge of sprite sheet
+
+00:02:04.783 --> 00:02:05.584
+animation.
+

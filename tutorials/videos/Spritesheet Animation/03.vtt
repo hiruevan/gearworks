@@ -1,0 +1,182 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:01.930
+Alright, so what we want to do now is we
+
+00:00:01.930 --> 00:00:04.131
+want to make the player movable. So let's
+
+00:00:04.131 --> 00:00:06.931
+go to the docs to learn about this. We're
+
+00:00:06.931 --> 00:00:09.731
+going to ask. We're going to search
+
+00:00:09.731 --> 00:00:12.692
+for how uh to check
+
+00:00:12.772 --> 00:00:15.332
+if the user or
+
+00:00:15.732 --> 00:00:17.572
+user is
+
+00:00:18.372 --> 00:00:20.453
+pressing a button on the keyboard.
+
+00:00:23.293 --> 00:00:25.653
+So input makes sense. Let's click on
+
+00:00:25.653 --> 00:00:28.533
+that. If we Scroll down, let's look
+
+00:00:28.533 --> 00:00:29.494
+for something.
+
+00:00:31.814 --> 00:00:34.614
+Ah Here we go, keyboard. Um
+
+00:00:35.574 --> 00:00:36.934
+Let's see here.
+
+00:00:41.015 --> 00:00:43.575
+Right here, this will return true of
+
+00:00:43.575 --> 00:00:46.376
+being pressed so we can
+
+00:00:46.376 --> 00:00:48.536
+see if the keyboard is checking
+
+00:00:48.536 --> 00:00:50.376
+something. So let's see.
+
+00:00:51.816 --> 00:00:53.976
+if we can figure out what those things
+
+00:00:53.976 --> 00:00:55.977
+are for like the arrow keys. So let's log
+
+00:00:55.977 --> 00:00:57.097
+the keyboard.
+
+00:00:59.017 --> 00:01:00.977
+And then let's go over to the console and
+
+00:01:00.977 --> 00:01:03.417
+click run. Let's press buttons.
+
+00:01:05.018 --> 00:01:07.898
+All right. So now we have
+
+00:01:07.978 --> 00:01:10.778
+arrow up, arrow right,
+
+00:01:10.938 --> 00:01:13.459
+arrow down, and arrow left. So we can use
+
+00:01:13.459 --> 00:01:15.259
+that in those if statements for moving
+
+00:01:15.259 --> 00:01:16.219
+the player around.
+
+00:01:18.299 --> 00:01:18.619
+So
+
+00:01:21.180 --> 00:01:24.140
+We're going to set the ani default to be
+
+00:01:24.220 --> 00:01:26.700
+idle, so the
+
+00:01:26.700 --> 00:01:29.100
+player's not moving. Now,
+
+00:01:29.420 --> 00:01:29.741
+if
+
+00:01:31.101 --> 00:01:32.781
+keyboard.includes
+
+00:01:33.661 --> 00:01:35.141
+arrow up,
+
+00:01:37.901 --> 00:01:40.142
+then ani=walk
+
+00:01:42.382 --> 00:01:45.102
+and py-=speed.
+
+00:01:46.702 --> 00:01:48.943
+Uh We're going to add speed. Up here,
+
+00:01:48.943 --> 00:01:50.623
+const speed equals, uh,
+
+00:01:52.063 --> 00:01:53.823
+let's do six. Six sounds like a good
+
+00:01:53.823 --> 00:01:56.584
+number. Okay. Now, else
+
+00:01:56.584 --> 00:01:57.024
+if
+
+00:01:58.624 --> 00:01:59.984
+keyboard.includes
+
+00:02:01.744 --> 00:02:04.705
+arrow down this time,
+
+00:02:06.145 --> 00:02:08.145
+ani equals walk again,
+
+00:02:09.905 --> 00:02:12.065
+and then py plus equals speed.
+
+00:02:14.306 --> 00:02:16.026
+Then we're going to go else if
+
+00:02:16.786 --> 00:02:18.786
+keyboard.includes
+
+00:02:19.666 --> 00:02:21.666
+arrow left,
+
+00:02:23.827 --> 00:02:25.747
+ani equals walk,
+
+00:02:26.947 --> 00:02:29.507
+px minus equals
+
+00:02:29.507 --> 00:02:32.188
+speed, and
+
+00:02:32.188 --> 00:02:34.308
+then else if
+
+00:02:35.108 --> 00:02:37.428
+keyboard.includes
+
+00:02:39.989 --> 00:02:42.789
+arrow arrow
+
+00:02:42.789 --> 00:02:43.309
+right,
+
+00:02:46.389 --> 00:02:48.550
+uh and then ani=walk,
+
+00:02:51.766 --> 00:02:54.486
+px+=speed, like that.
+
+00:02:55.926 --> 00:02:58.407
+Alright, now when we click run, we
+
+00:02:58.407 --> 00:03:00.847
+can move the player around and the
+
+00:03:00.847 --> 00:03:03.767
+animations match the player movement.
+
