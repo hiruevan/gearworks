@@ -152,7 +152,6 @@ footer {
 }
 
 div.code-controls {
-    font-size: 40px;
     margin-right: 40px;
     margin-bottom: 40px;
     position: absolute;
@@ -312,11 +311,11 @@ div.side-bar p {
     font-family: 'Sometype Mono', monospace;
     font-size: 25px;
 }
-/* 
+
 div.cabinet div.container div p {
     padding-bottom: 15px;
     border-bottom: dotted black 2px;
-} */
+}
 
 a.side-bar-control {
     position: fixed;
@@ -330,18 +329,22 @@ a.zoom {
     background-color: #ff853a;
     padding: 10px;
     padding-bottom: 5px;
-    margin: 5px;
+    margin: 5px 0px;
     z-index: 15;
+    height: 20px;
+    border: solid 3px #b0734d;
 }
 
 #zoom2{
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
+    border-left: 0px;
 }
 
 #zoom1{
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
+    border-right: 0px;
 }
 
 a.play-controls {
@@ -380,7 +383,7 @@ a.play-controls.disabled {
 a.side-bar-control:hover,
 a.zoom:hover,
 a.play-controls:hover {
-    background-color: bisque;
+    background-color: #b0734db7;
     cursor: pointer;
 }
 
@@ -513,16 +516,12 @@ img::selection {
     background-color: transparent;
 }
 
-/*Project/Cabinet Grid*/
+/*Project Grid*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 20px;
     padding: 20px;
-}
-
-.grid-container.cabinet-upload {
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 }
 
 .grid-item {
@@ -532,16 +531,13 @@ img::selection {
     text-align: center;
 }
 
-.grid-item img, .grid-item audio {
-    max-width: 100%;
-}
-
 .grid-item img {
+    max-width: 100%;
     height: auto;
 }
 
-.grid-item h3, .grid-item p {
-    font-size: 15px;
+.grid-item h3 {
+    font-size: 20px;
     margin: 10px 0 0;
 }
 
