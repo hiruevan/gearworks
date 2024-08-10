@@ -147,16 +147,12 @@
                     <button onclick="document.getElementById('img-upload').click();" class="canvasButton"><img src="./images/Image.svg"></button>
 		            <button onclick="document.getElementById('sound-upload').click();" class="canvasButton"><img src="./images/sound.svg"></button>
 			
+                    <input id="img-upload" type="file" class="hidden" accept=".png, .jpg, .jpeg, .svg">
+                    <input id="sound-upload" type="file" class="hidden" accept=".mp3, .wav, .ogg, .m4a, .wma">
+                    <img id="add-img" src="#" class="hidden">
+                    <img id="add-sound" src="#" class="hidden">
                     
                     <div class="grid-container cabinet-upload">
-                        <input id="img-upload" type="file" class="hidden" accept=".png, .jpg, .jpeg, .svg">
-                        <img id="add-img" src="#" class="hidden">
-                        <!-- <div class="container uploaded-images"> -->
-                        <!-- </div> -->
-                        <input id="sound-upload" type="file" class="hidden" accept=".mp3, .wav, .ogg, .m4a, .wma">
-                        <img id="add-sound" src="#" class="hidden">
-                        <!-- <div class="container uploaded-sounds"> -->
-                        <!-- </div> -->
                     </div>
                 </div>
             </div>
