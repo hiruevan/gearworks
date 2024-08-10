@@ -249,8 +249,6 @@ div.canvas-div canvas {
     width: 100%;
     top: 0px;
     background-color: white;
-    border-width: 5px;
-    border-color: grey;
 }
 
 div.canvas-div.fullscreen canvas {
@@ -288,6 +286,12 @@ img.imported-image {
     width: 100px;
 }
 
+div.cabinet div.container div p {
+    padding-bottom: 15px;
+    border-bottom: dotted black 2px;
+}
+
+/* side bar */
 div.side-bar {
     bottom: 0px;
     top: 0px;
@@ -312,11 +316,6 @@ div.side-bar p {
     font-size: 25px;
 }
 
-div.cabinet div.container div p {
-    padding-bottom: 15px;
-    border-bottom: dotted black 2px;
-}
-
 a.side-bar-control {
     position: fixed;
     font-size: 20px;
@@ -325,6 +324,27 @@ a.side-bar-control {
     border-bottom-right-radius: 1rem;
 }
 
+@keyframes hide-side-bar {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: calc(0px - 15%);
+    }
+}
+
+@keyframes show-side-bar {
+    0% {
+        left: calc(0px - 15%);
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+/* Play Controls */
 a.zoom {
     background-color: #ff853a;
     padding: 10px;
@@ -335,16 +355,16 @@ a.zoom {
     border: solid 3px #b0734d;
 }
 
-#zoom2{
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-left: 0px;
-}
-
 #zoom1{
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     border-right: 0px;
+}
+
+#zoom2{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-left: 0px;
 }
 
 a.play-controls {
@@ -383,10 +403,12 @@ a.play-controls.disabled {
 a.side-bar-control:hover,
 a.zoom:hover,
 a.play-controls:hover {
-    background-color: #b0734db7;
+    background-color: #b6754d;
+    border-color: #a06846;
     cursor: pointer;
 }
 
+/* Code Editor? */
 #editor {
     position: inherit;
     right: calc(25% + 35px);
@@ -422,26 +444,6 @@ a.play-controls:hover {
 
 .hidden {
     display: none;
-}
-
-@keyframes hide-side-bar {
-    0% {
-        left: 0px;
-    }
-
-    100% {
-        left: calc(0px - 15%);
-    }
-}
-
-@keyframes show-side-bar {
-    0% {
-        left: calc(0px - 15%);
-    }
-
-    100% {
-        left: 0px;
-    }
 }
 
 /* Code-space lines css */
@@ -516,7 +518,30 @@ img::selection {
     background-color: transparent;
 }
 
-/*Project Cabinet Grid*/
+/* Cabinet */
+div.cabinet {
+    position: absolute;
+    background-color: #b15d29;
+    height: auto;
+    top: 0px;
+    margin-top: calc(105% + 70px);
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    font-size: 25px;
+}
+
+img.imported-image {
+    height: auto;
+    width: 100px;
+}
+
+div.cabinet div.container div p {
+    padding-bottom: 15px;
+    border-bottom: dotted black 2px;
+}
+
+/*Cabinet Grid*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -545,7 +570,7 @@ img::selection {
     margin: 10px 0 0;
 }
 
-/* Docs code styles */
+/* Docs */
 code {
     font-size: 20px;
     font-family: monospace;
@@ -558,7 +583,7 @@ examplecode {
     font-family: monospace;
 }
 
-/* Color Coding of the console */
+/* Console */
 div.log {
     border-bottom: 1px solid black;
     font-family: 'Sometype Mono', monospace;
