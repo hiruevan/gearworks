@@ -1,0 +1,89 @@
+WEBVTT
+
+00:00:00.105 --> 00:00:03.065
+Alright, in the last video, we created
+
+00:00:03.065 --> 00:00:06.026
+this tile system that we can pan
+
+00:00:06.026 --> 00:00:08.427
+the camera around. Now what we're going
+
+00:00:08.427 --> 00:00:10.427
+to do is you can change
+
+00:00:11.067 --> 00:00:13.148
+RNG to be like negative one.
+
+00:00:14.508 --> 00:00:16.909
+Um Oh, I just caught something. That
+
+00:00:16.909 --> 00:00:19.549
+needs to be RNG, not 12, sorry. And
+
+00:00:19.549 --> 00:00:22.510
+negative one is an airspace. So negative
+
+00:00:22.510 --> 00:00:24.951
+one, we're going to see that it's just
+
+00:00:24.951 --> 00:00:27.712
+blank. Now we can
+
+00:00:27.712 --> 00:00:29.632
+make the RNG
+
+00:00:30.832 --> 00:00:33.713
+a special value. So if we say, if the
+
+00:00:33.713 --> 00:00:36.514
+Y position is greater
+
+00:00:36.514 --> 00:00:39.234
+than 512, the Y position on the screen,
+
+00:00:40.035 --> 00:00:41.555
+then what we're going to do
+
+00:00:42.995 --> 00:00:45.956
+is we're going
+
+00:00:45.956 --> 00:00:48.397
+to set RNG to be like a
+
+00:00:48.517 --> 00:00:51.237
+grass tile, like 6.
+
+00:00:51.718 --> 00:00:54.598
+And then if it's um even
+
+00:00:54.598 --> 00:00:57.399
+lower than that,um
+
+00:00:57.959 --> 00:01:00.760
+Then we're going to set it to be a
+
+00:01:00.760 --> 00:01:03.000
+dirt tile, which is,
+
+00:01:05.401 --> 00:01:08.362
+looks like 9, uh no
+
+00:01:08.362 --> 00:01:11.283
+that's 10. That
+
+00:01:11.283 --> 00:01:12.883
+tile right there. So it's going to
+
+00:01:12.923 --> 00:01:14.683
+display both of those tiles
+
+00:01:15.804 --> 00:01:18.684
+in a nice grid pattern at the bottom.
+
+00:01:19.805 --> 00:01:22.285
+And we can still pan this around, which
+
+00:01:22.285 --> 00:01:23.085
+is pretty cool.
+

@@ -1,0 +1,281 @@
+WEBVTT
+
+00:00:00.176 --> 00:00:01.536
+Alright, I've loaded up the starter
+
+00:00:01.536 --> 00:00:03.697
+project. If we click run, we can see this
+
+00:00:03.697 --> 00:00:06.577
+tile set. UhYou know, I
+
+00:00:06.577 --> 00:00:09.537
+really like this bottom square. Let's
+
+00:00:09.617 --> 00:00:11.217
+do that. So zero and three.
+
+00:00:13.377 --> 00:00:15.457
+Looks like it's index
+
+00:00:15.938 --> 00:00:18.818
+12. So what we're
+
+00:00:18.818 --> 00:00:20.338
+going to do is I'm going to show you how
+
+00:00:20.338 --> 00:00:22.898
+to draw just that square. So we're going
+
+00:00:22.898 --> 00:00:25.298
+to remove this and
+
+00:00:26.258 --> 00:00:28.418
+actually we're going to make a camera so
+
+00:00:28.418 --> 00:00:30.659
+that we can pan.
+
+00:00:31.219 --> 00:00:34.019
+this grid world around. So let x off
+
+00:00:34.019 --> 00:00:36.499
+equals zero, let y off equals zero. And
+
+00:00:36.499 --> 00:00:39.219
+then we'll set up some tile
+
+00:00:39.219 --> 00:00:41.939
+parameters, const tile size.
+
+00:00:42.179 --> 00:00:44.180
+We're going to set it to 128. That's what
+
+00:00:44.180 --> 00:00:47.140
+this particular tile set uses.
+
+00:00:48.180 --> 00:00:50.740
+And then we are going to repeat forever.
+
+00:00:52.020 --> 00:00:53.220
+Function forever.
+
+00:00:57.301 --> 00:01:00.181
+Uh Clear the screen, obviously.
+
+00:01:02.141 --> 00:01:03.381
+uh So that's going to be drawn up
+
+00:01:03.461 --> 00:01:06.181
+background. We're going to do sky
+
+00:01:06.181 --> 00:01:08.821
+blue. Let's do sky blue, nice sky
+
+00:01:08.821 --> 00:01:10.742
+color. And then
+
+00:01:12.102 --> 00:01:14.822
+draw tiles. We're going to go for let
+
+00:01:14.822 --> 00:01:17.382
+x equals negative tile
+
+00:01:17.382 --> 00:01:19.382
+size plus
+
+00:01:20.182 --> 00:01:22.423
+x off modulo
+
+00:01:23.383 --> 00:01:25.943
+the tile size, which is 128. That's
+
+00:01:25.943 --> 00:01:28.423
+basically just going to set the x to be
+
+00:01:28.743 --> 00:01:31.303
+one tile off the screen to the left, then
+
+00:01:31.303 --> 00:01:33.823
+x less than 800, that's the screen to the
+
+00:01:33.823 --> 00:01:36.344
+right, x plus equals tileSize.
+
+00:01:36.824 --> 00:01:38.504
+And then we're going to do the exact same
+
+00:01:38.504 --> 00:01:41.304
+thing for the y, tileSize
+
+00:01:41.304 --> 00:01:43.864
+plus y off this time, modulo
+
+00:01:43.864 --> 00:01:46.664
+tileSize, then y less than
+
+00:01:46.664 --> 00:01:49.585
+800, and then y plus
+
+00:01:49.585 --> 00:01:50.905
+equals tileSize.
+
+00:01:54.825 --> 00:01:56.625
+So just like that. Then we're going to
+
+00:01:56.665 --> 00:01:59.545
+let rng equal 12. rng is going to
+
+00:01:59.545 --> 00:02:01.785
+be the tile that we draw. So we're going
+
+00:02:01.785 --> 00:02:04.666
+to draw the tile there just
+
+00:02:04.666 --> 00:02:07.226
+on the screen using a drawTile
+
+00:02:07.226 --> 00:02:08.906
+function. Now we're going to
+
+00:02:10.666 --> 00:02:12.826
+make this drawTile function. It's going
+
+00:02:12.826 --> 00:02:15.306
+to have the spidx, the
+
+00:02:16.187 --> 00:02:18.907
+tile index, and then
+
+00:02:19.467 --> 00:02:22.427
+the x and y. So we're going to set
+
+00:02:22.427 --> 00:02:24.947
+this to be plus 128 times the
+
+00:02:24.947 --> 00:02:27.627
+spidx modulo
+
+00:02:28.427 --> 00:02:31.388
+4, and then 128 times
+
+00:02:32.668 --> 00:02:34.908
+math.floor spidx
+
+00:02:36.028 --> 00:02:38.908
+divided by 4, because it
+
+00:02:39.308 --> 00:02:42.109
+has a row of 4 there. And then
+
+00:02:42.109 --> 00:02:44.989
+modulo 4 again, because it's a
+
+00:02:44.989 --> 00:02:47.869
+4 by 4 grid, as you can see. Then 128,
+
+00:02:47.869 --> 00:02:50.829
+128, because that's the tile size
+
+00:02:50.829 --> 00:02:52.669
+in the sprite sheet, xy,
+
+00:02:53.469 --> 00:02:56.430
+and 128, 128,
+
+00:02:56.910 --> 00:02:59.710
+just like that. Now when we click run, we
+
+00:02:59.790 --> 00:03:02.550
+are greeted with this lovely grid of that
+
+00:03:02.550 --> 00:03:04.670
+particular tile we chose at thebeginning.
+
+00:03:07.230 --> 00:03:10.031
+Now we can actually adjust this grid
+
+00:03:10.191 --> 00:03:13.151
+by adjusting the x off and y
+
+00:03:13.151 --> 00:03:16.031
+off variables. Uh I think
+
+00:03:16.031 --> 00:03:18.991
+it'd be kind of fun if we use the user's
+
+00:03:18.991 --> 00:03:21.871
+input to pan the
+
+00:03:21.871 --> 00:03:24.112
+camera around. So let's do that.
+
+00:03:26.592 --> 00:03:27.472
+So we're going to go
+
+00:03:29.152 --> 00:03:29.632
+if
+
+00:03:30.272 --> 00:03:33.152
+keyboard.includes
+
+00:03:34.352 --> 00:03:36.273
+arrow left
+
+00:03:38.593 --> 00:03:41.473
+then xoff minus
+
+00:03:41.473 --> 00:03:44.433
+equals five else if
+
+00:03:44.433 --> 00:03:46.353
+keyboard.includes
+
+00:03:49.474 --> 00:03:51.874
+arrow right
+
+00:03:52.994 --> 00:03:55.154
+x off plus equals five,
+
+00:03:56.274 --> 00:03:58.114
+and if
+
+00:03:58.674 --> 00:04:00.674
+keyboard.includes
+
+00:04:02.915 --> 00:04:05.395
+arrow up,
+
+00:04:08.035 --> 00:04:09.795
+uh and then y off
+
+00:04:11.235 --> 00:04:13.955
+minus equals five, and finally
+
+00:04:13.955 --> 00:04:16.756
+else if keyboard.includes arrow
+
+00:04:16.756 --> 00:04:17.556
+down,
+
+00:04:22.436 --> 00:04:24.116
+Y off plus equals five.
+
+00:04:26.036 --> 00:04:28.917
+Now, when we click run, we can
+
+00:04:28.917 --> 00:04:31.317
+pan around the camera using the arrow
+
+00:04:31.317 --> 00:04:31.877
+keys.
+
+00:04:36.677 --> 00:04:38.837
+In the next video, we will start
+
+00:04:38.837 --> 00:04:40.677
+creating more intricate
+
+00:04:42.358 --> 00:04:43.398
+tile worlds.
+
