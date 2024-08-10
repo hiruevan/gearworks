@@ -312,11 +312,11 @@ div.side-bar p {
     font-family: 'Sometype Mono', monospace;
     font-size: 25px;
 }
-
+/* 
 div.cabinet div.container div p {
     padding-bottom: 15px;
     border-bottom: dotted black 2px;
-}
+} */
 
 a.side-bar-control {
     position: fixed;
@@ -513,12 +513,16 @@ img::selection {
     background-color: transparent;
 }
 
-/*Project Grid*/
+/*Project/Cabinet Grid*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+.grid-container.cabinet-upload {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 }
 
 .grid-item {
@@ -528,13 +532,16 @@ img::selection {
     text-align: center;
 }
 
-.grid-item img {
+.grid-item img, .grid-item audio {
     max-width: 100%;
+}
+
+.grid-item img {
     height: auto;
 }
 
-.grid-item h3 {
-    font-size: 20px;
+.grid-item h3, .grid-item p {
+    font-size: 15px;
     margin: 10px 0 0;
 }
 
