@@ -81,7 +81,7 @@ button {
 button.canvasButton {
     width:40%;
     height:auto;
-    background-color: white;
+    background-color: none !important;
 }
 .canvasButton > img{
     width: 30%;
@@ -224,11 +224,12 @@ div.footer {
 div.right-bar {
     bottom: 15px;
     top: 15px;
-    right: 35px;
+    right: 20px;
     position: inherit;
-    width: calc(25% - 35px);
+    width: calc(26% - 30px);
     font-family: 'Sometype Mono', monospace;
     font-size: 15px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 div.canvas-div {
@@ -238,6 +239,7 @@ div.canvas-div {
     padding-bottom: 105%;
     background-color: #9d9d9d;
     margin-bottom: 3px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 div.controls-div {
@@ -273,6 +275,9 @@ div.info-div {
     top: -16px;
     margin-top: calc(105% + 15px);
     background-color: #646464;
+    color: white;
+    padding-bottom: 6px;
+    border-color: rgb(88, 88, 88);
      
 }
 
@@ -302,11 +307,11 @@ div.cabinet div.container div p {
 div.side-bar {
     bottom: 0px;
     top: 0px;
-    background-color: #646464;
+    background-color: #a0a0a0;
     position: inherit;
     height: 100%;
     width: 15%;
-    color: lightgrey;
+    color: white;
 }
 
 div.side-bar.side-bar-in {
@@ -536,6 +541,16 @@ div.cabinet {
     right: 0px;
     bottom: 0px;
     font-size: 25px;
+    border-radius: 10px 10px 0px 0px;
+    border: solid;
+    border-width: 4px 5px 5px 5px;
+    border-color: #723c1a;
+}
+
+div.cabinet-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 img.imported-image {
