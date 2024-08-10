@@ -94,17 +94,24 @@ div.cabinet div.container button {
 
 button.side-bar {
     height: 30px;
-    background-color: #97979759;
+    background-color: #c06b2a;
+    left: -5px;
+    border-radius: 30px;
+}
+
+button.side-bar:hover {
+    height: 30px;
+    background-color: #aa5f26;
     left: -5px;
 }
 
 button.tab.selected {
-    background-color: #3a6895a9;
+    background-color: #2a79bf;
 }
 
 button.tab.selected:active,
 button.tab.selected:hover {
-    background-color: #3a6895a9;
+    background-color: #2265a0;
 }
 
 button:active,
@@ -295,10 +302,11 @@ div.cabinet div.container div p {
 div.side-bar {
     bottom: 0px;
     top: 0px;
-    background-color: beige;
+    background-color: #646464;
     position: inherit;
     height: 100%;
     width: 15%;
+    color: lightgrey;
 }
 
 div.side-bar.side-bar-in {
@@ -320,7 +328,7 @@ a.side-bar-control {
     position: fixed;
     font-size: 20px;
     padding: 5px;
-    background-color: beige;
+    background-color: #646464;
     border-bottom-right-radius: 1rem;
 }
 
@@ -391,20 +399,19 @@ a.right {
 
 a.zoom.disabled,
 a.play-controls.disabled {
-    background-color: rgb(111, 111, 91);
+    background-color: #ab6437;
 }
 
 a.zoom.disabled:hover,
 a.play-controls.disabled {
-    background-color: rgb(111, 111, 91);
+    background-color: #9a5932 !important;
     cursor: default;
 }
 
 a.side-bar-control:hover,
 a.zoom:hover,
 a.play-controls:hover {
-    background-color: #b6754d;
-    border-color: #a06846;
+    background-color: #c06b2a !important;
     cursor: pointer;
 }
 
