@@ -516,7 +516,7 @@ img::selection {
     background-color: transparent;
 }
 
-/*Project Grid*/
+/*Project Cabinet Grid*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -524,17 +524,21 @@ img::selection {
     padding: 20px;
 }
 
-.grid-item {
+.grid-item, .grid-item p {
     background-color:  rgb(150, 150, 150);
     border: 1px solid  rgb(103, 103, 103);
     padding: 10px;
     text-align: center;
 }
 
-.grid-item img {
-    max-width: 100%;
-    height: auto;
+.grid-container.cabinet-upload {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 }
+
+.grid-item img, .grid-item audio {
+    max-width: 100%;
+}
+
 
 .grid-item h3 {
     font-size: 20px;
