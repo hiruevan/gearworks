@@ -51,10 +51,12 @@ let gw_codeZoom = 2;
 let gw_zoomClasses = ["xsmall", "small", "norm", "large", "xlarge"];
 function gw_zoomIn() {
     gw_codeZoom++;
-    document.getElementsByClassName("zoom")[1].classList.remove("disabled");
+    document.getElementsByClassName("zoom")[2].classList.remove("disabled");
     if (gw_codeZoom === 4) {
         document.getElementsByClassName("zoom")[0].classList.add("disabled");
-    } else {
+    } else if (gw_codeZoom == 2) {
+        document.getElementsByClassName("zoom")[1].classList.add("disabled");
+     else {
         if (gw_codeZoom > 4) {
             gw_codeZoom = 4;
             return;
@@ -69,24 +71,27 @@ function gw_zoomOut() {
     gw_codeZoom--;
     document.getElementsByClassName("zoom")[0].classList.remove("disabled");
     if (gw_codeZoom === 0) {
+        document.getElementsByClassName("zoom")[2].classList.add("disabled");
+    } else if (gw_codeZoom == 2) {
         document.getElementsByClassName("zoom")[1].classList.add("disabled");
     } else {
         if (gw_codeZoom < 0) {
             codeZoom = 0;
             return;
         }
-        document.getElementsByClassName("zoom")[1].classList.remove("disabled");
+        document.getElementsByClassName("zoom")[2].classList.remove("disabled");
     }
     document.getElementsByClassName("editor-text")[0].classList.remove(gw_zoomClasses[gw_codeZoom+1]);
     document.getElementsByClassName("editor-text")[0].classList.add(gw_zoomClasses[gw_codeZoom]);
 }
 
-function gw_equalZoom() {
+function gw_zoomEqual() {
     document.getElementsByClassName("editor-text")[0].classList.remove(gw_zoomClasses[gw_codeZoom]);
     gw_codeZoom = 2;
     document.getElementsByClassName("editor-text")[0].classList.add(gw_zoomClasses[gw_codeZoom]);
     document.getElementsByClassName("zoom")[0].classList.remove("disabled");
-    document.getElementsByClassName("zoom")[1].classList.remove("disabled");
+    document.getElementsByClassName("zoom")[2].classList.remove("disabled");
+    document.getElementsByClassName("zoom")[1].classList.add("disabled");
 }
 
 /*User input in project running*/
