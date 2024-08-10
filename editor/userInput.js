@@ -54,14 +54,17 @@ function gw_zoomIn() {
     document.getElementsByClassName("zoom")[2].classList.remove("disabled");
     if (gw_codeZoom === 4) {
         document.getElementsByClassName("zoom")[0].classList.add("disabled");
-    } else if (gw_codeZoom == 2) {
-        document.getElementsByClassName("zoom")[1].classList.add("disabled");
-     else {
+    } else {
         if (gw_codeZoom > 4) {
             gw_codeZoom = 4;
             return;
         }
         document.getElementsByClassName("zoom")[0].classList.remove("disabled");
+    }
+    if (gw_codeZoom == 2) {
+        document.getElementsByClassName("zoom")[1].classList.add("disabled");
+    } else {
+        document.getElementsByClassName("zoom")[1].classList.remove("disabled");
     }
     document.getElementsByClassName("editor-text")[0].classList.remove(gw_zoomClasses[gw_codeZoom-1]);
     document.getElementsByClassName("editor-text")[0].classList.add(gw_zoomClasses[gw_codeZoom]);
@@ -72,14 +75,16 @@ function gw_zoomOut() {
     document.getElementsByClassName("zoom")[0].classList.remove("disabled");
     if (gw_codeZoom === 0) {
         document.getElementsByClassName("zoom")[2].classList.add("disabled");
-    } else if (gw_codeZoom == 2) {
-        document.getElementsByClassName("zoom")[1].classList.add("disabled");
     } else {
         if (gw_codeZoom < 0) {
             codeZoom = 0;
             return;
         }
         document.getElementsByClassName("zoom")[2].classList.remove("disabled");
+    } if (gw_codeZoom == 2) {
+        document.getElementsByClassName("zoom")[1].classList.add("disabled");
+    } else {
+        document.getElementsByClassName("zoom")[1].classList.remove("disabled");
     }
     document.getElementsByClassName("editor-text")[0].classList.remove(gw_zoomClasses[gw_codeZoom+1]);
     document.getElementsByClassName("editor-text")[0].classList.add(gw_zoomClasses[gw_codeZoom]);
