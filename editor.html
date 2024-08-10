@@ -144,8 +144,10 @@
             </div>
             <div class="cabinet page">
                 <div class="container">
-                    <button onclick="document.getElementById('img-upload').click();" class="canvasButton"><img src="./images/Image.svg"></button>
-		            <button onclick="document.getElementById('sound-upload').click();" class="canvasButton"><img src="./images/sound.svg"></button>
+                    <div class="cabinet-buttons">
+                        <button onclick="document.getElementById('img-upload').click();" class="canvasButton"><img src="./images/Image.svg"></button>
+		                <button onclick="document.getElementById('sound-upload').click();" class="canvasButton"><img src="./images/sound.svg"></button>
+                    </div>
 			
                     <input id="img-upload" type="file" class="hidden" accept=".png, .jpg, .jpeg, .svg">
                     <input id="sound-upload" type="file" class="hidden" accept=".mp3, .wav, .ogg, .m4a, .wma">
