@@ -49,7 +49,7 @@ document.getElementById('img-upload').addEventListener('change', function() {
         gw_cabinet.imageNames.push(this.files[0].name);
 
         gw_imgToDataURL(img.src, function(url) {
-            document.getElementsByClassName("uploaded-images")[0].innerHTML += "<img class='imported-image' src='" + url + "'><p class='image-text'>" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + " <a style='font-size:15px;' href='" + url + "' download='" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + '", "image")' + "'>Remove</a></p>";
+            document.getElementsByClassName("cabinet-upload")[0].innerHTML += "<div class='grid-item'><img class='imported-image' src='" + url + "'><p class='image-text'>" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + " <a style='font-size:15px;' href='" + url + "' download='" + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.imageNames[gw_cabinet.imageNames.length - 1] + '", "image")' + "'>Remove</a></p></div>";
             gw_cabinet.imageUrls.push(url);
         }, ext);
     }
@@ -87,7 +87,7 @@ document.getElementById('sound-upload').addEventListener('change', function() {
 
 function gw_addResult(r) {
     let url = r;
-    document.getElementsByClassName("uploaded-sounds")[0].innerHTML += "<audio class='imported-sound' src='" + url + "' controls></audio><p class='sound-text'>" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + " <a style='font-size:15px;' href='" + url + "' download='" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + '", "sound")' + ";'>Remove</a></p>";
+    document.getElementsByClassName("cabinet-upload")[0].innerHTML += "<div class='grid-item><audio class='imported-sound' src='" + url + "' controls></audio><p class='sound-text'>" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + " <a style='font-size:15px;' href='" + url + "' download='" + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + "'>Download</a> <a style='font-size:15px;' href='javascript:gw_cabinetRemove(" + '"' + gw_cabinet.soundNames[gw_cabinet.soundNames.length - 1] + '", "sound")' + ";'>Remove</a></p></div>";
     gw_cabinet.soundUrls.push(url);
 }
 
