@@ -279,6 +279,7 @@ div.info-div {
     color: white;
     padding-bottom: 6px;
     border-radius: 0px 0px 10px 10px;
+    padding-left: 10px;
     border-color: rgb(88, 88, 88);
      
 }
@@ -301,8 +302,8 @@ img.imported-image {
 }
 
 div.cabinet div.container div p {
-    padding-bottom: 15px;
-    border-bottom: dotted black 2px;
+    margin: 0;
+    font-size: 15px;
 }
 
 /* side bar */
@@ -560,11 +561,6 @@ img.imported-image {
     width: 100px;
 }
 
-div.cabinet div.container div p {
-    padding-bottom: 15px;
-    border-bottom: dotted black 2px;
-}
-
 /*Cabinet Grid*/
 .grid-container {
     display: grid;
@@ -573,7 +569,7 @@ div.cabinet div.container div p {
     padding: 20px;
 }
 
-.grid-item, .grid-item p {
+.grid-item {
     background-color:  rgb(150, 150, 150);
     border: 1px solid  rgb(103, 103, 103);
     padding: 10px;
