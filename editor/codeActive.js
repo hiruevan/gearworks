@@ -3,9 +3,10 @@ const notAllowed = ['window', 'document'];
 
 // Check for security issues
 function gw_checkForSecurityIssues(txt) {
+    // Check for not allowed js keywords
     for (let i = 0; i < notAllowed.length; i++) {
         if (txt.indexOf(notAllowed[i] + '.') !== -1) {
-            gw_error("Security Alert! Cannot allow JavaScript keyword: " + notAllowed[i] + ". This causes a security issue; Avoid using this word.");
+            gw_error("Illegal Javascript Keyword: '" + notAllowed[i] + "'. You cannot use document effecting keywords.");
             return true;
         }
     }
@@ -14,7 +15,7 @@ function gw_checkForSecurityIssues(txt) {
     const illegalFunctionPattern = /\b(gw_[a-zA-Z0-9_]*)\b/g;
     let match;
     while ((match = illegalFunctionPattern.exec(txt)) !== null) {
-        gw_error("Illegal Function Call: " + match[0] + ". You cannot call internal functions.");
+        gw_error("Illegal Function Call: '" + match[0] + "'. You cannot call Gear Works internal functions.");
         return true;
     }
 
@@ -23,7 +24,7 @@ function gw_checkForSecurityIssues(txt) {
 
 // Check for errors in the code
 function gw_primeScriptForErrors(code) {
-    let raw = "try {" + code + "\n} catch (e) {gw_error(e)}";
+    let raw = "try {\n" + code + "\n} catch(e) { gw_error(e); }";
     return raw;
 }
 
@@ -33,10 +34,10 @@ function gw_run() {
     let script = document.createElement("script");
     script.classList.add("canvas-script");
     let raw = editor.getValue();
-    raw = gw_primeScriptForErrors(raw);
     if (gw_checkForSecurityIssues(raw)) {
         return false;
     }
+    raw = gw_primeScriptForErrors(raw);
     script.innerHTML = raw;
     document.body.appendChild(script);
 }
