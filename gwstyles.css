@@ -12,7 +12,7 @@ h2 {
 }
 
 div.top-bar {
-    background-color: #787878;
+    background-color: #4e4e4e;
     position: fixed;
     z-index: 10000;
     display: block;
@@ -73,7 +73,8 @@ button {
     font-weight: bolder;
     height: 100%;
     position: relative;
-    background-color: #787878;
+    color: white;
+    background-color: #4e4e4e;
     border: none;
     border-bottom: #979797;
 }
@@ -277,6 +278,7 @@ div.info-div {
     background-color: #646464;
     color: white;
     padding-bottom: 6px;
+    border-radius: 0px 0px 10px 10px;
     border-color: rgb(88, 88, 88);
      
 }
