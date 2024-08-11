@@ -1,8 +1,7 @@
-// Where the code is accually run
-
-// Not allowed js Keywords
+// Disallowed JS keywords
 const notAllowed = ['window', 'document'];
 
+// Check for security issues
 function gw_checkForSecurityIssues(txt) {
     for (let i = 0; i < notAllowed.length; i++) {
         if (txt.indexOf(notAllowed[i] + '.') !== -1) {
@@ -10,16 +9,25 @@ function gw_checkForSecurityIssues(txt) {
             return true;
         }
     }
+
+    // Check for illegal function calls
+    const illegalFunctionPattern = /\b(gw_[a-zA-Z0-9_]*)\b/g;
+    let match;
+    while ((match = illegalFunctionPattern.exec(txt)) !== null) {
+        gw_error("Illegal Function Call: " + match[0] + ". You cannot call internal functions.");
+        return true;
+    }
+
     return false;
 }
 
-// Check Errors
+// Check for errors in the code
 function gw_primeScriptForErrors(code) {
     let raw = "try {" + code + "\n} catch (e) {gw_error(e)}";
     return raw;
 }
 
-// running code
+// Running code
 function gw_run() {
     gw_stop();
     let script = document.createElement("script");
@@ -48,7 +56,7 @@ function gw_stop() {
     gw_clearAllSounds();
     
     let src = gw_canvas.toDataURL();
-    console.log("Possible Thumnail:");
+    console.log("Possible Thumbnail:");
     console.log(src);
 
     gw_ctx.fillStyle = "white";

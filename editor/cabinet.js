@@ -13,8 +13,10 @@ function gw_cabinetRemove(url, type) {
         let idx = gw_cabinet.imageNames.indexOf(url);
         let img = document.getElementsByClassName("imported-image")[idx];
         let txt = document.getElementsByClassName("image-text")[idx];
+        let gridItem = document.getElementsByClassName("grid-item")[idx];
         img.remove();
         txt.remove();
+        gridItem.remove();
         gw_cabinet.imageNames.splice(idx, 1);
         gw_cabinet.imageUrls.splice(idx, 1);
     } else if (type == "sound") {
@@ -22,8 +24,10 @@ function gw_cabinetRemove(url, type) {
         let idx = gw_cabinet.soundNames.indexOf(url);
         let audio = document.getElementsByClassName("imported-sound")[idx];
         let txt = document.getElementsByClassName("sound-text")[idx];
+        let gridItem = document.getElementsByClassName("grid-item")[idx];
         audio.remove();
         txt.remove();
+        gridItem.remove();
         gw_cabinet.soundNames.splice(idx, 1);
         gw_cabinet.soundUrls.splice(idx, 1);
     }
