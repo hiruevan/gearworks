@@ -310,7 +310,7 @@ div.cabinet div.container div p {
 div.side-bar {
     bottom: 0px;
     top: 0px;
-    background-color: #a0a0a0;
+    background-color: #7a7a7a;
     position: inherit;
     height: 100%;
     width: 15%;
@@ -615,5 +615,5 @@ div.log.error {
 }
 
 div.log.warn {
-    color: orange;
+    color: #fcd75d;
 }
