@@ -6,7 +6,7 @@ let gw_ctx = gw_canvas.getContext("2d");
 gw_ctx.background = function(color) {
     let prevCol = this.fillStyle;
     this.fillStyle = color;
-    this.fillRect(0, 0, 800, 800);
+    this.fillRect(0, 0, gw_canvas.width, gw_canvas.height);
     this.fillStyle = prevCol;
 }
 
@@ -25,7 +25,7 @@ draw.image = function(pUrl, x, y, h = null, w = null, c = null, d = null, e = nu
     } else {
 
         // If nothing else works
-        gw_error("URL Converter: The requested URL does not exist.");
+        gw_error("URL Converter: The requested URL '" + pUrl + "' does not exist.");
         return;
     }
     if (h == null && w == null) {
@@ -80,7 +80,7 @@ const gearWorks = {
         } else {
 
             // If nothing else works
-            gw_error("URL Converter: The requested URL does not exist.");
+            gw_error("URL Converter: The requested URL '" + url + "' does not exist.");
             let img = document.createElement("img");
             img.src = "#";
             return img;
@@ -92,7 +92,7 @@ const gearWorks = {
             url = gw_cabinet.soundUrls[gw_cabinet.soundNames.indexOf(pUrl)];
         } else {
             // If nothing else works
-            gw_error("URL Converter: The requested URL does not exist.");
+            gw_error("URL Converter: The requested URL '" + pUrl + "' does not exist.");
             return;
         }
         let sound = document.createElement("audio");
@@ -103,5 +103,21 @@ const gearWorks = {
         sound.classList.add("canvas-sound");
         document.body.appendChild(sound);
         sound.play();
+    },
+    morph: function(resolution = 800, mainRem = null, trRem = null, blRem = null, brRem = null) { // heavily requested by Parker, created by Evan in beta-v0.3, was removed in beta-v0.4, but is now readded in beta-v0.6!
+        let cvs = gw_canvas;
+        cvs.width = resolution;
+        cvs.height = resolution;
+
+        if (mainRem !== null) {
+            if (trRem !== null) {
+                cvs.style.borderTopLeftRadius = mainRem + "%";
+                cvs.style.borderTopRightRadius = trRem + "%";
+                cvs.style.borderBottomLeftRadius = blRem + "%";
+                cvs.style.borderBottomRightRadius = brRem + "%";
+                return;
+            }
+            cvs.style.borderRadius = mainRem + "%";
+        }
     }
 };
