@@ -61,7 +61,7 @@ function gw_stop() {
     console.log(src);
 
     gw_ctx.fillStyle = "white";
-    gw_ctx.fillRect(0, 0, 800, 800);
+    gw_ctx.fillRect(0, 0, gw_canvas.width, gw_canvas.height);
     try {
         document.getElementsByClassName("canvas-script")[0].remove();
         console.log("Script Cleanup: Scripts cleaned.")
