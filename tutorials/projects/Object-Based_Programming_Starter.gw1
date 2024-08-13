@@ -1,0 +1,1 @@
+⇇!DOCTYPE⇔gw1⇉⇇META⇔Sun Aug 11 2024 21:36:15 GMT-0600 (Mountain Daylight Time)⇉⇇TITLE⇔Object-Based Programming⇔gw_user⇉⇇JSCONTENT⇔let player = ↴{};↴let enemy;↴↴function forever()↴{↴    draw.background("white");↴    ↴}⇉⇇END⇉
