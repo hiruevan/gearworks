@@ -130,5 +130,58 @@
             "location": "./tutorials/projects/tile_final.gw1",
             "name": "Final Project"
         }
+    ],
+    "Object-Based Programming": [
+        {
+            "module": "desc",
+            "name": null,
+            "value": "In this tutorial, I explain the concept of objects in JavaScript, demonstrating how they can store various data and functions. I showcase creating objects, adding properties, and utilizing methods. I also cover the importance of constructors and instances for efficient coding. Participate to grasp the fundamentals of object-oriented programming in JavaScript!"
+        },
+        {
+            "module": "video",
+            "name": "Introduction",
+            "video": "00",
+            "desc": "This video will showcase what we are making today. Let's get started!"
+        },
+        {
+            "module": "download",
+            "location": "./tutorials/projects/Object-Based_Programming_Starter.gw1",
+            "name": "Starter Project"
+        },
+        {
+            "module": "video",
+            "name": "Objects",
+            "video": "01",
+            "desc": "TBD"
+        },
+        {
+            "module": "video",
+            "name": "Drawing and Moving a Player",
+            "video": "02",
+            "desc": "TBD"
+        },
+        {
+            "module": "video",
+            "name": "Creating Enemy Class",
+            "video": "03",
+            "desc": "TBD"
+        },
+        {
+            "module": "video",
+            "name": "Working with Enemies",
+            "video": "04",
+            "desc": "TBD"
+        },
+        {
+            "module": "video",
+            "name": "Finishing Up",
+            "video": "05",
+            "desc": "TBD"
+        },
+        {
+            "module": "download",
+            "location": "./tutorials/projects/Object-Based_Programming_Final.gw1",
+            "name": "Final Project"
+        }
     ]
 }
