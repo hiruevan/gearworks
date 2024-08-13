@@ -1,0 +1,464 @@
+WEBVTT
+
+00:00:00.661 --> 00:00:02.261
+Now we are going to add player
+
+00:00:02.261 --> 00:00:05.141
+collisions. So, I'm going to explain
+
+00:00:05.141 --> 00:00:07.221
+this later, let's just get started. Let
+
+00:00:07.221 --> 00:00:09.942
+curX = math.round px
+
+00:00:10.022 --> 00:00:12.982
+divided by tileSize. Let curY
+
+00:00:13.862 --> 00:00:15.622
+= math.round
+
+00:00:16.982 --> 00:00:19.382
+py divided by tileSize.
+
+00:00:21.062 --> 00:00:22.823
+Now underneath where we set floor, we're
+
+00:00:23.063 --> 00:00:25.863
+going to go 4, let l = 0,
+
+00:00:26.183 --> 00:00:28.503
+l < 2, l++.
+
+00:00:31.583 --> 00:00:33.783
+Try if
+
+00:00:34.263 --> 00:00:36.343
+map curX
+
+00:00:37.624 --> 00:00:40.594
+-curY - 4 +
+
+00:00:41.784 --> 00:00:44.424
+l is
+
+00:00:44.504 --> 00:00:47.304
+greater than or equal to 0, then
+
+00:00:47.384 --> 00:00:48.034
+floor =
+
+00:00:49.704 --> 00:00:52.105
+cur y + l
+
+00:00:52.825 --> 00:00:54.265
+times tile size.
+
+00:00:57.465 --> 00:01:00.345
+And then break, then catch.
+
+00:01:00.985 --> 00:01:03.945
+So the try catch is just in
+
+00:01:03.945 --> 00:01:05.025
+case it's a
+
+00:01:06.746 --> 00:01:09.306
+false thing. I realized that that was
+
+00:01:09.306 --> 00:01:10.906
+incorrect, so let's fix that real quick.
+
+00:01:10.986 --> 00:01:13.466
+And now we have floor collisions like
+
+00:01:13.506 --> 00:01:16.466
+that. So you see that we don't have
+
+00:01:16.466 --> 00:01:18.666
+left and right collisions yet, but the
+
+00:01:18.666 --> 00:01:20.826
+player can stand on other floor levels
+
+00:01:20.866 --> 00:01:23.707
+now. So here we have the player.
+
+00:01:26.587 --> 00:01:28.667
+(Let me write that out) So when the
+
+00:01:28.667 --> 00:01:31.467
+player is moving around, we want to check
+
+00:01:31.467 --> 00:01:34.187
+for collisions. To the left here, we
+
+00:01:34.187 --> 00:01:35.948
+want to stop the player right here
+
+00:01:35.948 --> 00:01:38.028
+because there's a block right there. To
+
+00:01:38.028 --> 00:01:40.108
+the right, there's nothing right there,
+
+00:01:40.108 --> 00:01:42.348
+so we can leave it at its default, which
+
+00:01:42.348 --> 00:01:44.908
+is infinity. Going down,
+
+00:01:45.228 --> 00:01:47.948
+we want to stop it at the floor. And then
+
+00:01:47.948 --> 00:01:50.509
+going up, we can leave it at its default
+
+00:01:50.709 --> 00:01:53.669
+of negative infinity. The way this
+
+00:01:53.669 --> 00:01:56.389
+is going to work is we're going to go to
+
+00:01:56.389 --> 00:01:58.669
+the left, and we're going to go there's
+
+00:01:58.949 --> 00:02:01.229
+what's there, and we're going to find
+
+00:02:01.229 --> 00:02:03.309
+this block right here.
+
+00:02:06.350 --> 00:02:08.950
+Now we see this block, so we're going to
+
+00:02:08.950 --> 00:02:11.470
+set the leftWall
+
+00:02:11.470 --> 00:02:13.990
+variable to be the
+
+00:02:13.990 --> 00:02:16.670
+value of where we hit the
+
+00:02:16.670 --> 00:02:19.550
+block, like that. Then we're
+
+00:02:19.550 --> 00:02:21.951
+going to do the same for the ceiling, And
+
+00:02:21.951 --> 00:02:23.631
+we'll leave it as default because we
+
+00:02:23.631 --> 00:02:26.031
+don't find any blocks. The same for the
+
+00:02:26.031 --> 00:02:28.671
+right wall. We'll leave it as
+
+00:02:28.671 --> 00:02:30.831
+default because we don't find any blocks.
+
+00:02:31.391 --> 00:02:34.271
+Then when we go down, we're
+
+00:02:34.271 --> 00:02:36.352
+going to find that there's a block
+
+00:02:36.512 --> 00:02:39.472
+directly below the player. So we set
+
+00:02:39.472 --> 00:02:42.112
+the floor to be directly below the
+
+00:02:42.112 --> 00:02:43.552
+player right there.
+
+00:02:44.912 --> 00:02:47.712
+Now this value of where the floor
+
+00:02:47.872 --> 00:02:50.193
+is default happens to be
+
+00:02:50.593 --> 00:02:53.393
+512 and is the default floor
+
+00:02:53.393 --> 00:02:55.233
+value. So most of the time it won't have
+
+00:02:55.233 --> 00:02:58.113
+to change. So
+
+00:02:58.113 --> 00:03:00.913
+now let's get coding that. So let ceiling
+
+00:03:01.553 --> 00:03:02.033
+equal
+
+00:03:04.194 --> 00:03:05.554
+negative infinity.
+
+00:03:07.794 --> 00:03:09.874
+Let left wall equal
+
+00:03:10.514 --> 00:03:13.394
+negative infinity again and
+
+00:03:13.554 --> 00:03:16.194
+let right wall equal
+
+00:03:16.754 --> 00:03:19.635
+negative infinity. Except I made a
+
+00:03:19.635 --> 00:03:21.795
+mistake here. The right wall should be
+
+00:03:22.115 --> 00:03:24.995
+infinity. So just keep a
+
+00:03:24.995 --> 00:03:25.544
+note of that.
+
+00:03:25.786 --> 00:03:27.307
+Now we're going to add the collision
+
+00:03:27.307 --> 00:03:30.188
+checking. So if Py is less
+
+00:03:30.188 --> 00:03:32.869
+than ceiling, Py equals
+
+00:03:32.869 --> 00:03:35.630
+ceiling, and then Yvel
+
+00:03:35.630 --> 00:03:36.350
+equals zero.
+
+00:03:40.272 --> 00:03:42.513
+Now up here, we're going to have our
+
+00:03:42.513 --> 00:03:43.873
+left-right collisions.
+
+00:03:50.516 --> 00:03:53.477
+If Px is less than left
+
+00:03:53.477 --> 00:03:56.438
+wall, then Px equals left
+
+00:03:56.438 --> 00:03:59.119
+wall. Else
+
+00:03:59.159 --> 00:04:01.800
+if Px is greater than
+
+00:04:02.200 --> 00:04:04.441
+right wall, Px
+
+00:04:04.521 --> 00:04:06.122
+equals right wall.
+
+00:04:08.010 --> 00:04:09.931
+And then up here, we're going to start
+
+00:04:10.011 --> 00:04:12.731
+adding more block checks. So for
+
+00:04:12.731 --> 00:04:15.371
+let L equal 0, L less than
+
+00:04:15.371 --> 00:04:18.251
+2, L plus plus. Try
+
+00:04:18.892 --> 00:04:21.612
+if map cur x
+
+00:04:22.972 --> 00:04:25.292
+negative cur y
+
+00:04:25.692 --> 00:04:28.653
+minus 4 plus L plus
+
+00:04:28.653 --> 00:04:31.373
+1 is greater than or
+
+00:04:31.373 --> 00:04:33.053
+equal to 0.
+
+00:04:33.853 --> 00:04:36.253
+Then ceiling
+
+00:04:36.413 --> 00:04:38.414
+equals cur Y
+
+00:04:39.254 --> 00:04:40.734
+minus
+
+00:04:42.094 --> 00:04:44.574
+L minus 1 all
+
+00:04:44.574 --> 00:04:46.495
+times tile X.
+
+00:04:51.625 --> 00:04:52.425
+And then break.
+
+00:04:54.905 --> 00:04:57.866
+And let's put in our catch statement like
+
+00:04:57.906 --> 00:05:00.746
+that. Then for
+
+00:05:00.746 --> 00:05:02.746
+left wall, it will be
+
+00:05:03.146 --> 00:05:05.467
+for let L equal 0
+
+00:05:06.417 --> 00:05:09.137
+L less than 2, L plus
+
+00:05:09.137 --> 00:05:09.697
+plus.
+
+00:05:13.298 --> 00:05:16.178
+If map cur x
+
+00:05:16.738 --> 00:05:18.978
+minus L minus 1
+
+00:05:19.618 --> 00:05:22.419
+negative curY minus
+
+00:05:22.419 --> 00:05:25.139
+4 plus 1 is
+
+00:05:25.139 --> 00:05:27.459
+greater than or equal to 0,
+
+00:05:28.019 --> 00:05:30.019
+then left wall
+
+00:05:30.419 --> 00:05:32.900
+equals cur
+
+00:05:32.900 --> 00:05:35.420
+x minus L times
+
+00:05:35.940 --> 00:05:38.820
+tile size and then
+
+00:05:38.820 --> 00:05:39.220
+break.
+
+00:05:42.261 --> 00:05:44.741
+And let's put in our catch statement.
+
+00:05:47.701 --> 00:05:50.662
+Alright. Now for right wall it
+
+00:05:50.662 --> 00:05:51.203
+will be
+
+00:05:54.982 --> 00:05:57.782
+for let l=0, l less
+
+00:05:57.782 --> 00:05:59.463
+than 2, l++
+
+00:06:02.583 --> 00:06:04.663
+try if
+
+00:06:05.943 --> 00:06:08.584
+map curX
+
+00:06:08.584 --> 00:06:11.464
+plus L plus
+
+00:06:11.464 --> 00:06:11.864
+1
+
+00:06:14.104 --> 00:06:16.704
+negative curY
+
+00:06:16.704 --> 00:06:18.345
+minus 4
+
+00:06:19.425 --> 00:06:21.985
+plus 1 greater than or equal to
+
+00:06:22.185 --> 00:06:22.505
+0
+
+00:06:24.825 --> 00:06:26.906
+right wall equals
+
+00:06:27.946 --> 00:06:30.026
+curX plus L
+
+00:06:30.666 --> 00:06:32.586
+times tile size.
+
+00:06:34.866 --> 00:06:37.707
+And then break. And let's put in our
+
+00:06:37.707 --> 00:06:40.667
+catch statement. All right, now
+
+00:06:40.667 --> 00:06:42.267
+when we click run, we'll see it's
+
+00:06:42.267 --> 00:06:44.828
+completely broken because remember that
+
+00:06:44.828 --> 00:06:47.508
+mistake I made earlier? Yeah, that's our
+
+00:06:47.508 --> 00:06:49.988
+issue. And now we have 100%
+
+00:06:49.988 --> 00:06:52.348
+functioning collisions.
+
+00:06:52.788 --> 00:06:55.509
+And I actually put in this cloud here uh
+
+00:06:55.949 --> 00:06:58.909
+behind the scenes. Let me show you
+
+00:06:58.909 --> 00:07:01.629
+the map I have. So these negative
+
+00:07:01.629 --> 00:07:03.710
+ones are air blocks.
+
+00:07:04.190 --> 00:07:06.550
+And all the way on the left is the
+
+00:07:06.670 --> 00:07:09.230
+bottom of the world. And
+
+00:07:09.550 --> 00:07:12.471
+everything else are just indexed from the
+
+00:07:12.471 --> 00:07:14.391
+Explorer tile. So I can put in, let's
+
+00:07:14.391 --> 00:07:17.071
+say, a zero there.
+
+00:07:17.631 --> 00:07:18.671
+And you'll
+
+00:07:18.936 --> 00:07:21.259
+You can see that that is now in the
+
+00:07:21.259 --> 00:07:24.022
+world. And that's all I have for you
+
+00:07:24.022 --> 00:07:26.545
+today. Thank you for programming with me
+
+00:07:26.545 --> 00:07:29.028
+and making this simple, tile-based game.
+
