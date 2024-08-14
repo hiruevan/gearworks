@@ -300,7 +300,7 @@ div.side-bar {
     position: inherit;
     height: 100%;
     width: 15%;
-    color: white;
+    color: rgb(219, 219, 219);
 }
 .sidebar-break{
     width: 100%;
