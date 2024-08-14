@@ -97,8 +97,8 @@
                 "// Leaves resolution the same, bevels all edges by ²⁵%": "grey",
                 "// Leaves resolution the same, bevels all edges by a varied amount": "grey",
                 "@bevTr": "orange",
-                "@bevTl": "oragne",
-                "@bevBr": "oragne",
+                "@bevTl": "orange",
+                "@bevBr": "orange",
                 "@bevBl": "orange"
             }
         }
