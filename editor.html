@@ -47,8 +47,11 @@ or other items of worth.
 		<div class="side-bar side-bar-out">
             <div class="container page">
                 <br>
-                <button class="side-bar tab selected" onclick="gw_switchToDocs();">Docs</button>
-                <button class="side-bar tab" onclick="gw_switchToConsole();">Console</button>
+                <div class="sidebar-buttons">
+                    <button class="side-bar tab selected" onclick="gw_switchToDocs();">Docs</button>
+                    <button class="side-bar tab" onclick="gw_switchToConsole();">Console</button>
+                </div>
+                <hr class="sidebar-break">
                 
                 <!--Quick Docs-->
                 <div class="docs">
@@ -162,6 +165,7 @@ or other items of worth.
                         <button onclick="document.getElementById('img-upload').click();" class="canvasButton"><img src="./images/Image.svg"></button>
 		                <button onclick="document.getElementById('sound-upload').click();" class="canvasButton"><img src="./images/sound.svg"></button>
                     </div>
+                    <hr class="cabinet-break">
 			
                     <input id="img-upload" type="file" class="hidden" accept=".png, .jpg, .jpeg, .svg">
                     <input id="sound-upload" type="file" class="hidden" accept=".mp3, .wav, .ogg, .m4a, .wma">
