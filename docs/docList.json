@@ -85,6 +85,22 @@
                 {
                     "'music.mp³'": "green"
                 }
+        }, 
+        {
+            "module": "method",
+            "type": "function",
+            "name": "gearWorks.|morph|(@resolution, @bevTl, @bevTr, @bevBl, @bevBr)",
+            "use": "This function changes the resolution of the canvas, or optionaly, bevels the cornvers a desired amount.",
+            "example": "// Sets resolution to ¹²⁰⁰x¹²⁰⁰\ngearWorks.|morph|(1200);\n\n// Leaves resolution the same, bevels all edges by ²⁵%\ngearWorks.|morph|(800, 25);\n\n// Leaves resolution the same, bevels all edges by a varied amount\ngearWorks.|morph|(800, 25, 44, 12, 6);",
+            "to_highlight": {
+                "// Sets resolution to ¹²⁰⁰x¹²⁰⁰": "grey",
+                "// Leaves resolution the same, bevels all edges by ²⁵%": "grey",
+                "// Leaves resolution the same, bevels all edges by a varied amount": "grey",
+                "@bevTr": "orange",
+                "@bevTl": "oragne",
+                "@bevBr": "oragne",
+                "@bevBl": "orange"
+            }
         }
     ],
     "Input": [
