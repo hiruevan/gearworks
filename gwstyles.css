@@ -1,6 +1,7 @@
 body {
     font-family: 'Sometype Mono', monospace;
     z-index: -1;
+    background-color: #ebebeb;
 }
 
 h1 {
@@ -16,9 +17,7 @@ div.top-bar {
     position: fixed;
     z-index: 10000;
     display: block;
-    width: 100%;body {
-    font-family: 'Sometype Mono', monospace;
-    z-index: -1;
+    width: 100%;
 }
 
 h1 {
@@ -123,10 +122,6 @@ div.cabinet div.container button {
 button:active,
 button:hover {
     cursor: pointer;
-}
-
-body {
-    background-color: #a0a0a0;
 }
 
 .content {
