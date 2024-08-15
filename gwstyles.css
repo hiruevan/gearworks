@@ -774,10 +774,6 @@ button:hover {
     cursor: pointer;
 }
 
-body {
-    background-color: #a0a0a0;
-}
-
 .content {
     position: absolute;
     top: 7%;
