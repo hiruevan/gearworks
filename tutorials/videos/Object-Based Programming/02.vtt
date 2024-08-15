@@ -1,0 +1,134 @@
+WEBVTT
+
+00:00:00.464 --> 00:00:03.104
+then we could go function
+
+00:00:04.784 --> 00:00:05.904
+forever.
+
+00:00:09.024 --> 00:00:11.824
+This is the common throughout all of Gear
+
+00:00:11.824 --> 00:00:14.544
+Works that runs every
+
+00:00:16.464 --> 00:00:17.184
+frame.
+
+00:00:18.624 --> 00:00:20.544
+Keyboard.include
+
+00:00:22.664 --> 00:00:25.504
+and you can
+
+00:00:25.584 --> 00:00:27.104
+go move
+
+00:00:29.104 --> 00:00:30.024
+layer.move
+
+00:00:32.384 --> 00:00:33.824
+actually speed would be great.
+
+00:00:34.704 --> 00:00:35.584
+Speed
+
+00:00:38.184 --> 00:00:39.904
+I'll set this to like to 2
+
+00:00:43.984 --> 00:00:46.944
+player.speed that is 0
+
+00:00:47.904 --> 00:00:50.544
+so that this will run whenever the right
+
+00:00:52.184 --> 00:00:54.064
+key is touched and then you just copy
+
+00:00:54.064 --> 00:00:57.024
+that over change the input
+
+00:01:00.744 --> 00:01:01.344
+and then
+
+00:01:09.064 --> 00:01:10.544
+Negative player speed
+
+00:01:16.184 --> 00:01:19.104
+zero player
+
+00:01:20.704 --> 00:01:23.504
+dot speed
+
+00:01:24.224 --> 00:01:26.224
+so now this will create a
+
+00:01:27.144 --> 00:01:28.864
+infuriating me why do I have it
+
+00:01:30.144 --> 00:01:33.104
+anyway this will that's also
+
+00:01:33.104 --> 00:01:35.144
+infuriating a little bit and then we just
+
+00:01:35.144 --> 00:01:38.064
+go play Let's go out
+
+00:01:38.064 --> 00:01:39.984
+one. Player
+
+00:01:41.384 --> 00:01:43.824
+dot render.
+
+00:01:47.544 --> 00:01:48.464
+OK, you see.
+
+00:01:51.024 --> 00:01:53.184
+Keyboard dot include is not a
+
+00:01:53.184 --> 00:01:55.904
+function. Wait, let me
+
+00:01:55.904 --> 00:01:58.064
+see if that includes.
+
+00:02:00.024 --> 00:02:02.544
+OK, I'm just stupid and can't--
+
+00:02:03.424 --> 00:02:03.664
+oh.
+
+00:02:06.544 --> 00:02:06.864
+Ohh
+
+00:02:07.540 --> 00:02:10.020
+W, S. And
+
+00:02:12.020 --> 00:02:13.300
+I also forgot to add
+
+00:02:18.980 --> 00:02:21.300
+draw.background white. Which I always
+
+00:02:21.300 --> 00:02:24.180
+forget to add these things. It's
+
+00:02:24.180 --> 00:02:26.580
+weird. So now you
+
+00:02:26.580 --> 00:02:28.700
+can think-- speed is low
+
+00:02:30.340 --> 00:02:30.900
+eh five.
+
+00:02:33.940 --> 00:02:35.580
+You know, just like a little thing. Okay,
+
+00:02:36.340 --> 00:02:38.900
+this is great. You have an object that
+
+00:02:38.900 --> 00:02:40.100
+represents the player!
+

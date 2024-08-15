@@ -1,0 +1,173 @@
+WEBVTT
+
+00:00:00.264 --> 00:00:02.864
+But like enemies. You don't want to
+
+00:00:02.864 --> 00:00:05.624
+recreate the same structure
+
+00:00:05.624 --> 00:00:08.104
+every time for an enemy. And that's
+
+00:00:08.424 --> 00:00:10.824
+why we have a thing called a class.
+
+00:00:11.544 --> 00:00:13.704
+Class. Enemy.
+
+00:00:15.944 --> 00:00:18.664
+Right?And oh
+
+00:00:18.744 --> 00:00:20.984
+wait, I'm just stupid. You don't do that.
+
+00:00:21.064 --> 00:00:23.624
+Don't do that. Learn from me. Don't do
+
+00:00:23.624 --> 00:00:26.304
+that. And then you see with
+
+00:00:26.784 --> 00:00:29.624
+these, you got functions
+
+00:00:29.624 --> 00:00:32.224
+that you could do like moveand
+
+00:00:32.224 --> 00:00:34.744
+stuff but one
+
+00:00:35.144 --> 00:00:37.704
+that you always want to do is
+
+00:00:37.704 --> 00:00:39.464
+constructor
+
+00:00:41.944 --> 00:00:44.144
+this is like the
+
+00:00:44.184 --> 00:00:45.064
+omega
+
+00:00:47.064 --> 00:00:49.744
+function that you put in these it
+
+00:00:49.744 --> 00:00:51.864
+lets you basically
+
+00:00:53.064 --> 00:00:53.544
+create
+
+00:00:53.544 --> 00:00:56.384
+it basicallylets you create them and
+
+00:00:56.664 --> 00:00:58.344
+you could do color
+
+00:00:59.504 --> 00:01:01.944
+which I am so good at typing
+
+00:01:01.944 --> 00:01:04.664
+but anyway you could go like this dot
+
+00:01:04.824 --> 00:01:07.224
+x equals x
+
+00:01:08.824 --> 00:01:10.704
+this dot
+
+00:01:11.784 --> 00:01:12.944
+y equals y
+
+00:01:14.664 --> 00:01:17.464
+this dot w equals
+
+00:01:17.464 --> 00:01:19.704
+w this
+
+00:01:19.864 --> 00:01:22.104
+doth
+
+00:01:22.584 --> 00:01:25.224
+equals h which
+
+00:01:25.464 --> 00:01:26.824
+I'm this
+
+00:01:28.264 --> 00:01:30.824
+dot color equals
+
+00:01:31.224 --> 00:01:33.224
+color and
+
+00:01:35.304 --> 00:01:36.984
+stuff like that okay you know
+
+00:01:39.624 --> 00:01:40.864
+whenever you uh
+
+00:01:41.904 --> 00:01:44.864
+something of the class enemy you just do
+
+00:01:44.864 --> 00:01:44.904
+uh
+
+00:01:47.384 --> 00:01:50.024
+var e one for enemy one equals
+
+00:01:50.664 --> 00:01:52.584
+new enemy
+
+00:01:52.584 --> 00:01:55.144
+and you could go put in all your
+
+00:01:55.264 --> 00:01:57.024
+instructor stuff like you want the x to
+
+00:01:57.024 --> 00:01:59.824
+be 1 1 y to be 1 sure with
+
+00:02:00.424 --> 00:02:02.824
+let's it's a 20 by 20
+
+00:02:03.464 --> 00:02:04.824
+with the color of
+
+00:02:06.424 --> 00:02:09.064
+red because that
+
+00:02:10.904 --> 00:02:12.504
+guy right and you you
+
+00:02:12.504 --> 00:02:14.584
+another enemy right called e2
+
+00:02:15.224 --> 00:02:17.064
+equals new enemy
+
+00:02:19.464 --> 00:02:19.784
+with uh
+
+00:02:21.184 --> 00:02:23.344
+800 800
+
+00:02:23.744 --> 00:02:25.984
+20(what the crap) 20
+
+00:02:27.024 --> 00:02:29.064
+blue in fact let's make it
+
+00:02:29.824 --> 00:02:30.544
+slightly
+
+00:02:32.384 --> 00:02:34.704
+bigger 25
+
+00:02:36.304 --> 00:02:39.184
+25 oh wait that's a string
+
+00:02:39.184 --> 00:02:41.864
+blue is a string it's a string okay we
+
+00:02:41.864 --> 00:02:42.598
+have two enemies
+

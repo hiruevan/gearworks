@@ -1,0 +1,65 @@
+WEBVTT
+
+00:00:03.447 --> 00:00:03.927
+You see?
+
+00:00:09.455 --> 00:00:12.015
+That's it. You You don't even need
+
+00:00:12.175 --> 00:00:13.295
+these variable
+
+00:00:14.495 --> 00:00:17.375
+creators. All
+
+00:00:17.375 --> 00:00:20.335
+you really need is the new enemies
+
+00:00:20.375 --> 00:00:21.975
+because it creates the objects anyway.
+
+00:00:21.975 --> 00:00:24.775
+It's just the problem is
+
+00:00:25.455 --> 00:00:27.935
+that you cannot reference them again
+
+00:00:27.935 --> 00:00:29.695
+unless you get them back
+
+00:00:31.535 --> 00:00:34.095
+through some way.
+
+00:00:34.495 --> 00:00:35.975
+You cannot reference it again unless
+
+00:00:35.975 --> 00:00:37.695
+there's another way to reference them.
+
+00:00:38.175 --> 00:00:41.135
+through like here up
+
+00:00:41.135 --> 00:00:43.855
+here through like one of these you could
+
+00:00:43.855 --> 00:00:45.135
+run for each clone
+
+00:00:52.635 --> 00:00:55.075
+which works and
+
+00:00:55.755 --> 00:00:56.715
+then actually it
+
+00:01:02.505 --> 00:01:05.265
+so now you know how to use
+
+00:01:08.385 --> 00:01:10.425
+classes and objects you know
+
+00:01:14.705 --> 00:01:17.455
+check the docs for more info-- For
+
+00:01:17.455 --> 00:01:20.335
+more information, see you next video.
+
