@@ -552,6 +552,7 @@ a.play-controls:hover {
 
 ::selection {
     background-color: #ffd139;
+    color: black;
 }
 
 a::selection,
