@@ -13,7 +13,7 @@ h2 {
 }
 
 div.top-bar {
-    background-color: #4e4e4e;
+    background-color: #5b5b5b;
     position: fixed;
     z-index: 10000;
     display: block;
@@ -75,7 +75,7 @@ button {
     height: 100%;
     position: relative;
     color: white;
-    background-color: #4e4e4e;
+    background-color: #5b5b5b;
     border: none;
     border-bottom: #979797;
 }
@@ -109,7 +109,7 @@ button:hover {
 }
 
 body {
-    background-color: #a0a0a0;
+    background-color: #d8d8d8;
 }
 
 .content {
@@ -141,7 +141,7 @@ div.container {
 footer {
     flex-direction: row;
     padding: 1%;
-    background-color: rgb(150, 150, 150);
+    background-color: rgb(184, 184, 184);
     text-align: center;
     justify-content: center;
 }
@@ -225,7 +225,7 @@ div.canvas-div {
     width: 100%;
     height: 0;
     padding-bottom: 105%;
-    background-color: #9d9d9d;
+    background-color: #696969;
     margin-bottom: 3px;
     border-radius: 10px 10px 0px 0px;
 }
@@ -237,7 +237,7 @@ div.controls-div {
     padding: 0;
     margin: 0;
     top: 0px;
-    background-color: #bababa;
+    background-color: #a3a3a3;
 }
 
 div.canvas-div canvas {
@@ -262,7 +262,7 @@ div.info-div {
     width: 100%;
     top: -16px;
     margin-top: calc(105% + 15px);
-    background-color: #6d6d6d;
+    background-color: #696969;
     color: white;
     padding-bottom: 6px;
     border-radius: 0px 0px 10px 10px;
@@ -297,7 +297,7 @@ div.cabinet div.container div p {
 div.side-bar {
     bottom: 0px;
     top: 0px;
-    background-color: #6d6d6d;
+    background-color: #5c5c5c;
     position: inherit;
     height: 100%;
     width: 15%;
@@ -330,7 +330,7 @@ button.side-bar:hover {
 }
 
 button.tab.selected {
-    background-color: #6d6d6d;
+    background-color: #5c5c5c;
     height: 35px;
     border: solid #5e5e5e;
 }
@@ -364,6 +364,7 @@ a.side-bar-control {
     padding: 5px;
     background-color: #646464;
     border-bottom-right-radius: 1rem;
+    z-index: 5;
 }
 
 @keyframes hide-side-bar {
@@ -606,8 +607,8 @@ img.imported-image {
 }
 
 .grid-item {
-    background-color:  rgb(150, 150, 150);
-    border: 1px solid  rgb(103, 103, 103);
+    background-color:  rgb(195, 195, 195);
+    border: 1px solid  rgb(142, 142, 142);
     padding: 10px;
     text-align: center;
 }
