@@ -2,6 +2,7 @@ body {
     font-family: 'Sometype Mono', monospace;
     color: rgb(70, 70, 70);
     z-index: -1;
+    background-color: #d8d8d8;
 }
 
 h1 {
@@ -13,7 +14,7 @@ h2 {
 }
 
 div.top-bar {
-    background-color: #5b5b5b;
+    background-color: #4e4e4e;
     position: fixed;
     z-index: 10000;
     display: block;
@@ -75,7 +76,7 @@ button {
     height: 100%;
     position: relative;
     color: white;
-    background-color: #5b5b5b;
+    background-color: #4e4e4e;
     border: none;
     border-bottom: #979797;
 }
@@ -108,10 +109,6 @@ button:hover {
     cursor: pointer;
 }
 
-body {
-    background-color: #d8d8d8;
-}
-
 .content {
     position: absolute;
     top: 7%;
@@ -141,7 +138,7 @@ div.container {
 footer {
     flex-direction: row;
     padding: 1%;
-    background-color: rgb(184, 184, 184);
+    background-color: rgb(150, 150, 150);
     text-align: center;
     justify-content: center;
 }
@@ -225,7 +222,7 @@ div.canvas-div {
     width: 100%;
     height: 0;
     padding-bottom: 105%;
-    background-color: #696969;
+    background-color: #9d9d9d;
     margin-bottom: 3px;
     border-radius: 10px 10px 0px 0px;
 }
@@ -237,7 +234,7 @@ div.controls-div {
     padding: 0;
     margin: 0;
     top: 0px;
-    background-color: #a3a3a3;
+    background-color: #bababa;
 }
 
 div.canvas-div canvas {
@@ -262,7 +259,7 @@ div.info-div {
     width: 100%;
     top: -16px;
     margin-top: calc(105% + 15px);
-    background-color: #696969;
+    background-color: #6d6d6d;
     color: white;
     padding-bottom: 6px;
     border-radius: 0px 0px 10px 10px;
@@ -297,7 +294,7 @@ div.cabinet div.container div p {
 div.side-bar {
     bottom: 0px;
     top: 0px;
-    background-color: #5c5c5c;
+    background-color: #6d6d6d;
     position: inherit;
     height: 100%;
     width: 15%;
@@ -330,9 +327,9 @@ button.side-bar:hover {
 }
 
 button.tab.selected {
-    background-color: #5c5c5c;
+    background-color: #6d6d6d;
     height: 35px;
-    border: solid #757474;
+    border: solid #5e5e5e;
 }
 
 
@@ -364,7 +361,6 @@ a.side-bar-control {
     padding: 5px;
     background-color: #646464;
     border-bottom-right-radius: 1rem;
-    z-index: 5;
 }
 
 @keyframes hide-side-bar {
@@ -675,3 +671,25 @@ div.log.warn {
     background: #9e9e9e; 
   }
 
+
+
+footer {
+    flex-direction: row;
+    padding: 1%;
+    background-color: rgb(184, 184, 184);
+    text-align: center;
+    justify-content: center;
+}
+
+div.footer {
+    background-color: ghostwhite;
+    font-family: 'Sometype Mono', monospace;
+    font-size: 30px;
+    text-align: center;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 180px;
+    position: relative;
+    margin-top: 40%;
+}
