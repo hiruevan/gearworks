@@ -332,6 +332,9 @@ button.tab.selected {
     border: solid #5e5e5e;
 }
 
+button.side-bar.tab {
+    flex-direction: row;
+}
 
 div.sidebar-buttons{
     display: flex;
