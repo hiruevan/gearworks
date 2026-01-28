@@ -4,5 +4,5 @@ Gear Works is a programming website created by 4 highschoolers. It is designed t
 ## Credits:
 * Evan Hill
 * Nathan Malaman
-* Katie K.
+* Katie
 * parker Budd
