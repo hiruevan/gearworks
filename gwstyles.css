@@ -5,6 +5,44 @@ body {
     background-color: #d8d8d8;
 }
 
+div.gwBox {
+    background-color: #ffffff;
+    box-shadow: 20px 20px 10px #A7ABBC;
+    margin: 0px;
+}
+
+div.gwBox > h2 {
+    background-color: #4e4e4e;
+    padding: 10px 0px 10px 20px;
+    color: #ffffff;
+    font-size:30px !important;
+    margin:0px;
+}
+
+div.gwBox > h3 {
+    padding: 5px 5px 20px 20px;
+}
+
+div.gwBox > a {
+    margin: 5px 20px 5px 20px;
+    font-size: 20px;
+    background-color: #FF762C;
+    color: #ffffff;
+    padding: 10px 15px 10px 15px;
+    align-self:center;
+}
+
+div.gwFlex {
+    display: flex;
+    flex-direction: normal;
+    margin:35px 0px 0px 0px;
+    padding:0px;
+    width: 100%;
+    justify-content: center !important;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
 h1 {
     font-size: 70px;
 }
@@ -14,7 +52,7 @@ h2 {
 }
 
 div.top-bar {
-    background-color: #4e4e4e;
+    background-color: #FF762C;
     position: fixed;
     z-index: 10000;
     display: block;
@@ -24,6 +62,7 @@ div.top-bar {
     left: 0px;
     word-wrap: unset;
     overflow: hidden;
+    box-shadow: 0px 0px 10px #3d3f4687;
 }
 
 div.top-bar img {
@@ -35,7 +74,8 @@ div.top-bar span {
     position: relative;
     bottom: 38%;
     height: inherit;
-    padding: none;
+    height: 75%;
+    padding: 5px;
 }
 
 span input {
@@ -76,9 +116,15 @@ button {
     height: 100%;
     position: relative;
     color: white;
-    background-color: #4e4e4e;
     border: none;
     border-bottom: #979797;
+    background-color: #FF762C;
+    text-align: center;
+    padding:10px;
+    margin: 0px 0px 0px 0px;
+}
+button:hover{
+    background-color: #e44724;
 }
 
 
@@ -654,8 +700,8 @@ div.log.error {
 div.log.warn {
     color: #fcd75d;
 }
-/* Scrollbar */
 
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
