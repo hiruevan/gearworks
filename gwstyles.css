@@ -2,7 +2,7 @@ body {
     font-family: 'Sometype Mono', monospace;
     color: rgb(70, 70, 70);
     z-index: -1;
-    background-color: #d8d8d8;
+    background-color: #D9D9D9;
 }
 
 div.gwBox {
@@ -30,6 +30,10 @@ div.gwBox > a {
     color: #ffffff;
     padding: 10px 15px 10px 15px;
     align-self:center;
+}
+
+div.gwBox a:hover {
+    background-color: #e44724;
 }
 
 div.gwFlex {
@@ -340,11 +344,12 @@ div.cabinet div.container div p {
 div.side-bar {
     bottom: 0px;
     top: 0px;
-    background-color: #6d6d6d;
+    background-color: #D9D9D9;
     position: inherit;
     height: 100%;
     width: 15%;
     color: rgb(219, 219, 219);
+    padding:5px 5px 5px 0px;
 }
 .sidebar-break{
     width: 100%;
@@ -354,28 +359,30 @@ div.side-bar {
 
 button.side-bar {
     height: 30px;
-    background-color: #b15d29;
+    background-color: #FF762C;
     left: -5px;
-    border-radius: 10px 10px 0px 0px;
-    width: 50%;
+    width: 30%;
     align-self: flex-end;
-    border: solid #724011;
     border-width:2px 2px 0px 2px !important;
     margin:0px !important;
     font-size: 90%;
     text-wrap: nowrap;
+    transition:width 0.5s ;
 }
 
 button.side-bar:hover {
     height: 30px;
-    background-color: #814813;
+    background-color: #e44724;
     left: -5px;
 }
 
 button.tab.selected {
-    background-color: #6d6d6d;
+    background-color: #D9D9D9;
     height: 35px;
-    border: solid #5e5e5e;
+    width: 70%;
+    color: black;
+    transition:width 0.5s ;
+    border: 1px solid #5e5e5e;
 }
 
 button.side-bar.tab {
@@ -408,7 +415,7 @@ a.side-bar-control {
     position: fixed;
     font-size: 20px;
     padding: 5px;
-    background-color: #646464;
+    background-color: #D9D9D9;
     border-bottom-right-radius: 1rem;
 }
 
@@ -440,18 +447,17 @@ a.zoom {
     margin: 5px 0px;
     z-index: 15;
     height: 20px;
-    border: solid 3px #b0734d;
 }
 
 #zoom1{
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
     border-right: 0px;
 }
 
 #zoom2{
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
     border-left: 0px;
 }
 
@@ -479,19 +485,22 @@ a.right {
 
 a.zoom.disabled,
 a.play-controls.disabled {
-    background-color: #ab6437;
+    background-color: #923a17;s
+}
+a.zoom.disabled img {
+    filter: brightness(70%);
 }
 
 a.zoom.disabled:hover,
 a.play-controls.disabled {
-    background-color: #9a5932 !important;
+    background-color: #923a17 !important;
     cursor: default;
 }
 
 a.side-bar-control:hover,
 a.zoom:hover,
 a.play-controls:hover {
-    background-color: #c06b2a !important;
+    background-color: #e44724 !important;
     cursor: pointer;
 }
 
@@ -609,7 +618,7 @@ img::selection {
 /* Cabinet */
 div.cabinet {
     position: absolute;
-    background-color: #b15d29;
+    background-color: #D9D9D9;
     height: auto;
     top: 0px;
     margin-top: calc(105% + 70px);
@@ -617,10 +626,6 @@ div.cabinet {
     right: 0px;
     bottom: 0px;
     font-size: 25px;
-
-    border: solid;
-    border-width: 4px 5px 5px 5px;
-    border-color: #723c1a;
 }
 
 div.cabinet::-webkit-scrollbar-thumb{

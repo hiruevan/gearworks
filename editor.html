@@ -25,7 +25,7 @@ or other items of worth.
     <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./gwstyles.css">
 </head>
-<body spellcheck="false" style="background-color: #a0a0a0;">
+<body spellcheck="false" style="background-color: #535353;">
 	<div class="top-bar">
 		<a href="https://gearworks.org"><img src="./images/Gw-Favicon.svg"></a>
 		<span><button class="file-button" onclick="gw_toggleFileBox()">File ▼</button>
@@ -41,7 +41,6 @@ or other items of worth.
         </div>
     </div>
 	<div class="content">
-        
         <!--Side Bar-->
 		<div class="side-bar side-bar-out">
             <div class="container page">
@@ -50,89 +49,90 @@ or other items of worth.
                     <button class="side-bar tab selected" onclick="gw_switchToDocs();">Docs</button>
                     <button class="side-bar tab" onclick="gw_switchToConsole();">Console</button>
                 </div>
-                <hr class="sidebar-break">
-                
-                <!--Quick Docs-->
-                <div class="docs">
-                    <p><u>Gear Works</u></p>
-                    <p><em><b>gearWorks</b><br>Used for handling system occurances and insctructions.</em></p>
-                    <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">log</span>(<span style="color: rgb(0, 194, 0);">str</span>)</strong><br>Logs a string in the console.</p>
-                    <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">warn</span>(<span style="color: rgb(0, 194, 0);;">str</span>)</strong><br>Logs a warning string in the console.</p>
-                    <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">error</span>(<span style="color: rgb(0, 194, 0);;">str</span>)</strong><br>Logs a error in the console.</p>
-                    <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">url</span>(<span style="color: rgb(0, 194, 0);;">name</span>)</strong><br>Returns a conversion of a project file to a data url.</p>
-                    <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">playSound</span>(<span style="color: rgb(0, 194, 0);;">name</span>)</strong><br>Plays a sound found in the project files.</p>
-                    <p><em><b>input</b><br>Used to determine what the user is doing at any given moment.</em></p>
-                    <p><strong>mouse.x</strong><br>Returns mouse x.</p>
-                    <p><strong>mouse.y</strong><br>Returns mouse y.</p>
-                    <p><strong>keyboard</strong><br>Returns an array of all keys being pressed at any given moment.</p>
-                    <p><strong>keyboard[keyboard.length-1]</strong><br>Returns the last key pressed.</p>
-                    <p><strong>keyboard.<span style="color: rgb(80, 80, 245);">includes</span>(<span style="color: rgb(0, 194, 0);;">key</span>)</strong><br>Checks if a key is being pressed.</p>
-                    <p><em><b>draw</b><br>Used for drawing things on the canvas.</em></p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">background</span>(<span style="color: rgb(0, 194, 0);;">cssColor</span>)</strong><br>Clears the screen and displays a solid color. Example:<br>draw.<span style="color: rgb(80, 80, 245);;">background</span>(<span style="color: rgb(0, 194, 0);;">"darkrgb(80, 80, 245);"</span>);</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">fillRect</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Draws a "filled" rectange.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">strokeRect</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Draws a rectangle (with no fill).</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">clearRect</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Clears specified pixels within a rectangle.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">image</span>(<span style="color: rgb(0, 194, 0);;">name</span>, <span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Draws an image from the cabinet on the canvas.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">beginPath</span>()</strong><br>Begins a new path or resets the current path.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">closePath</span>()</strong><br>Adds a line to the path from the current point to the start.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">moveTo</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Moves the path to a point in the canvas (without drawing).</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">lineTo</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Adds a line to the path.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">fill</span>()</strong><br>Fills the current path.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">stroke</span>()</strong><br>Draws the current path.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">arc</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">r</span>, <span style="color: orange;">startAngle</span>, <span style="color: orange;">endAngle</span>)</strong><br>Adds an arc/curve (circle, or parts of a circle) to the path.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">fillText</span>(<span style="color: rgb(0, 194, 0);;">text</span>, <span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Draws "filled" text on the canvas.</p>
-                    <p><strong>draw.<span style="color: rgb(80, 80, 245);">strokeText</span>(<span style="color: rgb(0, 194, 0);;">text</span>, <span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Draws text (with no fill).</p>
-                    <p><strong>draw.font <span style="color: rgb(37, 37, 192);">=</span> <span style="color: rgb(0, 194, 0);;">cssFont</span></strong><br>Sets or returns the font properties for text content. Example:<br>draw.font <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">"50px Arial"</span>;</p>
-                    <p><strong>draw.textAlign <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">cssAlign</span></strong><br>Sets or returns the alignment for text content. Example:<br>draw.textAlign <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">"center"</span>;</p>
-                    <p><strong>draw.lineWidth <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: orange;">width</span></strong><br>Sets or returns the width of 'stroked' lines.</p>
-                    <p><strong>draw.fillStyle <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">cssColor</span></strong><br>Sets or returns the color, gradient, or pattern used to fill the drawing.</p>
-                    <p><strong>draw.strokeStyle <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">cssColor</span></strong><br>Sets or returns the color, gradient, or pattern used for strokes.</p>
-                    
-                    <br>
-                    <p><u>JavaScript</u></p>
-                    <p><em><b>Operators</b><br>Used in everyday programming, these are very important to know.</em></p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">+</span></strong><br>Addition symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">-</span></strong><br>Subtraction symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">*</span></strong><br>Multiplication symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">/</span></strong><br>Division symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">%</span></strong><br>Modulus symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">||</span></strong><br>Or symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">&&</span></strong><br>And symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">!</span></strong><br>Not symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">!=</span></strong><br>Not equal to symbol.</p>
-                    <p><strong><span style="color: rgb(37, 37, 192);;">==</span></strong><br>Equal to symbol <em>(Not to be confused with a single =, that is for variable setting).</em></p>
-                    <p><em><b>Variables & Keywords</b><br>This is a very important function that is in all programming languages. You can use this to store values, store lists of values, objects, and even to store code for later use!</em></p>
-                    <p><strong><span style="color: purple;">var</span></strong><br>This keyword defines a variable without any constrant. Example:<br><span style="color: purple;">var</span> str <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">"Hello World!"</span></p>
-                    <p><strong><span style="color: purple;">let</span></strong><br>This keyword defines a variable that can be changed, but not redefined.</p>
-                    <p><strong><span style="color: purple;">const</span></strong><br>This keyword defines a constant variable.</p>
-                    <p><strong><span style="color: purple;">const</strong><br>This keyword defines a constant variable.</p>
-                    <p><strong><span style="color: purple;">function</span></strong><br>Function keyword. This allows you to call a function (Reuse old code) later. Example:<br><span style="color: purple;">function</span> <span style="color: rgb(80, 80, 245);;">logHi</span>() { gearWorks.<span style="color: rgb(80, 80, 245);;">log</span>(<span style="color: rgb(0, 194, 0);;">"Hi"</span>); }</p>
-                    <p><strong><span style="color: purple;">function</span> <span style="color: rgb(80, 80, 245);;">forever</span>() {}</strong><br>In the case of the forever function, gearWorks will take whatever code you have defined in the brakets and repeat it forever.</p>
-                    <p><em><b>Math</b><br>Used for representing irrational numbers, and running other mathematical functions.</em></p>
-                    <p><strong>Math.E</strong><br>Returns Euler's number.</p>
-                    <p><strong>Math.PI</strong><br>Returns PI.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">sin</span>(<span style="color: orange;">float</span>)</strong><br>Sine function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">cos</span>(<span style="color: orange;">float</span>)</strong><br>Cosine function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">tan</span>(<span style="color: orange;">float</span>)</strong><br>Tangent function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">sqrt</span>(<span style="color: orange;">float</span>)</strong><br>Square root function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">pow</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Returns x to the power of y.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">abs</span>(<span style="color: orange;">float</span>)</strong><br>Absolute value function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">round</span>(<span style="color: orange;">float</span>)</strong><br>Rounding to nearest intager function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">ceil</span>(<span style="color: orange;">float</span>)</strong><br>Rounding up function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">floor</span>(<span style="color: orange;">float</span>)</strong><br>Rounding down function.</p>
-                    <p><strong>Math.<span style="color: rgb(80, 80, 245);;">random</span>()</strong><br>Returns random value between 0 and 1.</p>
-                    
-                    <br>
-                    <p><u>Extensions</u></p>
-                    <p><em><b>ECI</b><br>The ECI (Extention Creation Interface) is used to create custom user extentions, which adds an extra layer of freedom to Gear Works. Extentions are "Mods" for the Gear Works editor that can add extra uses and improve user experience. You can access the ECI <a href="./docs/eci">here</a>.</em></p>
-                    <div class="extension-docs-holder"></div>
-                    <br>
-                    <button class="side-bar" onclick="document.getElementById('ext-uploader').click();">Add</button>
-                    <input type="file" class="hidden" id="ext-uploader" accept=".gwx">
-                </div>
+                <!-- <hr class="sidebar-break"> -->
 
+                <!--Quick Docs-->
+                    <div class="docs" style="background-color: #A7ABBC; color: black;">
+                        <p><u>Gear Works</u></p>
+                        <p><em><b>gearWorks</b><br>Used for handling system occurances and insctructions.</em></p>
+                        <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">log</span>(<span style="color: rgb(0, 194, 0);">str</span>)</strong><br>Logs a string in the console.</p>
+                        <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">warn</span>(<span style="color: rgb(0, 194, 0);;">str</span>)</strong><br>Logs a warning string in the console.</p>
+                        <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">error</span>(<span style="color: rgb(0, 194, 0);;">str</span>)</strong><br>Logs a error in the console.</p>
+                        <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">url</span>(<span style="color: rgb(0, 194, 0);;">name</span>)</strong><br>Returns a conversion of a project file to a data url.</p>
+                        <p><strong>gearWorks.<span style="color: rgb(80, 80, 245);">playSound</span>(<span style="color: rgb(0, 194, 0);;">name</span>)</strong><br>Plays a sound found in the project files.</p>
+                        <p><em><b>input</b><br>Used to determine what the user is doing at any given moment.</em></p>
+                        <p><strong>mouse.x</strong><br>Returns mouse x.</p>
+                        <p><strong>mouse.y</strong><br>Returns mouse y.</p>
+                        <p><strong>keyboard</strong><br>Returns an array of all keys being pressed at any given moment.</p>
+                        <p><strong>keyboard[keyboard.length-1]</strong><br>Returns the last key pressed.</p>
+                        <p><strong>keyboard.<span style="color: rgb(80, 80, 245);">includes</span>(<span style="color: rgb(0, 194, 0);;">key</span>)</strong><br>Checks if a key is being pressed.</p>
+                        <p><em><b>draw</b><br>Used for drawing things on the canvas.</em></p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">background</span>(<span style="color: rgb(0, 194, 0);;">cssColor</span>)</strong><br>Clears the screen and displays a solid color. Example:<br>draw.<span style="color: rgb(80, 80, 245);;">background</span>(<span style="color: rgb(0, 194, 0);;">"darkrgb(80, 80, 245);"</span>);</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">fillRect</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Draws a "filled" rectange.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">strokeRect</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Draws a rectangle (with no fill).</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">clearRect</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Clears specified pixels within a rectangle.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">image</span>(<span style="color: rgb(0, 194, 0);;">name</span>, <span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">width</span>, <span style="color: orange;">height</span>)</strong><br>Draws an image from the cabinet on the canvas.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">beginPath</span>()</strong><br>Begins a new path or resets the current path.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">closePath</span>()</strong><br>Adds a line to the path from the current point to the start.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">moveTo</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Moves the path to a point in the canvas (without drawing).</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">lineTo</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Adds a line to the path.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">fill</span>()</strong><br>Fills the current path.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">stroke</span>()</strong><br>Draws the current path.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">arc</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>, <span style="color: orange;">r</span>, <span style="color: orange;">startAngle</span>, <span style="color: orange;">endAngle</span>)</strong><br>Adds an arc/curve (circle, or parts of a circle) to the path.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">fillText</span>(<span style="color: rgb(0, 194, 0);;">text</span>, <span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Draws "filled" text on the canvas.</p>
+                        <p><strong>draw.<span style="color: rgb(80, 80, 245);">strokeText</span>(<span style="color: rgb(0, 194, 0);;">text</span>, <span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Draws text (with no fill).</p>
+                        <p><strong>draw.font <span style="color: rgb(37, 37, 192);">=</span> <span style="color: rgb(0, 194, 0);;">cssFont</span></strong><br>Sets or returns the font properties for text content. Example:<br>draw.font <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">"50px Arial"</span>;</p>
+                        <p><strong>draw.textAlign <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">cssAlign</span></strong><br>Sets or returns the alignment for text content. Example:<br>draw.textAlign <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">"center"</span>;</p>
+                        <p><strong>draw.lineWidth <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: orange;">width</span></strong><br>Sets or returns the width of 'stroked' lines.</p>
+                        <p><strong>draw.fillStyle <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">cssColor</span></strong><br>Sets or returns the color, gradient, or pattern used to fill the drawing.</p>
+                        <p><strong>draw.strokeStyle <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">cssColor</span></strong><br>Sets or returns the color, gradient, or pattern used for strokes.</p>
+                        
+                        <br>
+                        <p><u>JavaScript</u></p>
+                        <p><em><b>Operators</b><br>Used in everyday programming, these are very important to know.</em></p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">+</span></strong><br>Addition symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">-</span></strong><br>Subtraction symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">*</span></strong><br>Multiplication symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">/</span></strong><br>Division symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">%</span></strong><br>Modulus symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">||</span></strong><br>Or symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">&&</span></strong><br>And symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">!</span></strong><br>Not symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">!=</span></strong><br>Not equal to symbol.</p>
+                        <p><strong><span style="color: rgb(37, 37, 192);;">==</span></strong><br>Equal to symbol <em>(Not to be confused with a single =, that is for variable setting).</em></p>
+                        <p><em><b>Variables & Keywords</b><br>This is a very important function that is in all programming languages. You can use this to store values, store lists of values, objects, and even to store code for later use!</em></p>
+                        <p><strong><span style="color: purple;">var</span></strong><br>This keyword defines a variable without any constrant. Example:<br><span style="color: purple;">var</span> str <span style="color: rgb(37, 37, 192);;">=</span> <span style="color: rgb(0, 194, 0);;">"Hello World!"</span></p>
+                        <p><strong><span style="color: purple;">let</span></strong><br>This keyword defines a variable that can be changed, but not redefined.</p>
+                        <p><strong><span style="color: purple;">const</span></strong><br>This keyword defines a constant variable.</p>
+                        <p><strong><span style="color: purple;">const</strong><br>This keyword defines a constant variable.</p>
+                        <p><strong><span style="color: purple;">function</span></strong><br>Function keyword. This allows you to call a function (Reuse old code) later. Example:<br><span style="color: purple;">function</span> <span style="color: rgb(80, 80, 245);;">logHi</span>() { gearWorks.<span style="color: rgb(80, 80, 245);;">log</span>(<span style="color: rgb(0, 194, 0);;">"Hi"</span>); }</p>
+                        <p><strong><span style="color: purple;">function</span> <span style="color: rgb(80, 80, 245);;">forever</span>() {}</strong><br>In the case of the forever function, gearWorks will take whatever code you have defined in the brakets and repeat it forever.</p>
+                        <p><em><b>Math</b><br>Used for representing irrational numbers, and running other mathematical functions.</em></p>
+                        <p><strong>Math.E</strong><br>Returns Euler's number.</p>
+                        <p><strong>Math.PI</strong><br>Returns PI.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">sin</span>(<span style="color: orange;">float</span>)</strong><br>Sine function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">cos</span>(<span style="color: orange;">float</span>)</strong><br>Cosine function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">tan</span>(<span style="color: orange;">float</span>)</strong><br>Tangent function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">sqrt</span>(<span style="color: orange;">float</span>)</strong><br>Square root function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">pow</span>(<span style="color: orange;">x</span>, <span style="color: orange;">y</span>)</strong><br>Returns x to the power of y.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">abs</span>(<span style="color: orange;">float</span>)</strong><br>Absolute value function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">round</span>(<span style="color: orange;">float</span>)</strong><br>Rounding to nearest intager function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">ceil</span>(<span style="color: orange;">float</span>)</strong><br>Rounding up function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">floor</span>(<span style="color: orange;">float</span>)</strong><br>Rounding down function.</p>
+                        <p><strong>Math.<span style="color: rgb(80, 80, 245);;">random</span>()</strong><br>Returns random value between 0 and 1.</p>
+                        
+                        <br>
+                        <p><u>Extensions</u></p>
+                        <p><em><b>ECI</b><br>The ECI (Extention Creation Interface) is used to create custom user extentions, which adds an extra layer of freedom to Gear Works. Extentions are "Mods" for the Gear Works editor that can add extra uses and improve user experience. You can access the ECI <a href="./docs/eci">here</a>.</em></p>
+                        <div class="extension-docs-holder"></div>
+                        <br>
+                        <button class="side-bar" onclick="document.getElementById('ext-uploader').click();">Add</button>
+                        <input type="file" class="hidden" id="ext-uploader" accept=".gwx">
+                    </div>
+                </span>
                 <!--Console-->
                 <div class="console hidden">
+                    <br>
                     <button class="side-bar" onclick="gw_clearConsole();">Clear</button>
                     <p class="console-logs"></p>
                 </div>
