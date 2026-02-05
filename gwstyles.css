@@ -59,7 +59,7 @@ div.top-bar {
     background-color: #FF762C;
     position: fixed;
     z-index: 10000;
-    display: block;
+    display: flex;
     width: 100%;
     height: 7%;
     top: 0px;
@@ -70,16 +70,18 @@ div.top-bar {
 }
 
 div.top-bar img {
-    height: 75%;
-    padding: 5px;
+    height: 120%;
+    padding: 0px 10px 0px 10px;
 }
 
 div.top-bar span {
     position: relative;
-    bottom: 38%;
-    height: inherit;
-    height: 75%;
-    padding: 5px;
+    height: 100%;
+    padding: 0px;
+    text-align: center;
+    margin:0px;
+    top: 0px;
+    left: 0px;
 }
 
 span input {
@@ -114,7 +116,7 @@ div.file-box button {
 }
 
 button {
-    font-size: 20px;
+    font-size: 100%;
     font-family: 'Sometype Mono', monospace;
     font-weight: bolder;
     height: 100%;
