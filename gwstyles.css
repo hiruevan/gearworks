@@ -19,7 +19,8 @@ div.gwBox > h2 {
     margin:0px;
 }
 
-div.gwBox > h3 {
+
+div.gwBox > h3, div.gwBox > p, div.gwBox > ul {
     padding: 5px 5px 20px 20px;
 }
 
@@ -145,7 +146,7 @@ button.canvasButton {
 }
 
 button.canvasButton:hover{
-    background-color: #c06b2a;
+    background-color: #e44724;
 }
 
 .canvasButton > img{
