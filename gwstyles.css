@@ -452,15 +452,15 @@ a.zoom {
 }
 
 #zoom1{
-    border-top-left-radius: 25%;
-    border-bottom-left-radius: 25%;
-    border-right: 0px;
-}
-
-#zoom2{
     border-top-right-radius: 25%;
     border-bottom-right-radius: 25%;
     border-left: 0px;
+}
+
+#zoom2{
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-right: 0px;
 }
 
 a.play-controls {
