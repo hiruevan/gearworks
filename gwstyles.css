@@ -363,20 +363,15 @@ div.side-bar {
 button.side-bar {
     height: 30px;
     background-color: #FF762C;
-    left: -5px;
-    width: 30%;
-    align-self: flex-end;
-    border-width:2px 2px 0px 2px !important;
-    margin:0px !important;
-    font-size: 90%;
-    text-wrap: nowrap;
-    transition:width 0.5s ;
+    left: 5px;
+    width: 80%;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 button.side-bar:hover {
     height: 30px;
     background-color: #e44724;
-    left: -5px;
 }
 
 button.tab.selected {
@@ -388,8 +383,17 @@ button.tab.selected {
     border: 1px solid #5e5e5e;
 }
 
-button.side-bar.tab {
+button.tab {
+    left: -5px;
     flex-direction: row;
+    font-size: 90%;
+    text-wrap: nowrap;
+    transition:width 0.5s ;
+    width: 30%;
+    align-self: flex-end;
+    border-width:2px 2px 0px 2px !important;
+    margin:0px !important;
+    padding-bottom: 20px;
 }
 
 div.sidebar-buttons{
@@ -471,8 +475,13 @@ a.play-controls {
     font-size: 15px;
 }
 
+div.docs, div.console {
+    margin-right: 5px;
+}
+
 div.docs p {
     font-size: 15px;
+    
 }
 div.docs u, div.docs b {
     font-size: 25px;
@@ -488,8 +497,9 @@ a.right {
 
 a.zoom.disabled,
 a.play-controls.disabled {
-    background-color: #923a17;s
+    background-color: #923a17;
 }
+
 a.zoom.disabled img {
     filter: brightness(70%);
 }
@@ -698,15 +708,17 @@ examplecode {
 div.log {
     border-bottom: 1px solid black;
     font-family: 'Sometype Mono', monospace;
+    color: black;
+    background: #A7ABBC;
     font-size: 15px;
 }
 
 div.log.error {
-    color: red;
+    background: rgb(255, 67, 67);
 }
 
 div.log.warn {
-    color: #fcd75d;
+    background: #fcd75d;
 }
 
 /* Scrollbar */
