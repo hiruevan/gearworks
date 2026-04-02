@@ -1,0 +1,141 @@
+<!--
+Gear Works © 2026
+by the Gear Works team. The Gear
+Works team consists of (with GitHub usernames in
+parentheses) Evan Hill (hiruevan), Nathan Malaman
+(carameltaffy2), Parker Budd (parkmasterpro), and Katie (sushii64).
+
+Under no circumstances is any part of Gear Works to be
+redistributed without this notice and the copyright
+information accompanying the software. Gear Works may
+not be redistributed in exchange for money (of any kind)
+or other items of worth.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gearworks | For Developers</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./images/Gw-Favicon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./gwstyles.css">
+</head>
+<body>
+	<div class="top-bar">
+        <a href="./index"><img src="./images/Outlined.svg" alt="GearWorks"></a>
+		<span><button onclick="window.location = './editor'">Editor</button></span>
+		<span><button onclick="window.location = './tutorials'">Tutorials</button></span>
+		<span><button onclick="window.location = './docs'">DOCS</button></span>
+		<span><button onclick="window.location = './projects'">Projects</button></span>
+    </div>
+	<div class="content scroll">
+		<div class="container" id="main">
+			<h2>Developer Documentation</h2>
+
+      <div class="docs">
+        <p><u>Extensions</u></p>
+        <p><em><b>ECI</b><br>The ECI (Extention Creation Interface) is used to create custom user extentions, which adds an extra layer of freedom to Gear Works. Extentions are "Mods" for the Gear Works editor that can add extra uses and improve user experience. You can access the ECI <a href="./docs/eci">here</a>. Please note that extensions are not officially supported and may not work as expected. Use the following development docs when developing extensions.</em></p>
+
+        <br>
+        <p><u>Gear Works Backend</u><br>These are the technical details for the Gear Works backend.</p>
+        <p><em>Source Code</em><br>You can find the source code for the Gear Works backend <a href="https://github.com/hiruevan/gearworks" target="_blank">here</a>.</p>
+        <p><em>Ace Editor</em><br>Gear Works uses the Ace Editor for its code editing functionality. You can find more information about the Ace Editor <a href="https://ace.c9.io/" target="_blank">here</a>.</p>
+        <p><em>JQuery</em><br>Gear Works uses JQuery for its JavaScript functionality. You can find more information about JQuery <a href="https://jquery.com/" target="_blank">here</a>.</p>
+        <p><em>gw_ prefix</em><br>Every variable and function in the Gear Works backend is prefixed with "gw_" to avoid naming conflicts.</p>
+        <p><em>Gear Works Editor Functions</em><br>Here is a list of all available "gw_" functions for the editor (you can find full implementation in our source code):</p>
+		<p><strong>gw_toggleSideBar()</strong><br>Opens/Closes the Detail Panel.</p>
+		<p><strong>gw_switchToDocs()</strong><br>Switches Detail Panel to Docs.</p>
+		<p><strong>gw_switchToConsole()</strong><br>Switches Detail Panel to Console.</p>
+		<p><strong>gw_toggleFileBox()</strong><br>Opens/Closes the file dropdown.</p>
+		<p><strong>gw_openProject()</strong><br>Opens a prompt to open a project from the user's computer.</p>
+		<p><strong>gw_packageProject()</strong><br>Packages a project (not yet implemented)</p>
+		<p><strong>gw_stripHTMLTags</strong><br>Converts html tag strings to corresponding unicode characters (eg: &lt;br&gt; becomes \n).</p>
+		<p><strong>gw_zoomIn()</strong><br>Zooms the code editor in.</p>
+		<p><strong>gw_zoomOut()</strong><br>Zooms the code editor out.</p>
+		<p><strong>gw_zoomEqual</strong><br>Sets the code editor zoom to center.</p>
+		<p><strong>gw_fullscreen()</strong><br>Puts the canvas in fullscreen mode.</p>
+		<p><strong>gw_escapeFullscreen()</strong><br>Puts the canvas in editor mode.</p>
+		<p><strong>gw_goInFullscreen(element)</strong><br>Puts the argument into fullscreen.</p>
+		<p><strong>gw_goOutFullscreen(element)</strong><br>Takes the argument out of fullscreen.</p>
+		<p><strong>gw_isFullscreen()</strong><br>Returns a bool true if canvas is in fullscreen mode.</p>
+		<p><strong>gw_log(log)</strong><br>Logs in the console.</p>
+		<p><strong>gw_warn(log)</strong><br>Logs a warning in the console.</p>
+		<p><strong>gw_error(log)</strong><br>Logs an error in the console.</p>
+		<p><strong>gw_clearConsole()</strong><br>Clears the console.</p>
+		<p><strong>gw_checkForSecurityIssues(txt)</strong><br>Returns true if parsed text is determined to contain security issues.</p>
+		<p><strong>gw_primeScriptForErrors(code)</strong><br>Returns a new string of code with a try-catch statment wrapped around it.</p>
+		<p><strong>gw_run()</strong><br>Runs the project code.</p>
+		<p><strong>gw_stop()</strong><br>Stops the project code.</p>
+		<p><strong>gw_clearAllSounds()</strong><br>Stops all currently playing sounds.</p>
+		<p><strong>gw_cabinet{imageNames[], imageUrls[], soundNames[], soundUrls[]}</strong><br>An object representing all resources in the project.</p>
+		<p><strong>gw_xtns[]</strong><br>An array of extension opjects open in the project.</p>
+		<p><strong>gw_cabinetRemove(url, type)</strong><br>Removes an item from the cabinet based on url and type ("image" or "sound")</p>
+		<p><em>Gear Works Loader Functions</em><br>Here is a list of all available "gw_" functions for file handling (you can find full implementation in our source code):</p>
+		<p><strong>gw_download(filename, text)</strong><br>Downloads a text file with desired filename and text content.</p>
+		<p><strong>gw_readExtensionFile(txt)</strong><br>Takes a raw gwx file and returns an extension object.</p>
+		<p><strong>gw_loadProjectFile(text)</strong><br>Takes a raw gw1 file and loads it into the editor.</p>
+		<p><strong>gw_getDownloadFile()</strong><br>Returns the raw text of the gw1 file that represents the current open project.</p>
+		<p><strong>gw_getExtensionFile(obj)</strong><br>Takes an extension object and returns the raw text of the gwx file corresponding to the argument.</p>
+		<p><strong>gw_downloadProject()</strong><br>Downloads the open project to the user's computer.</p>
+		<p><strong>gw_loadExtension(ext)</strong><br>Takes an extension object as the argument, and loads it into the editor.</p>
+		<p><strong>gw_xtnRemove(xtnName)</strong><br>Removes an extension from the editor by name.</p>
+
+		<br>
+		<p><u>Gear Works Files</u></p>
+		<p><em>The .gw1 file</em><br>This filetype is used to store Gear Works projects including their code, resources and extensions.</p>
+		<p><strong>Layout</strong><br>The .gw1 file has a layout similar to the .gwx file. Please note that the syntax is different between the two files, to be able to noticably tell the difference. It uses "tags" similar to html, but the syntax is slightly different. Each tag must be in the proper order and there must only be one (with the exception of IMAGE, SOUND, and XTEN tags; There can be as many as desired). 
+			<ol>
+				<li>The <b>⇇!DOCTYPE⇔gw1⇉</b> tag. This tells the interperater that the file is not corrupted and is not outdated.</li>
+				<li>The <b>⇇META⇔data⇉</b> tag. In the "data" section, is a timestamp, or other usefull information. It is ignored in current versions.</li>
+				<li>The <b>⇇TITLE⇔new project⇔gw_user⇉</b> tag. It contains the name of the project, followed by the name of the author.</li>
+				<li>The <b>⇇JSCONTENT⇔content⇉</b> tag. It contains all the code in the project.</li>
+				<li>The <b>⇇IMAGE⇔filename⇔content⇉</b> tag. This contains the name of the image, and a data (base64) url stored in the content.</li>
+				<li>The <b>⇇SOUND⇔filename⇔content⇉</b> tag. This contains the name of the sound, and a data (base64) url stored in the content.</li>
+				<li>The <b>⇇XTEN⇔raw⇉</b> tag. This simply only contains the raw content of a .gwx file.</li>
+				<li>The <b>⇇END⇉</b> tag. This must be found at the bottom of the file. To terminate the interperater.</li>				
+			</ol>
+		</p>
+		<p><strong>Special Characters</strong><br>(Sometimes called *Broken* characters) To prevent errors transpiring through urls, several characters are encoded.
+			<ol>
+				<li>"\n" and "\r" become "↴"</li>
+				<li>"#" becomes "↯"</li>
+			</ol>
+		</p>
+		<p><em>The .gwx file</em><br>This filetype is used to store Gear Works extensions ("mods"), specifically their code.</p>
+		<p><strong>Layout</strong><br>The .gwx file has a layout similar to the .gw1 file. Please note that the syntax is different between the two files, to be able to noticably tell the difference. It uses "tags" similar to html, but the syntax is slightly different. Each tag must be in the proper order and there must only be one (there are no exceptions in this filetype). 
+			<ol>
+				<li>The <b>←!DOCTYPE↭gwx→</b> tag. This tells the interperater that the file is not corrupted and is not outdated.</li>
+				<li>The <b>←META↭data→</b> tag. In the "data" section, is a timestamp, or other usefull information. It is ignored in current versions.</li>
+				<li>The <b>←TITLE↭Name↭Author→</b> tag. It contains the name of the extension, followed by the name of the author.</li>
+				<li>The <b>←OVERVEIW↭Text Content↭Hex Color→</b> tag. It contains a simple overview (written in html) of the extension followed by a color to assosiate it with. (Note the # in the color will be replaced with a ↯ char)</li>
+				<li>The <b>←JSCONTENT↭content→</b> tag. It contains all the code in the extension.</li>
+				<li>The <b>←DOCUMENTATION↭Text Content→</b> tag. It contains detailed documentation (written in html) of the extension.</li>
+				<li>The <b>←END→</b> tag. This must be found at the bottom of the file. To terminate the interperater.</li>				
+			</ol>
+		</p>
+		<p><strong>Special Characters</strong><br>(Sometimes called *Broken* characters) To prevent errors transpiring through urls, several characters are encoded.
+			<ol>
+				<li>"\n" and "\r" become "↴" (except when written in html, use the &lt;br&gt; tag)</li>
+				<li>"#" becomes "↯"</li>
+			</ol>
+		</p>
+    </div>
+		</div>
+
+    <div id="list"></div>
+
+    <br><br><br>
+		<footer>
+			<a href="./legal">Legal</a> | <a href="./about">About</a> | <a href="https://github.com/hiruevan/gearworks?tab=readme-ov-file" target="_blank">Source Code</a> | <a href="">Donate</a>
+		</footer>
+		
+	</div>
+  
+  <!--Gearworks JS-->
+  <script src="./docs/docs.js"></script>
+
+</body>
+</html>
