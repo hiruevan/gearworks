@@ -343,6 +343,6 @@ Gear Works is intended to help students move from block-based or highly simplifi
 
 ## Credits
 
-**Project Leader Evan Hill**
+**Project Leader: Evan Hill**
 
-Other contributions are from: Nathan Malaman, Katie, Blxl
+Other contributions are from: Nathan Malaman, Katie, and Blxl
