@@ -76,7 +76,11 @@ A Gear Works project can contain:
 
 Projects can be loaded directly into the editor from a `.gw1` file.
 
-Example projects are included in the repository under: *samples/*
+Example projects are included in the repository under: 
+
+```text
+`samples/
+```
 
 Current sample projects include:
 
