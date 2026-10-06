@@ -79,7 +79,7 @@ Projects can be loaded directly into the editor from a `.gw1` file.
 Example projects are included in the repository under: 
 
 ```text
-`samples/
+samples/
 ```
 
 Current sample projects include:
